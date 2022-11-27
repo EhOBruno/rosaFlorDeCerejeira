@@ -130,3 +130,4 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
     ~~~cmd
     git pull
     ~~~
+# motta lindo 
