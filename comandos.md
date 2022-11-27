@@ -1,12 +1,12 @@
 # Introdução
 
-Nesse primeira parte de git comandos explicarei um pouco sobre os comandos mais importantes do git 
+Nesse primeira parte de git comandos explicarei um pouco sobre os comandos mais importantes do git(para a gente), lembrando que existem muitas variações dos comandos e tbm muitos outros comandos. na segunda parte usamos os comandos na pratica.
     
 # GIT COMANDOS
 
 Leitura (e prática!) recomendada: https://www.atlassian.com/git/tutorials
 
-OBS: existem vários outros comandos muito importantes! O git é um software muito profundo e cheio de nuances! Esse tutorial é beeeem básico!
+OBS: O git é um software muito profundo e cheio de nuances! Esse tutorial é beeeem básico!
 
 Dito isso, boa leitura! :)
 
@@ -54,7 +54,9 @@ O comando `git checkout <nome_da_branch>` faz com que ocorra a troca da branch a
 
 
 
-## GIT MERGE
+## GIT MERGE 
+
+### <font color="red">muito cuiado com esse comando</font>
 
 O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch 'nome_da_branch'. Ou seja: todas as adições e alterações feitas em <nome_da_branch> passam pra branch atual. No entanto, <nome_da_branch> continua inalterada.
 
