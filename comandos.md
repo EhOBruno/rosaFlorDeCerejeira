@@ -62,6 +62,16 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
 
 * OBS: isso pode gerar conflitos. "Conflito", no caso, é quando, ao mesclar duas branches, as duas realizam alterações no mesmo arquivo e, no fim das contas, essas duas versões do arquivo são diferentes. A resolução do conflito é escolher quais alterações queremos.
 # Primeiro acesso
+## git config
+ * Se vc nunca usou o git na sua maquina atual vc deve rodar os comandos
+    ~~~cmd
+    git config user.email "email usado no Github"
+    ~~~~
+    ~~~cmd
+    git config user.email "Nome e sobrenome"
+    ~~~~
+   
+## voltando
 1. Abre o CMD e navegue até o local que vc  deseja ter a pasta do seu repositorio.<br>
     ex: area de trabalho
 
@@ -88,3 +98,4 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
         ~~~cmd
         git pull
         ~~~
+        
