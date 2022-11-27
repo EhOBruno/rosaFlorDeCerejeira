@@ -73,7 +73,16 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
         ~~~~
 2. Quando estiver no local adequado usar o comando git clone.
     * git clone 
-         ~~~cmd
+        ~~~cmd
         git clone <linkDoRepositorio>
         ~~~~
-    *De pois desse comando todas as 
+    Depois desse comando todas as pastas e arquivos do repositório serão copiadas para o seu dispositivo, após isso para utilizar os outros comandos para esse repositório, é necessário mudar o terminal para a pasta clonada:
+    * Para mudar o diretório novamente:
+        ~~~cmd
+        cd <nomedorepositorioclonado>
+        ~~~
+3. Quando estiver no local do repositorio:
+    * git pull para poder verificar a pasta `.git` e se está tudo atualizado
+        ~~~cmd
+        git pull
+        ~~~
