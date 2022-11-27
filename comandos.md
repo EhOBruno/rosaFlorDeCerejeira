@@ -83,8 +83,39 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
         ~~~cmd
         cd <nomedorepositorioclonado>
         ~~~
-3. Quando estiver no local do repositorio:
+3. Quando estiver no local do repositorio.
     * git pull para poder verificar a pasta `.git` e se está tudo atualizado
         ~~~cmd
         git pull
         ~~~
+    Depois agora é fazer sua parte modificando os arquivos
+# Subindo arquivos para repositório remoto (GitHub)
+1. Salvar as alterações e "commitar".
+    * git add
+        ~~~cmd
+        git add <nomedoarquivo>
+        ~~~
+        ou, para adcionar todos os arquivos modificados:
+        ~~~cmd
+        git add .
+        ~~~
+    * git status (para verificar se adcionou certamente os arquivos selecionados)
+        ~~~cmd
+        git status
+        ~~~
+    * git commit (para salvar as alterações)
+        ~~~cmd
+        git commit -m "mensagemdacommit"
+        ~~~
+2. Subir as alterações para o repositório remoto.
+    * git push
+        ~~~cmd
+        git push origin <nomedabranch>
+        ~~~
+*  OBS: Sempre estar salvando e commitando para não perder as alterações feitas, mas não é necessário subir rapidamente as alterações.
+# Uso a partir da segunda vez
+1. Atualizar o repositório local.
+    * git pull
+    ~~~cmd
+    git pull
+    ~~~
