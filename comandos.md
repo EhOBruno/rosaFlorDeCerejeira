@@ -93,7 +93,7 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
         ~~~cmd
         cd <nomedorepositorioclonado>
         ~~~
-3. Quando estiver no local do repositorio:
+3. Quando estiver no local do repositorio.
     * git pull para poder verificar a pasta `.git` e se está tudo atualizado
         ~~~cmd
         git pull
