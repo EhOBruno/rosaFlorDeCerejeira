@@ -65,10 +65,10 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
 ## git config
  * Se vc nunca usou o git na sua maquina atual vc deve rodar os comandos
     ~~~cmd
-    git config user.email "email usado no Github"
+    git config user.email "email_usado_no_Github"
     ~~~~
     ~~~cmd
-    git config user.email "Nome e sobrenome"
+    git config user.email "Nome_e_sobrenome"
     ~~~~
    
 ## voltando
@@ -77,7 +77,7 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
 
     * Para navegar no CMD use:
         ~~~cmd
-        cd <nomedodiretorio>
+        cd <nome_do_diretorio>
         ~~~~
         No caso da area de trabalho provavelmente o comando sera:
         ~~~cmd
@@ -86,12 +86,12 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
 2. Quando estiver no local adequado usar o comando git clone.
     * git clone 
         ~~~cmd
-        git clone <linkDoRepositorio>
+        git clone <link_Do_Repositorio>
         ~~~~
     Depois desse comando todas as pastas e arquivos do repositório serão copiadas para o seu dispositivo, após isso para utilizar os outros comandos para esse repositório, é necessário mudar o terminal para a pasta clonada:
     * Para mudar o diretório novamente:
         ~~~cmd
-        cd <nomedorepositorioclonado>
+        cd <nome_do_repositorio_clonado>
         ~~~
 3. Quando estiver no local do repositorio.
     * git pull para poder verificar a pasta `.git` e se está tudo atualizado
@@ -104,7 +104,7 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
 1. Salvar as alterações e "commitar".
     * git add
         ~~~cmd
-        git add <nomedoarquivo>
+        git add <nome_do_arquivo>
         ~~~
         ou, para adcionar todos os arquivos modificados:
         ~~~cmd
@@ -116,12 +116,12 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
         ~~~
     * git commit (para salvar as alterações)
         ~~~cmd
-        git commit -m "mensagemdacommit"
+        git commit -m "mensagem_da_commit"
         ~~~
 2. Subir as alterações para o repositório remoto.
     * git push
         ~~~cmd
-        git push origin <nomedabranch>
+        git push origin <nome_da_branch>
         ~~~
 *  OBS: Sempre estar salvando e commitando para não perder as alterações feitas, mas não é necessário subir rapidamente as alterações.
 # Uso a partir da segunda vez
@@ -129,4 +129,40 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
     * git pull
     ~~~cmd
     git pull
+    ~~~
+2. Realizar os mesmos passos do tópico anterior.
+    * OBS: Seria bom a partir de modificar arquivos mais profundamente, criar uma nova branch apenas para modificações específicas que podem gerar um futuro problema se caso fosse no repositório principal direto.
+# Criar uma nova Branch
+1. Pimeiro verificar as branchs já existentes.
+    * git branch
+    ~~~cmd
+    git branch -a
+    ~~~
+2. Caso sua branch já exista e você não está nela.
+    * git checkout
+    ~~~cmd
+    git checkout <nome_da_branch>
+    ~~~
+    Caso ela não exista.
+    * git branch
+    ~~~cmd
+    git branch -M <nome_da_branch>
+    ~~~
+# Utilizando uma Branch separada
+1. Estando na branch, podem utilizar os comandos anteriores normalmente, porém trocando os nomes da main pela a separada.
+<br>
+    Ex:
+    ~~~cmd
+    git push origin <nome_da_outra_branch>
+    ~~~
+2. Para juntar a separada com a main após todos os testes.
+    * Usar o git add e commit para salvar as alterações.
+    
+    * Juntar a main primeiramente no repositório local.
+    ~~~cmd
+    git pull origin main
+    ~~~
+    * Caso as alterações dêem certo, <strong>APENAS COM PERMISSÂO E VERIFICAÇÂO DO DUQUE OU SEMI-DUQUE</strong>, juntar a branch separada com a main no repositório remoto. (após salvar tudo e utilizar o git add e commit de tudo)
+    ~~~cmd
+    git push origin main
     ~~~
