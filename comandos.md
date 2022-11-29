@@ -149,15 +149,14 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
     git branch -M <nome_da_branch>
     ~~~
 # Utilizando uma Branch separada
-1. Estando na branch, podem utilizar os comandos anteriores normalmente, porém trocando os nomes da main pela a separada.
-<br>
+1. Estando na branch, podem utilizar os comandos anteriores normalmente, porém trocando os nomes da main pela a separada. <br>
     Ex:
     ~~~cmd
     git push origin <nome_da_outra_branch>
     ~~~
 2. Para juntar a separada com a main após todos os testes.
     * Usar o git add e commit para salvar as alterações.
-    
+
     * Juntar a main primeiramente no repositório local.
     ~~~cmd
     git pull origin main
