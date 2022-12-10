@@ -1,0 +1,270 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #151515;
+}
+
+.cabecalho{
+  width: 100%;
+  height: 120px;
+  background-color: #111111;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#botao-1{
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 20%;
+  height: 50%;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-left: 300px;
+  cursor: pointer;
+}
+
+#botao-2{
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 20%;
+  height: 50%;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.botao-1:hover {
+  background-color: #e83678;
+  transition: 0.2s;
+}
+
+.botao-2:hover {
+  background-color: #e83678;
+  transition: 0.2s;
+}
+
+.header-left{
+  width: 50%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-right{
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#logo{
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 75px;
+  height: 75px;
+}
+
+.barra-pesquisa{
+  width: 580px;
+  height: 50px;
+  border-radius: 32px;
+  margin-top: 30px;
+  margin-left: 70px;
+  background:url(./img/lupa.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 4%;
+  background-color: #FFCECE;
+  background-position-x: 97%;
+  padding-left: 20px;
+  border: 0 none;
+  outline: 0;
+}  
+
+.barra-pesquisa::placeholder {
+  font-size: 16px;
+  text-align: start;
+}
+
+main {
+  display: flex;
+}
+
+  #main-left{
+  width: 50%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+#main-right{
+  width: 50%;
+  margin: 0;
+  padding: 0px;
+}
+
+#imagem-inicial{
+  width: 800px;
+  height: 700px;
+}
+
+#texto-inicial{
+  color: #ffffff;
+  margin-left: 22px;
+  margin-top: 150px;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+#main-scroll-right{
+  width: 50%;
+  margin: 0;
+  padding: 0px;
+  height: 300px;
+}
+
+#texto-secundario{
+  color: #ffffff;
+  margin-left: 22px;
+  margin-top: 70px;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+#texto-scroll{
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  color: #ffffff;
+  margin-left: 50px;
+  margin-top: 70px;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+#botao-cadastro{
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 200px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-left: 300px;
+  cursor: pointer;
+}
+
+.botao-cadastro:hover {
+  background-color: #e83678;
+  transition: 0.2s;
+}
+
+#texto-intermedio{
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 35px;
+  margin-top: 20px;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+#botao-navegar{
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 200px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 15px;
+  margin-left: 300px;
+  cursor: pointer;
+}
+
+.botao-navegar:hover {
+  background-color: #e83678;
+  transition: 0.2s;
+}
+
+#imagem-scroll{
+  width: 700px;
+  height: 650px;
+  align-self: center;
+}
+
+.capa {
+  position: absolute;
+  width: 270px;
+  height: 480px;
+  margin: 0;
+}
+
+.introducao {
+  margin-left:456px;
+  margin-top:66px;
+}
+
+.capa #jogo {
+  position: absolute;
+  border-radius: 10px;
+  display: block;
+  margin: 2.5%;
+  margin-top: 2.5%;
+  width: 95%;
+  height: 460px;
+}
+
+.capa #borda {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#descricao {
+  margin-left: 290px;
+}
+
+#titulo-jogo {
+  color: #ffffff;
+  margin-left: 30px;
+  font-size: 24px;
+  text-align: start;
+  text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#descricao p {
+  color: #ffffff;
+  margin-left: 22px;
+  margin-top: 10px;
+  margin-right: 400px;
+  font-size: 18px;
+  text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+#line {
+  border: 10px solid aliceblue;
+}
+
+

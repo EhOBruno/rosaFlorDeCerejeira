@@ -1,0 +1,16 @@
+.capa {
+    position: relative;
+    width: 270.12px;
+    height: 480px;
+    top: 0px;
+}
+
+.capa #borda {
+    position: absolute;
+    top: 0px;
+}
+
+.capa-imagem {
+    margin-left: 456px;
+    margin-top:266px;
+}

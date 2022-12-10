@@ -1,0 +1,197 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #151515
+}
+
+header {
+    width: 100%;
+    height: 6vw;
+    position: fixed;
+    display: flex;
+    background-color: #111111;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 2;
+}
+
+#page {
+    width: 100%;
+    height: 100vh;
+}
+
+#logo {
+    margin-left: 2vw;
+    width: 4vw;
+    height: 4vw;
+
+}
+
+.barra-pesquisa {
+    border-radius: 32px;
+    width: 28vw;
+    height: 3vw;
+    margin-left: 5vw;
+    background: url("./img/lupa.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #FFCECE;
+    background-size: 6%;
+    background-position-x: 97%;
+    padding: 0 4%;
+    border: 0 none;
+    outline: 0;
+    font-size: 1vw;
+}
+
+.perfil {
+    width: 15vw;
+    margin-left: 42vw;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.perfil img {
+    margin-left: 10%;
+}
+
+.botao {
+    width: 25vw;
+    display: flex;
+    margin-left: 30vw;
+    justify-content: space-between;
+}
+
+#botao-1, #botao-2 {
+    background-color: #D7336E;
+    color: aliceblue;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 15px;
+    font-size: 1vw;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#botao-1:hover, #botao-2:hover {
+    background-color: #e83678;
+    transition: 0.2s;
+}
+  
+
+.introducao {
+    display: flex;
+    width: 100%;
+    height: 35vw;
+    z-index: 1;
+}
+
+.capa {
+    position: relative;
+    margin-top: 12%;
+    width: 14vw;
+    height: 42vh;
+    margin-left: 20vw;
+    z-index: 1;
+}
+
+#jogo {
+    position: absolute;
+    width: 95%;
+    height: auto;
+    margin: 4% 2%;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.descricao {
+    margin-top: 11%;
+    margin-left: 2%;
+    width: 50vw;
+}
+
+.descricao h3 {
+    color: aliceblue;
+    font-size: 2vw;
+    text-align: start;
+    text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.descricao p {
+    color: aliceblue;
+    margin-left: 2%;
+    font-size: 1.5vw;
+    text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.requisitos {
+    margin-top: 5vw;
+    width: 100%;
+}
+
+#line {
+    background-color: aliceblue;
+    height: 0.8vw;
+    width: 90vw;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.tabela {
+    width: 80vw;
+    margin: 4% auto;
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+.req {
+    border: 1px solid aliceblue;
+    border-radius: 20px;
+}
+
+.req {
+    padding: 1% 2vw;
+    width: 50%;
+}
+
+.req h2 {
+    color: aliceblue;
+    font-family: 'Opens Sans', sans-serif;
+    text-align: center;
+}
+
+.req li {
+    margin-top: 2%;
+    font-size: 1vw;
+}
+
+.seus-interesses h2 {
+    margin-top: 2%;
+    margin-left: 6%;
+    text-decoration: underline 4px;
+}
+
+.jgs-interesses {
+    display: flex;
+    width: 98%;
+    margin: 6% 1% 4%;
+    justify-content: space-between;
+}
+
+.jg img {
+    width: 14vw;
+    height: 35vh;
+}
