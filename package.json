@@ -1,0 +1,27 @@
+{
+  "name": "rosaflordecerejeira",
+  "version": "1.0.0",
+  "description": "Project Sakura Flower, one site for games and more!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EhOBruno/rosaFlorDeCerejeira.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EhOBruno/rosaFlorDeCerejeira/issues"
+  },
+  "homepage": "https://github.com/EhOBruno/rosaFlorDeCerejeira#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
