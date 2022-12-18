@@ -1,0 +1,268 @@
+html,body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #151515;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  width: 100vw;
+  height: 13vh;
+  background-color: #111111;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.button-1{
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 20%;
+  height: 45%;
+  font-size: 1.2em;
+  font-weight: bolder;
+  border-radius: 15px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.button-2{
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 20%;
+  height: 45%;
+  font-size: 1.2em;
+  font-weight: bolder;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+
+.botao-1:hover {
+  background-color: #e83678;
+  transition: 0.2s;
+}
+
+.botao-2:hover {
+  background-color: #e83678;
+  transition: 0.2s;
+}
+
+.header-left{
+  width: 50%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-right{
+  display: flex;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  justify-content: right;
+  margin-right: 30px;
+}
+
+
+#logo{
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 15%;
+  height: 65%;
+}
+
+.barra-pesquisa{
+  width: 50%;
+  height: 45%;
+  border-radius: 32px;
+  margin-top: 30px;
+  margin-left: 2%;
+  background:url(./img/lupa.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 4%;
+  background-color: #FFCECE;
+  background-position-x: 97%;
+  padding-left: 20px;
+  border: 0 none;
+  outline: 0;
+  font-size: 1.2em;
+
+}  
+
+.barra-pesquisa::placeholder {
+  font-size: 1em;
+  text-align: start;
+}
+
+main {
+  display: flex;
+}
+
+#main-left{
+  width: 50%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+#main-right{
+  width: 50%;
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+#imagem-inicial{
+  width: 100%;
+  height: 100%;
+}
+
+#texto-inicial{
+  color: #ffffff;
+  margin-left: 22px;
+  font-size: 2.6em;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#texto-secundario{
+  color: #ffffff;
+  font-size: 1.3em;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+#main-scroll{
+  margin-top: 15vh;
+}
+#main-scroll-left{
+  width: 50%;
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+#main-scroll-right{
+  width: 50%;
+  margin: 0;
+  padding: 0px;
+  display: flex;
+}
+
+#texto-scroll{
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.6em;
+  color: #ffffff;
+  margin-left: 50px;
+  margin-top: 70px;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+#botao-cadastro{
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 20%;
+  height: 10%;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#texto-intermedio{
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.2em;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+#botao-navegar{
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 20%;
+  height: 10%;
+  font-size: 1em;
+  font-weight: bolder;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+
+.botao-cadastro:hover {
+  background-color: #e83678;
+  transition: 0.2s;
+}
+
+.botao-navegar:hover {
+  background-color: #e83678;
+  transition: 0.2s;
+}
+
+#imagem-scroll{
+  width: 100%;
+  height: 100%;
+  align-self: center; 
+}
+
+footer{
+  display: flex;
+  justify-content:space-between;
+  width: 100vw;
+  height: 10vh;
+  background-color: #111111;
+  margin-top: 50px;
+}
+
+#image-footer{
+  width: 5%;
+  align-items: left;
+}
+
+/* @media screen and (min-width : 768px){
+  header{
+    height: 120px;
+    height: 60vh;
+    justify-content: space-around;
+    flex-direction: row; 
+  }
+} */
+
+
+
+
+
