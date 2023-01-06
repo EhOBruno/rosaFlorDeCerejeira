@@ -53,14 +53,25 @@ header {
 
 .perfil {
     width: 15vw;
+    height: 100%;
     margin-left: 42vw;
     display: flex;
     align-items: center;
     justify-content: end;
+    font-size: 1vw;
+}
+
+.perfil a {
+    margin-left: 10%;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .perfil img {
-    margin-left: 10%;
+    width: 60%;
+    height: auto;
 }
 
 .botao {
@@ -120,7 +131,7 @@ header {
 
 .descricao h3 {
     color: aliceblue;
-    font-size: 2vw;
+    font-size: 3vw;
     text-align: start;
     text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
     font-weight: 800;
@@ -171,6 +182,7 @@ header {
     color: aliceblue;
     font-family: 'Opens Sans', sans-serif;
     text-align: center;
+    font-size: 2vw;
 }
 
 .req li {
@@ -181,7 +193,8 @@ header {
 .seus-interesses h2 {
     margin-top: 2%;
     margin-left: 6%;
-    text-decoration: underline 4px;
+    text-decoration: underline;
+    font-size: 1vw;
 }
 
 .jgs-interesses {
@@ -193,5 +206,94 @@ header {
 
 .jg img {
     width: 14vw;
-    height: 35vh;
+    height: 20vw;
+}
+
+#setinha {
+    align-self: center;
+}
+
+#setinha img {
+    width: 10vw;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        height: 12vw;
+        position: fixed;
+        display: flex;
+        background-color: #111111;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 2;
+    }
+
+    #logo {
+        margin-left: 2vw;
+        width: 8vw;
+        height: 8vw;
+        
+    }
+    
+    .barra-pesquisa {
+        border-radius: 32px;
+        width: 28vw;
+        height: 3vw;
+        margin-left: 5vw;
+        background: url("./img/lupa.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: #FFCECE;
+        background-size: 6%;
+        background-position-x: 97%;
+        padding: 0 4%;
+        border: 0 none;
+        outline: 0;
+        font-size: 1vw;
+    }
+    
+    .perfil {
+        width: 15vw;
+        height: 100%;
+        margin-left: 42vw;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        font-size: 1vw;
+    }
+    
+    .perfil a {
+        margin-left: 10%;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .perfil img {
+        width: 60%;
+        height: auto;
+        
+    }
+    
+    .botao {
+        width: 25vw;
+        display: flex;
+        margin-left: 30vw;
+        justify-content: space-between;
+    }
+    
+    #botao-1, #botao-2 {
+        background-color: #D7336E;
+        color: aliceblue;
+        width: 10vw;
+        height: 3vw;
+        border-radius: 15px;
+        font-size: 1vw;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    
 }
