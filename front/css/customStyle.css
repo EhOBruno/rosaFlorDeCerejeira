@@ -1,0 +1,10 @@
+Body {
+    margin-left: 320px !important;
+    margin-right: 320px !important;
+}
+
+.col {
+    background-color: red;
+    height: 100vh;
+    margin: 1em
+}
