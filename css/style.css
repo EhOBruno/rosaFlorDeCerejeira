@@ -393,11 +393,13 @@ form img{
 
 .footer{
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   width: 100vw;
-  height: 10vh;
-  background-color: #73404A;
-  border-color: red;
+  height: auto;
+  background-color: #111111;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto auto 0 auto;
 }
 
 .footer-left{
@@ -414,6 +416,43 @@ form img{
   padding: 0;
 
 }
+
+#logo-unb{
+  width: 50px;
+  height: 50px;
+  margin-left: 5vw;
+}
+
+
+#footer-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#button-page-up {
+  width: 50px;
+  height: 50px;
+  margin-right: 5vw;
+  background-image: url("../img/page-up.svg");
+  background-position: center;
+  border-radius: 10px;
+}
+
+#sobre-footer {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+#feudo-footer {
+  color: white;
+  text-decoration: none;
+}
+
+
 .input-login{
   width: 25%;
   padding: 1.5%;
@@ -447,6 +486,5 @@ form img{
   text-decoration: underline;
   color: #e83678;
 }
-
 
 
