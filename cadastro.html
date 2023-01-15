@@ -36,30 +36,27 @@
   </header>
   <main class="main-cadastro">
     <h1>Cadastre-se</h1>
+    
+    <div class="form-floating mb-4 mt-4" style="width: 25em;">
+      <input class="input form-control bg-danger-subtle border-light-subtle " placeholder="Nome" id="floatingInput">
+      <label class="text-danger form-label" for="floatingInput">Nome</label>
+    </div>
 
-    <form>
-      <div class="form-floating mb-4 mt-4" style="width: 25em;">
-        <input class="input form-control bg-danger-subtle border-light-subtle " placeholder="Nome" id="floatingInput">
-        <label class="text-danger form-label" for="floatingInput">Nome</label>
-      </div>
+    <div class="form-floating mb-4" style="width: 25em;">
+      <input type="email" class="input form-control bg-danger-subtle border-light-subtle  " id="floatingInput" placeholder="name@example.com">
+      <label class="text-danger form-label" for="floatingInput">E-mail</label>
+    </div>
+    
+    <div class="form-floating mb-4" style="width: 25em;">
+      <input type="password" class="input form-control bg-danger-subtle border-light-subtle " id="floatingPassword" placeholder="Password">
+      <label class="text-danger form-label" for="floatingPassword">Senha</label>
+    </div>
+    
+    <div class="form-floating mb-4" style="width: 25em;">
+      <input type="password" class="input form-control bg-danger-subtle" id="floatingPassword" placeholder="Password">
+      <label class="text-danger form-label" for="floatingPassword">Confirme a senha</label>
+    </div>
 
-      <div class="form-floating mb-4" style="width: 25em;">
-        <input type="email" class="input form-control bg-danger-subtle border-light-subtle  " id="floatingInput"
-          placeholder="name@example.com">
-        <label class="text-danger form-label" for="floatingInput">E-mail</label>
-      </div>
-
-      <div class="form-floating mb-4" style="width: 25em;">
-        <input type="password" class="input form-control bg-danger-subtle border-light-subtle " id="floatingPassword"
-          placeholder="Password">
-        <label class="text-danger form-label" for="floatingPassword">Senha</label>
-      </div>
-
-      <div class="form-floating mb-4" style="width: 25em;">
-        <input type="password" class="input form-control bg-danger-subtle" id="floatingPassword" placeholder="Password">
-        <label class="text-danger form-label" for="floatingPassword">Confirme a senha</label>
-      </div>
-    </form>
 
     <div class="form-floating mb-4" style="width: 25em;">
       <select class="form-select bg-danger-subtle rounded-3" id="floatingSelect"
@@ -71,7 +68,7 @@
       </select>
       <label class="text-danger" for="floatingSelect">Processador</label>
     </div>
-
+    
     <!-- <form action="" class="forms">
       <input type="Nome" class="input-2" placeholder="Processador">
       <button class="botao-escolha"></button>
