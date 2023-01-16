@@ -6,8 +6,8 @@ document.write(`
         placeholder="Pesquise aqui...">
     </div>
     <div class="header-right-all">
-    <button class="button-1">Sobre</button> 
-    <button class="button-2" onclick="irParaLogin()">Login</button> 
+        <button class="button-1">Sobre</button> 
+        <button class="button-2" onclick="irParaLogin()">Login</button> 
     </div>
 </header>
     `)
