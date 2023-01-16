@@ -159,7 +159,7 @@ O comando `git merge <nome_da_branch>` faz a mescla da branch atual com a branch
 
     * Juntar a main primeiramente no repositório local.
     ~~~cmd
-    git pull origin main
+    git pull origin main --allow-unrelated-histories
     ~~~
     * Caso as alterações dêem certo, <strong>APENAS COM PERMISSÂO E VERIFICAÇÂO DO DUQUE OU SEMI-DUQUE</strong>, juntar a branch separada com a main no repositório remoto. (após salvar tudo e utilizar o git add e commit de tudo)
     ~~~cmd
