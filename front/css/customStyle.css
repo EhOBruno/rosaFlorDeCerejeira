@@ -30,7 +30,7 @@ main {
     justify-content: space-between;
   
   }
-  
+ 
   .button-1{
     background-color: #D7336E;
     color: #ffffff;
@@ -81,6 +81,30 @@ main {
     padding: 0;
     justify-content: right;
     margin-right: 30px;
+  }
+
+  .header-right-all-login {
+    display: flex;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    justify-content: right;
+    margin-right: 30px;
+    align-items: center;
+  }
+
+  .header-right-all-login a {
+    text-decoration: none;
+    color: aliceblue;
+  }
+
+  #username {
+    margin-right: 1em;
+  }
+
+  #img-user {
+    width: 5em;
+    height: auto;
   }
   
   .header-right-2{
