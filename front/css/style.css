@@ -142,7 +142,8 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 3em;
+  padding-top: 3em;
+  background-color: #151515;
 }
 
 .main-login{

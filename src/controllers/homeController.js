@@ -1,13 +1,10 @@
+const path = require('path');
+
 exports.paginaInicial = (req, res) => {
-    res.send(`
-    <form action="/" method="POST">
-    Nome: <input type="text" name="qlqrcoisa"><br>
-    <button>enviar</button>
-    </form>
-    `);
+    res.render('../front/index.html');
 };
 
 
-exports.trataPost = (req, res) => {
+/*exports.trataPost = (req, res) => {
     res.send('Tratamento de post');
-};
+};*/
