@@ -20,6 +20,12 @@ const userSchema = new Schema({
     },
     processador: {
         type: String
+    },
+    gpu: {
+        type: String
+    },
+    ram: {
+        type: String
     }
 }, {timestamps: true});
 

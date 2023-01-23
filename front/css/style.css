@@ -350,8 +350,8 @@ h1{
 }
  
 form{
-  background-color:#FFCECE !important;
-  display: flex !important;
+  background-color:#151515 !important;
+  /*display: flex !important;*/
   justify-content: space-between !important;
 } 
 
