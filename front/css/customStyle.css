@@ -366,3 +366,22 @@ main {
 .checkbox input:checked ~.checkmark:after {
   display: block;
 }
+
+.botao-filtrar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 5em;
+}
+
+.botao-filtrar input {
+  justify-content: center;
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 25%;
+  height: 45%;
+  font-size: 1.2em;
+  border-radius: 15px;
+  border: #D7336E;
+  cursor: pointer;
+}
