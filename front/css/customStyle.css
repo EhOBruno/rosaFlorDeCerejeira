@@ -284,3 +284,9 @@ main {
   color: white;
   text-decoration: none;
 }
+
+.filtros {
+  background-color: #111111;
+  height: 100vh;
+
+}
