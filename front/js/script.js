@@ -6,6 +6,20 @@ function irParaLogin() {
   window.location.assign("./login.html")
 }
 
+function irParaConfig() {
+  window.location.assign("./configurações.html")
+}
+
+function irParaConta() {
+  window.location.assign("./minhaconta.html")
+}
+
+function irParaFav() {
+  window.location.assign("./favoritos.html")
+}
+
+
+
 
 let mybutton = document.getElementById("button-page-up");
 
