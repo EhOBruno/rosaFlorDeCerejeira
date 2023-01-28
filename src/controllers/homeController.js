@@ -1,5 +1,3 @@
-const path = require('path');
-
 exports.paginaInicial = (req, res) => {
     res.render('../front/index.html');
 };
