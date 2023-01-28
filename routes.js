@@ -33,5 +33,6 @@ route.get('/jogo', jogoController.paginaJogo)
 //Rota filtros
 
 route.get('/filtros', filtrosController.paginaFiltros)
+route.post('/filtros', filtrosController.getGames)
 
 module.exports = route;
