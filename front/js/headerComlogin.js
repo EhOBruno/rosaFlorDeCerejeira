@@ -1,7 +1,7 @@
 document.write(`
 <header class="header">
   <div class="header-left">
-    <img src="../front/img/logo.svg" alt="logo" class="logo">
+    <img src="../front/img/logo.svg" alt="logo" onclick="window.location.assign('./')" class="logo">
     <input type="text" class="barra-pesquisa" 
       placeholder="Pesquise aqui...">
   </div>
