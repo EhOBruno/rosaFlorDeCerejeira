@@ -8,8 +8,9 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 const dotenv = require('dotenv').config();
 
+mongoose.set("strictQuery", true);
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.qvti9so.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true })
+mongoose.connect(`mongodb+srv://necivaldo:0ldXupvJhMa5nTjj@cluster0.qvti9so.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true })
     .then(()=>{
         app.emit('pronto')
     })
