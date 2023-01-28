@@ -79,6 +79,20 @@ body{
   margin-right: 30px;
 }
 
+.header-right-all-login a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+#username {
+  margin-right: 1em;
+}
+
+#img-user {
+  width: 5em;
+    height: auto;
+}
+  
 .header-right-2{
   display: flex;
   width: 50%;
@@ -111,7 +125,6 @@ body{
   border: 0 none;
   outline: 0;
   font-size: 1.2em;
-
 }  
 
 .barra-pesquisa::placeholder {

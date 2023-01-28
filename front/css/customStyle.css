@@ -169,7 +169,7 @@ main {
   text-align: start;
   text-shadow: 0px 4px 4px rgba(227, 227, 227, 0.25);
   font-weight: 100;
-  /* text-align: center; */
+  text-align: center;
   margin-top: 0.5em;
   margin-left: 1.9em;
 }
@@ -283,4 +283,110 @@ main {
 #feudo-footer {
   color: white;
   text-decoration: none;
+}
+
+#main-filtros {
+  width: 20%;
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 0;
+}
+
+.filtros {
+  background-color: #111111;
+  height: 100%;
+  border-radius: 20px;
+  padding: 0 1em 1em 1em;
+}
+
+.filtros-generos {
+  width: auto;
+  color: aliceblue;
+  justify-content: center;
+}
+
+.filtros-generos h4 {
+  width: 100%;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#e83678;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  color: #DB7093;
+  padding-left: 1.5em;
+  font-size: 1em;
+  
+}
+
+.checkbox input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 2px;
+}
+
+.checkbox:hover input ~.checkmark {
+  background-color: #ccc;
+}
+
+.checkbox input:checked ~.checkmark {
+  background-color: #FF69B4;
+}
+
+.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid aliceblue;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox input:checked ~.checkmark:after {
+  display: block;
+}
+
+.botao-filtrar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 5em;
+}
+
+.botao-filtrar input {
+  justify-content: center;
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 25%;
+  height: 45%;
+  font-size: 1.2em;
+  border-radius: 15px;
+  border: #D7336E;
+  cursor: pointer;
+}
+
+.imgs-filtros {
+  justify-content: space-between;
 }
