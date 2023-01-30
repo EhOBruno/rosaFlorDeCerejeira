@@ -11,33 +11,41 @@ getJogos = async () => {
 
 teste = () => {
 
-    let nome = document.getElementById('imputName').name
-    let email = document.getElementById('imputEmail').name
-    let password = document.getElementById('imputPassword').name
-    let passwordConf = document.getElementById('imputPasswordConf').name
-    let processador = document.getElementById('imputProcessador').name
-    let gpu = document.getElementById('imputGpu').name
-    let ram = document.getElementById('imputRam').name
+    nome = document.getElementById('imputName').value
+    email = document.getElementById('imputEmail').value
+    password = document.getElementById('imputPassword').value
+    passwordConf = document.getElementById('imputPasswordConf').value
+    processador = document.getElementById('imputProcessador').value
+    gpu = document.getElementById('imputGpu').value
+    ram = document.getElementById('imputRam').value
+    
     const data = {
         "name": nome,
         "email": email,
         "pswd": password,
         "passwordConf": passwordConf,
         "gpu": gpu,
-        "ram": ram
+        "ram": ram,
+        "processador": processador 
     }
+    console.log("maldita data", data)
     req(data)
-    
 }
 
 async function req(data){
     console.log("que", data)
-    await fetch("/cadastro", {method:'POST', body: data})
-    .then(response => response.json())
+    
+    await fetch("/lixo", {
+        method:'POST', 
+        headers:{          
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.text())
     .then(jazonprovResponse => {
        console.log(jazonprovResponse);
        alert(jazonprovResponse)
-   }); 
-
-   alert('foi')
+   });
 }

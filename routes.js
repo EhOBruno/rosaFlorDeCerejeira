@@ -7,12 +7,12 @@ const sobreController = require('./src/controllers/sobreController');
 const cadastroController = require('./src/controllers/cadastroController');
 const loginController = require('./src/controllers/loginController');
 
+const bodyParser = require('body-parser');
+route.use(bodyParser.json());
+
 //Rotas Pagina Inicial
 route.get('/', homeController.paginaInicial);
 //route.post('/', homeController.trataPost);
-
-
-
 
 //Rota Sobre
 route.get('/sobre', sobreController.paginaSobre);
@@ -20,7 +20,7 @@ route.get('/sobre', sobreController.paginaSobre);
 
 //Rota Cadastro
 route.get('/cadastro', cadastroController.pageRegister)
-route.post('/cadastro', cadastroController.register)
+route.post('/lixo', cadastroController.register)
 
 //Rota Login
 
