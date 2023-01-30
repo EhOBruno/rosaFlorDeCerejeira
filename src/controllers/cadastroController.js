@@ -8,6 +8,7 @@ exports.pageRegister = ('/cadastro', (req, res) => {
 
 
 exports.register = async (req, res, next) => {
+    console.log(req.body)
 
     try {
         // check for existing email
@@ -30,7 +31,6 @@ exports.register = async (req, res, next) => {
         })
         user.save()
             .then(user => {
-                res.redirect('/')
                 console.log(user)
             })
             .catch(error => {
