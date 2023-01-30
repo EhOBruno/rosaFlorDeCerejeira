@@ -20,7 +20,7 @@ route.get('/sobre', sobreController.paginaSobre);
 
 //Rota Cadastro
 route.get('/cadastro', cadastroController.pageRegister)
-route.post('/lixo', cadastroController.register)
+route.post('/cadastro', cadastroController.register)
 
 //Rota Login
 

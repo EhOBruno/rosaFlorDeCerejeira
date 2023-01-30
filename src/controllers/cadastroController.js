@@ -7,17 +7,15 @@ exports.pageRegister = ('/cadastro', (req, res) => {
 })
 
 
-exports.register = ('/lixo', async (req, res) => {
+exports.register = ('/cadastro', async (req, res) => {
     try {
-        // check for existing email
-        console.log("body", req.body)
         let user = await User.findOne({ email: req.body.email });
-        console.log(user)
-        if (user) {
+        console.log("usuario", user)
+        if ( user) {
             return res.status(401).send("Given email already exist!")
         }
         else if (req.body.pswd !== req.body.confirmpass) {
-            res.status(400).sen("Senhas não conferem")
+            return res.status(200).send("Senhas não conferem")
         }
 
         const hashedPass = await bcrypt.hash(req.body.pswd, 10)
@@ -42,6 +40,7 @@ exports.register = ('/lixo', async (req, res) => {
         res.status(200).send("Usuario cadastrado")
     }
     catch (err) {
+        console.log(err)
         res.status(500).json("porra")
     }
 })
