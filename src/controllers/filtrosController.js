@@ -12,7 +12,7 @@ exports.getJogos = ('/getJogos', (req, res) => {
                 console.log(error)
             }
             else {
-                console.log(data)
+                // console.log(data)
                 res.json(data)
             }
         })

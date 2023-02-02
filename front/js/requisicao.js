@@ -1,11 +1,35 @@
 getJogos = async () => {
     await fetch("/getJogos", { method: 'GET' })
-        .then(response => response.text())
+        .then(response => response.json())
         .then(jazonprovResponse => {
-            console.log("teste", JSON.parse(jazonprovResponse));
+            jazon = jazonprovResponse
+            console.log(jazon)
         });
+    // console.log(JSON.stringify(jazon))
+    addCardGame(jazon)
 }
-getJogos()
+
+addCardGame = (jazon) => {
+    tamanho = jazon["length"]
+    gameimg = jazon['0']['img']
+    gameNome = jazon['0']['nome']
+    card = cardGame(gameimg, gameNome)
+    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
+    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
+    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
+    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
+    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
+    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
+    
+}
+
+cardGame = (gameimg, gameNome) => {
+    return '<div class="col-4 cardjogo mb-4">' +
+        '<a href="./jogo.html"><img class="imgjogo"' +
+        'src="' + gameimg + '"></a>' +
+        '<p class="gamename">' + gameNome + '</p>' +
+        '</div>'
+}
 
 sendForm = () => {
     nome = document.getElementById('imputName').value
@@ -69,28 +93,28 @@ async function sendReq(data) {
         })
             .then(response => {
                 let resStatus = response.status
-                if (resStatus === 401){
+                if (resStatus === 401) {
                     return Swal.fire({
                         icon: 'error',
                         title: 'Esse email já está cadastrado.',
                         confirmButtonText: 'Voltar',
                     })
                 }
-                else if(resStatus === 200){
+                else if (resStatus === 200) {
                     return Swal.fire({
                         icon: 'success',
                         title: 'Cadastro realizado com sucesso!',
                         confirmButtonText: ':D',
                     })
                 }
-                else{
+                else {
                     return Swal.fire({
                         icon: 'error',
                         title: 'Ocorreu um erro no sistema D:',
                         text: 'Por favor, tente novamente mais tarde.',
                         confirmButtonText: 'Ok',
                     })
-                } 
+                }
             })
     } catch (err) {
         console.log(err)

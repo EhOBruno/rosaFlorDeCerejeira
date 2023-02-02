@@ -26,11 +26,12 @@
 </head>
 
 <body>
-    
+
     <script src="./js/headerSemlogin.js"></script>
-    <div style="display: flex;">
-        <main id="main-filtros">
-            <div class="row col-12 filtros">
+    <script>getJogos()</script>
+    <div class="row mb-3">
+        <main class="col-3" id="main-filtros" style="margin-right: 40px;">
+            <div class="filtros">
                 <div class="filtros-generos">
                     <h4 id="generos-title">GÊNEROS DE JOGOS</h4>
                 </div>
@@ -40,37 +41,37 @@
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <div class="generos mt-2">
+                <div class="generos mt-4">
                     <label class="checkbox">RPG
                         <input type="checkbox" id="checkbox-rpg">
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <div class="generos mt-2">
+                <div class="generos mt-4">
                     <label class="checkbox">Estratégia
                         <input type="checkbox" id="checkbox-estrategia">
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <div class="generos mt-2">
+                <div class="generos mt-4">
                     <label class="checkbox">Aventura
                         <input type="checkbox" id="checkbox-aventura">
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <div class="generos mt-2">
+                <div class="generos mt-4">
                     <label class="checkbox">Simulação
                         <input type="checkbox" id="checkbox-simulacao">
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <div class="generos mt-2">
+                <div class="generos mt-4">
                     <label class="checkbox">Esporte
                         <input type="checkbox" id="checkbox-esporte">
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <div class="generos mt-2">
+                <div class="generos mt-4">
                     <label class="checkbox">Corrida
                         <input type="checkbox" id="checkbox-corrida">
                         <span class="checkmark"></span>
@@ -111,76 +112,24 @@
                 </div>
             </div>
         </main>
-        <div class="jogos" style="margin: 0 6em;">
-            <div class="imgs-filtros row justify-content-sopace-around mt-5" style="gap: 0;">
-                <div class="col-2 col-xxl-3" style="margin-left: 4em; text-align: center;">
-                    <div style="border-radius: 20px; overflow: hidden;">
-                        <a href="./Rainbow-Six.html"><img class="gameImg"
-                            src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671482386" alt=""></a>
-                    </div>
-                    <a href="./Rainbow-Six.html" style="text-decoration: none;"><p class="mt-2" style="color: aliceblue; font-weight: bold;">Tom Clancy's Rainbow Six® Siege</p></a>
-                </div>
-                <div class="col-2 col-xxl-3" style="text-align: center;">
-                    <div style="border-radius: 20px; overflow: hidden;">
-                        <a href="./Rainbow-Six.html"><img class="gameImg"
-                            src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671482386" alt=""></a>
-                    </div>
-                    <a href="./Rainbow-Six.html" style="text-decoration: none;"><p class="mt-2" style="color: aliceblue; font-weight: bold;">Tom Clancy's Rainbow Six® Siege</p></a>
-                </div>
-                <div class="col-2 col-xxl-3" style="margin-right: 4em; text-align: center;">
-                    <div style="border-radius: 20px; overflow: hidden;">
-                        <a href="./Rainbow-Six.html"><img class="gameImg"
-                            src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671482386" alt=""></a>
-                    </div>
-                    <a href="./Rainbow-Six.html" style="text-decoration: none;"><p class="mt-2" style="color: aliceblue; font-weight: bold;">Tom Clancy's Rainbow Six® Siege</p></a>
-                </div>
+        <div id="jogos" class="jogos col-9">
+            <br>
+            <div id="gamestable" class="row">
+                 
             </div>
-            <div class="imgs-filtros row justify-content-sopace-around mt-5">
-                <div class="col-2 col-xxl-3" style="margin-left: 4em; text-align: center;">
-                    <div style="border-radius: 20px; overflow: hidden;">
+
+            <!-- <div class="col-4">
+                <a href="./jogo.html"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1593500/header.jpg?t=1650554440"></a>
+            </div> -->
+            <!-- <div class="imgs-filtros row justify-content-sopace-around mt-5" style="gap: 0;">
+                <div class="col-4 col-xxl-3" style="margin-left: 4em; text-align: center;">
+                    <div style="border-radius: 40px; overflow: hidden;">
                         <a href="./Rainbow-Six.html"><img class="gameImg"
-                            src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671482386" alt=""></a>
+                            src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671484386" alt=""></a>
                     </div>
-                    <a href="./Rainbow-Six.html" style="text-decoration: none;"><p class="mt-2" style="color: aliceblue; font-weight: bold;">Tom Clancy's Rainbow Six® Siege</p></a>
+                    <a href="./Rainbow-Six.html" style="text-decoration: none;"><p class="mt-4" style="color: aliceblue; font-weight: bold;">Tom Clancy's Rainbow Six® Siege</p></a>
                 </div>
-                <div class="col-2 col-xxl-3" style="text-align: center;">
-                    <div style="border-radius: 20px; overflow: hidden;">
-                        <a href="./Rainbow-Six.html"><img class="gameImg"
-                            src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671482386" alt=""></a>
-                    </div>
-                    <a href="./Rainbow-Six.html" style="text-decoration: none;"><p class="mt-2" style="color: aliceblue; font-weight: bold;">Tom Clancy's Rainbow Six® Siege</p></a>
-                </div>
-                <div class="col-2 col-xxl-3" style="margin-right: 4em; text-align: center;">
-                    <div style="border-radius: 20px; overflow: hidden;">
-                        <a href="./Rainbow-Six.html"><img class="gameImg"
-                            src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671482386" alt=""></a>
-                    </div>
-                    <a href="./Rainbow-Six.html" style="text-decoration: none;"><p class="mt-2" style="color: aliceblue; font-weight: bold;">Tom Clancy's Rainbow Six® Siege</p></a>
-                </div>
-            </div>
-            <div class="imgs-filtros row justify-content-sopace-around mt-5">
-                <div class="col-2 col-xxl-3" style="margin-left: 4em; text-align: center;">
-                    <div style="border-radius: 20px; overflow: hidden;">
-                        <a href="./Rainbow-Six.html"><img class="gameImg"
-                            src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671482386" alt=""></a>
-                    </div>
-                    <a href="./Rainbow-Six.html" style="text-decoration: none;"><p class="mt-2" style="color: aliceblue; font-weight: bold;">Tom Clancy's Rainbow Six® Siege</p></a>
-                </div>
-                <div class="col-2 col-xxl-3" style="text-align: center;">
-                    <div style="border-radius: 20px; overflow: hidden;">
-                        <a href="./Rainbow-Six.html"><img class="gameImg"
-                            src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671482386" alt=""></a>
-                    </div>
-                    <a href="./Rainbow-Six.html" style="text-decoration: none;"><p class="mt-2" style="color: aliceblue; font-weight: bold;">Tom Clancy's Rainbow Six® Siege</p></a>
-                </div>
-                <div class="col-2 col-xxl-3" style="margin-right: 4em; text-align: center;">
-                    <div style="border-radius: 20px; overflow: hidden;">
-                        <a href="./Rainbow-Six.html"><img class="gameImg"
-                            src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671482386" alt=""></a>
-                    </div>
-                    <a href="./Rainbow-Six.html" style="text-decoration: none;"><p class="mt-2" style="color: aliceblue; font-weight: bold;">Tom Clancy's Rainbow Six® Siege</p></a>
-                </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <br>

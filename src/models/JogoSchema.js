@@ -12,9 +12,12 @@ const jogoSchema = new Schema({
     genero: {
         type: Array,
     },
+    lancamento: {
+        type: String,
+    },
     nome: {
         type: String,
     }
 });
 
-module.exports = jogo = mongoose.model('Jogo', jogoSchema);
+module.exports = mongoose.model('Jogo', jogoSchema, "Jogos");

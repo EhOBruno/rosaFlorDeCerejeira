@@ -10,7 +10,7 @@ const dotenv = require('dotenv').config();
 
 mongoose.set("strictQuery", true);
 
-mongoose.connect(`mongodb+srv://necivaldo:0ldXupvJhMa5nTjj@cluster0.qvti9so.mongodb.net/seupctanka%3F`, { useNewUrlParser: true })
+mongoose.connect(`mongodb+srv://necivaldo:0ldXupvJhMa5nTjj@cluster0.qvti9so.mongodb.net/JogosDB`, { useNewUrlParser: true })
     .then(()=>{
         app.emit('pronto')
     })
