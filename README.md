@@ -1,1 +1,1 @@
-Project Sakura Flower, one site for games and more!
+Project Sakura Flower, a site for games and more!
