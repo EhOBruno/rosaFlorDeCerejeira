@@ -9,23 +9,57 @@ getJogos = async () => {
     addCardGame(jazon)
 }
 
+postJogoData = async (idSteam) => {
+    await fetch("/postJogoData", {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({'idSteam': idSteam})
+    })
+        .then(response => response.json())
+        .then(jazonprovResponse => {
+            jazonJogoData = jazonprovResponse
+        });
+        // console.log(jazonJogoData[idSteam]['data']['name'])
+        document.getElementById('titleJogo').append(jazonJogoData[idSteam]['data']['name'])
+        document.getElementById('descriJogo').append(jazonJogoData[idSteam]['data']['short_description'])
+
+    }
+
+
 addCardGame = (jazon) => {
     tamanho = jazon["length"]
-    gameimg = jazon['0']['img']
-    gameNome = jazon['0']['nome']
-    card = cardGame(gameimg, gameNome)
-    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
-    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
-    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
-    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
-    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
-    document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
-    
+
+    // for(let key in jazon){
+    //     for()
+    // }
+    for (i = 0; i < tamanho; i++) {
+        gameimg = jazon[i]['img']
+        gameNome = jazon[i]['nome']
+        idSteam = jazon[i]['idSteam']
+
+        card = cardGame(gameimg, gameNome, idSteam)
+        document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
+    }
 }
 
-cardGame = (gameimg, gameNome) => {
+clickjogo = (idSteam) => {
+    sessionStorage.setItem('idSteam', idSteam)
+    window.location.assign("./jogo")
+}
+
+reqSteam = () => {
+    idSteam = sessionStorage.getItem('idSteam')
+    postJogoData(idSteam)
+}
+
+
+cardGame = (gameimg, gameNome, idSteam) => {
+    idSteam = "'" + idSteam + "'"
     return '<div class="col-4 cardjogo mb-4">' +
-        '<a href="./jogo.html"><img class="imgjogo"' +
+        '<a onclick="clickjogo(' + idSteam + ')"><img class="imgjogo"' +
         'src="' + gameimg + '"></a>' +
         '<p class="gamename">' + gameNome + '</p>' +
         '</div>'

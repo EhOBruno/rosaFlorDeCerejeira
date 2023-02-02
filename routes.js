@@ -26,6 +26,7 @@ route.get('/login', loginController.paginaLogin)
 
 //Rota jogo
 route.get('/jogo', jogoController.paginaJogo)
+route.post('/postJogoData', jogoController.postJogoData)
 
 //Rota filtros
 route.get('/filtros', filtrosController.paginaFiltros)
