@@ -7,7 +7,7 @@ getJogos = async () => {
         });
 }
 
-// getJogos()
+getJogos()
 
 teste = () => {
 
