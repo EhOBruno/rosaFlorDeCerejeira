@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
 
 const Schema = mongoose.Schema;
 
-const JogoSchema = new Schema({
+const jogoSchema = new Schema({
     idSteam: {
         type: String,
     },
@@ -18,5 +17,4 @@ const JogoSchema = new Schema({
     }
 });
 
-
-module.exports = Jogo = mongoose.model('Jogo', JogoSchema, 'Jogos');
+module.exports = jogo = mongoose.model('Jogo', jogoSchema);

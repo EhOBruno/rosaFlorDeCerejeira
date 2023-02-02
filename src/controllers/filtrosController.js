@@ -1,21 +1,24 @@
 const mongoose = require('mongoose');
-const JogoSchema = require('../models/jogos');
-
-
+const Jogo = require('../models/JogoSchema');
 
 exports.paginaFiltros = (req, res) => {
     res.render('../front/filtros.html');
 };
 
-exports.getGames = (req, res) => {
-    const UsersData = JogoSchema
-    console.log(UsersData.find((error, data) => {
-        if (error) {
-            console.log(error)
-        }
-        else {
-            console.log(data)
-            res.json(data)
-        }
-    }))
-};
+exports.getJogos = ('/getJogos', (req, res) => {
+    try {
+        Jogo.find((error, data) => {
+            if (error) {
+                console.log(error)
+            }
+            else {
+                console.log(data)
+                res.json(data)
+            }
+        })
+    }
+    catch (err) {
+        console.log(err)
+        res.status(500).send("err", err).send()
+    }
+});

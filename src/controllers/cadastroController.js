@@ -1,25 +1,19 @@
-const path = require('path');
-const User = require('../models/User');
+const User = require('../models/UserSchema');
 const bcrypt = require('bcrypt');
 
 exports.pageRegister = ('/cadastro', (req, res) => {
     res.render('../front/cadastro.html')
 })
 
-
 exports.register = ('/cadastro', async (req, res) => {
     try {
-        let user = await User.findOne({ email: req.body.email });
-        console.log("usuario", user)
-        if ( user) {
-            return res.status(401).send("Given email already exist!")
-        }
-        else if (req.body.pswd !== req.body.confirmpass) {
-            return res.status(200).send("Senhas não conferem")
+        let userAlreadyExists = await User.findOne({ email: req.body.email });
+
+        if (userAlreadyExists) {
+            return res.status(401).send()
         }
 
         const hashedPass = await bcrypt.hash(req.body.pswd, 10)
-
 
         user = new User({
             name: req.body.name,
@@ -37,11 +31,11 @@ exports.register = ('/cadastro', async (req, res) => {
             .catch(error => {
                 console.log(error)
             })
-        res.status(200).send("Usuario cadastrado")
+        res.status(200).send()
     }
     catch (err) {
         console.log(err)
-        res.status(500).json("porra")
+        res.status(500).send("err", err).send()
     }
 })
 

@@ -1,16 +1,13 @@
 getJogos = async () => {
-    await fetch("/filtros", { method: 'POST' })
+    await fetch("/getJogos", { method: 'GET' })
         .then(response => response.text())
         .then(jazonprovResponse => {
-            console.log(jazonprovResponse);
-            alert(jazonprovResponse)
+            console.log("teste", JSON.parse(jazonprovResponse));
         });
 }
-
 getJogos()
 
-teste = () => {
-
+sendForm = () => {
     nome = document.getElementById('imputName').value
     email = document.getElementById('imputEmail').value
     password = document.getElementById('imputPassword').value
@@ -19,7 +16,36 @@ teste = () => {
     gpu = document.getElementById('imputGpu').value
     ram = document.getElementById('imputRam').value
 
-    const data = {
+    if (nome === '') {
+        return Swal.fire({
+            title: 'Por favor, digite seu nome',
+            icon: 'warning',
+            confirmButtonText: 'Voltar',
+        })
+    }
+    else if (email === '') {
+        return Swal.fire({
+            title: 'Por favor, digite seu e-mail',
+            icon: 'warning',
+            confirmButtonText: 'Voltar',
+        })
+    }
+    else if (password === '') {
+        return Swal.fire({
+            icon: 'warning',
+            title: 'Por favor, digite uma senha.',
+            confirmButtonText: 'Voltar',
+        })
+    }
+    else if (password !== passwordConf) {
+        return Swal.fire({
+            icon: 'warning',
+            title: 'As senhas não conferem.',
+            confirmButtonText: 'Voltar',
+        })
+    }
+
+    const inputData = {
         "name": nome,
         "email": email,
         "pswd": password,
@@ -28,27 +54,45 @@ teste = () => {
         "ram": ram,
         "processador": processador
     }
-    console.log("maldita data", data)
-    req(data)
+    sendReq(inputData)
 }
 
-async function req(data) {
-    console.log("que", data)
+async function sendReq(data) {
     try {
         await fetch("/cadastro", {
             method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(data)
         })
-            .then(response => response.text())
-            .then(jazonprovResponse => {
-                console.log(jazonprovResponse);     
-            });
-            Swal.fire(
-                'Good job!',
-                'You clicked the button!',
-                'success'
-            )
-    }catch(err){
+            .then(response => {
+                let resStatus = response.status
+                if (resStatus === 401){
+                    return Swal.fire({
+                        icon: 'error',
+                        title: 'Esse email já está cadastrado.',
+                        confirmButtonText: 'Voltar',
+                    })
+                }
+                else if(resStatus === 200){
+                    return Swal.fire({
+                        icon: 'success',
+                        title: 'Cadastro realizado com sucesso!',
+                        confirmButtonText: ':D',
+                    })
+                }
+                else{
+                    return Swal.fire({
+                        icon: 'error',
+                        title: 'Ocorreu um erro no sistema D:',
+                        text: 'Por favor, tente novamente mais tarde.',
+                        confirmButtonText: 'Ok',
+                    })
+                } 
+            })
+    } catch (err) {
         console.log(err)
     }
 }

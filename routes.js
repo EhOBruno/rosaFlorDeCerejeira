@@ -17,22 +17,18 @@ route.get('/', homeController.paginaInicial);
 //Rota Sobre
 route.get('/sobre', sobreController.paginaSobre);
 
-
 //Rota Cadastro
 route.get('/cadastro', cadastroController.pageRegister)
 route.post('/cadastro', cadastroController.register)
 
 //Rota Login
-
 route.get('/login', loginController.paginaLogin)
 
 //Rota jogo
-
 route.get('/jogo', jogoController.paginaJogo)
 
 //Rota filtros
-
 route.get('/filtros', filtrosController.paginaFiltros)
-route.post('/filtros', filtrosController.getGames)
+route.get('/getJogos', filtrosController.getJogos)
 
 module.exports = route;
