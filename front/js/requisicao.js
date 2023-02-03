@@ -24,8 +24,18 @@ postJogoData = async (idSteam) => {
         });
         // console.log(jazonJogoData[idSteam]['data']['name'])
         document.getElementById('titleJogo').append(jazonJogoData[idSteam]['data']['name'])
-        document.getElementById('descriJogo').append(jazonJogoData[idSteam]['data']['short_description'])
+        document.getElementById('descriJogo').insertAdjacentHTML("beforeend", jazonJogoData[idSteam]['data']['short_description'])
+        document.getElementById('imgJogo').src=jazonJogoData[idSteam]['data']['header_image']
+        document.getElementById('videoJogo').src=jazonJogoData[idSteam]['data']['movies'][0]['mp4']['480']
 
+        minimos  = jazonJogoData[idSteam]['data']['pc_requirements']['minimum']
+        var resultado = minimos.substr(0,7)+" class='requisitos'"+minimos.substr(2,minimos.length);
+        document.getElementById('minimum').insertAdjacentHTML("beforeend",resultado)
+        
+
+        recomendados  = jazonJogoData[idSteam]['data']['pc_requirements']['recommended']
+        var resultado = recomendados.substr(0,7)+" class='requisitos'"+recomendados.substr(2, recomendados.length);
+        document.getElementById('recommended').insertAdjacentHTML("beforeend",resultado)
     }
 
 
