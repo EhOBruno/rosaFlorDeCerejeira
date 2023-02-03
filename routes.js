@@ -6,6 +6,8 @@ const jogoController = require('./src/controllers/jogoController');
 const sobreController = require('./src/controllers/sobreController');
 const cadastroController = require('./src/controllers/cadastroController');
 const loginController = require('./src/controllers/loginController');
+const minhacontaController = require('./src/controllers/minhacontaController');
+const configuracoesController = require('./src/controllers/configuracoesController');
 
 const bodyParser = require('body-parser');
 route.use(bodyParser.json());
@@ -32,5 +34,12 @@ route.post('/postJogoData', jogoController.postJogoData)
 //Rota filtros
 route.get('/filtros', filtrosController.paginaFiltros)
 route.get('/getJogos', filtrosController.getJogos)
+
+//Rota conta
+route.get('/minhaconta', minhacontaController.paginaConta);
+
+//Rota config
+route.get('/configuracoes', configuracoesController.paginaConfiguracoes);
+
 
 module.exports = route;

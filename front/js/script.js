@@ -6,6 +6,20 @@ function irParaLogin() {
   window.location.assign("./login")
 }
 
+function irParaConfig() {
+  window.location.assign("./configuracoes")
+}
+
+function irParaConta() {
+  window.location.assign("./minhaconta")
+}
+
+function irParaFav() {
+  window.location.assign("./favoritos.html")
+}
+
+
+
 
 let mybutton = document.getElementById("button-page-up");
 
@@ -20,7 +34,7 @@ let mybutton = document.getElementById("button-page-up");
 // }
 
 function topFunction() {
-  document.body.scrollTop = 0; 
+  document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 
