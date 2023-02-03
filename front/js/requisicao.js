@@ -8,7 +8,42 @@ getJogos = async () => {
     // console.log(JSON.stringify(jazon))
     addCardGame(jazon)
 }
+addCardGame = (jazon) => {
+    tamanho = jazon["length"]
 
+    // for(let key in jazon){
+    //     for()
+    // }
+    for (i = 0; i < tamanho; i++) {
+        gameimg = jazon[i]['img']
+        gameNome = jazon[i]['nome']
+        idSteam = jazon[i]['idSteam']
+
+        card = cardGame(gameimg, gameNome, idSteam)
+        document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
+    }
+}
+cardGame = (gameimg, gameNome, idSteam) => {
+    idSteam = "'" + idSteam + "'"
+    return '<div class="col-4 cardjogo mb-4">' +
+        '<a onclick="clickjogo(' + idSteam + ')"><img class="imgjogo"' +
+        'src="' + gameimg + '"></a>' +
+        '<p class="gamename">' + gameNome + '</p>' +
+        '</div>'
+}
+
+
+clickjogo = (idSteam) => {
+    sessionStorage.setItem('idSteam', idSteam)
+    window.location.assign("./jogo")
+}
+
+
+reqSteam = () => {
+    idSteam = sessionStorage.getItem('idSteam')
+    postJogoData(idSteam)
+    addcardCarousel()
+}
 postJogoData = async (idSteam) => {
     await fetch("/postJogoData", {
         method: 'POST',
@@ -37,34 +72,6 @@ postJogoData = async (idSteam) => {
     var resultado = recomendados.substr(0, 7) + " class='requisitos'" + recomendados.substr(2, recomendados.length);
     document.getElementById('recommended').insertAdjacentHTML("beforeend", resultado)
 }
-
-
-addCardGame = (jazon) => {
-    tamanho = jazon["length"]
-
-    // for(let key in jazon){
-    //     for()
-    // }
-    for (i = 0; i < tamanho; i++) {
-        gameimg = jazon[i]['img']
-        gameNome = jazon[i]['nome']
-        idSteam = jazon[i]['idSteam']
-
-        card = cardGame(gameimg, gameNome, idSteam)
-        document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
-    }
-}
-
-clickjogo = (idSteam) => {
-    sessionStorage.setItem('idSteam', idSteam)
-    window.location.assign("./jogo")
-}
-
-reqSteam = () => {
-    idSteam = sessionStorage.getItem('idSteam')
-    postJogoData(idSteam)
-    addcardCarousel()
-}
 addcardCarousel = async () => {
     await fetch("/getJogos", { method: 'GET' })
         .then(response => response.json())
@@ -85,6 +92,7 @@ addcardCarousel = async () => {
 
 }
 
+
 cardCarousel = (gameimg,idSteam) => {
     idSteam = "'" + idSteam + "'"
     return '<div class="imgC">' +
@@ -92,19 +100,6 @@ cardCarousel = (gameimg,idSteam) => {
         'src="' + gameimg + '"></a>' +
         '</div>'
 }
-
-
-cardGame = (gameimg, gameNome, idSteam) => {
-    idSteam = "'" + idSteam + "'"
-    return '<div class="col-4 cardjogo mb-4">' +
-        '<a onclick="clickjogo(' + idSteam + ')"><img class="imgjogo"' +
-        'src="' + gameimg + '"></a>' +
-        '<p class="gamename">' + gameNome + '</p>' +
-        '</div>'
-}
-
-
-
 
 
 sendLoginForm = () => {
@@ -132,7 +127,6 @@ sendLoginForm = () => {
     }
     sendLoginReq(inputData)  
 }
-
 async function sendLoginReq(data) {
     try {
         await fetch("/loginAuth", {
@@ -176,9 +170,6 @@ async function sendLoginReq(data) {
         console.log(err)
     }
 }
-
-
-
 
 
 sendCadastroForm = () => {
@@ -230,7 +221,6 @@ sendCadastroForm = () => {
     }
     sendCadastroReq(inputData)
 }
-
 async function sendCadastroReq(data) {
     try {
         await fetch("/cadastro", {
