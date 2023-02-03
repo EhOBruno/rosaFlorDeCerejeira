@@ -20,12 +20,12 @@ exports.loginAuth = ('/loginAuth', async (req, res) => {
             return res.status(401).send()
         }
         else {
-            return res.status(200)
+            return res.status(200).send()
         }
     }
     catch (err) {
     console.log(err)
-    res.status(500).send("err", err).send()
+     return res.status(500).send("err", err).send()
 }
 
 })
