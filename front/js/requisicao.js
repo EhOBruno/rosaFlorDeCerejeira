@@ -1,3 +1,5 @@
+
+// tela filtros
 getJogos = async () => {
     await fetch("/getJogos", { method: 'GET' })
         .then(response => response.json())
@@ -31,18 +33,16 @@ cardGame = (gameimg, gameNome, idSteam) => {
         '<p class="gamename">' + gameNome + '</p>' +
         '</div>'
 }
-
-
 clickjogo = (idSteam) => {
     sessionStorage.setItem('idSteam', idSteam)
     window.location.assign("./jogo")
 }
 
-
+// tela jogo
 reqSteam = () => {
     idSteam = sessionStorage.getItem('idSteam')
     postJogoData(idSteam)
-    addcardCarousel()
+    // addcardCarousel()
 }
 postJogoData = async (idSteam) => {
     await fetch("/postJogoData", {
@@ -72,36 +72,35 @@ postJogoData = async (idSteam) => {
     var resultado = recomendados.substr(0, 7) + " class='requisitos'" + recomendados.substr(2, recomendados.length);
     document.getElementById('recommended').insertAdjacentHTML("beforeend", resultado)
 }
-addcardCarousel = async () => {
-    await fetch("/getJogos", { method: 'GET' })
-        .then(response => response.json())
-        .then(jazonprovResponse => {
-            jazon = jazonprovResponse
-            console.log(jazon)
-        });
-    tamanho = jazon["length"]
-    // document.getElementById("teste2").insertAdjacentHTML("beforeend", '<div id="carousel" class="carousel mb-5 mt-4" style="margin: 0 100px;">>')
-    for (i = 1; i < 11; i++) {
-        numero = Math.floor(Math.random() * tamanho)
-        gameimg = jazon[numero]['img']
-        idSteam = jazon[numero]['idSteam']
+// addcardCarousel = async () => {
+//     await fetch("/getJogos", { method: 'GET' })
+//         .then(response => response.json())
+//         .then(jazonprovResponse => {
+//             jazon = jazonprovResponse
+//             console.log(jazon)
+//         });
+//     tamanho = jazon["length"]
+//     // document.getElementById("teste2").insertAdjacentHTML("beforeend", '<div id="carousel" class="carousel mb-5 mt-4" style="margin: 0 100px;">>')
+//     for (i = 1; i < 11; i++) {
+//         numero = Math.floor(Math.random() * tamanho)
+//         gameimg = jazon[numero]['img']
+//         idSteam = jazon[numero]['idSteam']
 
-        document.getElementById(i).src=gameimg
-    }
-    // document.getElementById("teste2").insertAdjacentHTML("beforeend", '</div>')
+//         document.getElementById(i).src=gameimg
+//     }
+//     // document.getElementById("teste2").insertAdjacentHTML("beforeend", '</div>')
 
-}
+// }
 
+// cardCarousel = (gameimg,idSteam) => {
+//     idSteam = "'" + idSteam + "'"
+//     return '<div class="imgC">' +
+//         '<a onclick="clickjogo(' + idSteam + ')"><img class="imgjogo"' +
+//         'src="' + gameimg + '"></a>' +
+//         '</div>'
+// }
 
-cardCarousel = (gameimg,idSteam) => {
-    idSteam = "'" + idSteam + "'"
-    return '<div class="imgC">' +
-        '<a onclick="clickjogo(' + idSteam + ')"><img class="imgjogo"' +
-        'src="' + gameimg + '"></a>' +
-        '</div>'
-}
-
-
+// LOGIN
 sendLoginForm = () => {
     email = document.getElementById('floatingInput').value
     password = document.getElementById('floatingPassword').value
@@ -171,7 +170,7 @@ async function sendLoginReq(data) {
     }
 }
 
-
+// CADASTRO
 sendCadastroForm = () => {
     nome = document.getElementById('imputName').value
     email = document.getElementById('imputEmail').value
