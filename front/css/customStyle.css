@@ -403,3 +403,7 @@ main {
 .imgs-filtros {
   justify-content: space-between;
 }
+
+.imgjogo{
+  cursor: pointer;
+}
