@@ -75,7 +75,85 @@ cardGame = (gameimg, gameNome, idSteam) => {
         '</div>'
 }
 
-sendForm = () => {
+
+
+
+
+sendLoginForm = () => {
+    email = document.getElementById('floatingInput').value
+    password = document.getElementById('floatingPassword').value
+
+    if (email === '') {
+        return Swal.fire({
+            title: 'Por favor, digite seu e-mail',
+            icon: 'warning',
+            confirmButtonText: 'Voltar',
+        })
+    }
+    else if (password === '') {
+        return Swal.fire({
+            icon: 'warning',
+            title: 'Por favor, digite sua senha.',
+            confirmButtonText: 'Voltar',
+        })
+    }
+
+    const inputData = {
+        "email": email,
+        "password": password,
+    }
+    sendLoginReq(inputData)  
+}
+
+async function sendLoginReq(data) {
+    try {
+        await fetch("/loginAuth", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                let resStatus = response.status
+                if (resStatus === 404) {
+                    return Swal.fire({
+                        icon: 'error',
+                        title: 'Esse usuário não está cadastrado.',
+                        confirmButtonText: 'Voltar',
+                    })
+                }
+                else if (resStatus === 401) {
+                    return Swal.fire({
+                        icon: 'error',
+                        title: 'Senha inválida.',
+                        confirmButtonText: 'Voltar',
+                    })
+                }
+                else if (resStatus === 200) {
+                    sessionStorage.setItem('Logado', true)
+                    return window.location.assign('./filtros.html')
+                }
+                else {
+                    return Swal.fire({
+                        icon: 'error',
+                        title: 'Ocorreu um erro no sistema D:',
+                        text: 'Por favor, tente novamente mais tarde.',
+                        confirmButtonText: 'Ok',
+                    })
+                }
+            })
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+
+
+
+
+sendCadastroForm = () => {
     nome = document.getElementById('imputName').value
     email = document.getElementById('imputEmail').value
     password = document.getElementById('imputPassword').value
@@ -122,10 +200,10 @@ sendForm = () => {
         "ram": ram,
         "processador": processador
     }
-    sendReq(inputData)
+    sendCadastroReq(inputData)
 }
 
-async function sendReq(data) {
+async function sendCadastroReq(data) {
     try {
         await fetch("/cadastro", {
             method: 'POST',

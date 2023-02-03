@@ -23,6 +23,7 @@ route.post('/cadastro', cadastroController.register)
 
 //Rota Login
 route.get('/login', loginController.paginaLogin)
+route.post('/loginAuth', loginController.loginAuth)
 
 //Rota jogo
 route.get('/jogo', jogoController.paginaJogo)
