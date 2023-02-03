@@ -235,20 +235,29 @@ async function sendCadastroReq(data) {
                 let resStatus = response.status
                 if (resStatus === 401) {
                     return Swal.fire({
+                        background: '#111111',
                         icon: 'error',
                         title: 'Esse email já está cadastrado.',
                         confirmButtonText: 'Voltar',
                     })
                 }
                 else if (resStatus === 200) {
+                    sessionStorage.setItem('Logado', true)
                     return Swal.fire({
+                        background: '#111111',
+                        allowOutsideClick: false,
                         icon: 'success',
                         title: 'Cadastro realizado com sucesso!',
                         confirmButtonText: ':D',
-                    })
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.assign('./filtros')
+                        }
+                      })
                 }
                 else {
                     return Swal.fire({
+                        background: '#111111',
                         icon: 'error',
                         title: 'Ocorreu um erro no sistema D:',
                         text: 'Por favor, tente novamente mais tarde.',
