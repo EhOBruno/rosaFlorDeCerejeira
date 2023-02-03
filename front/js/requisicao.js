@@ -16,27 +16,27 @@ postJogoData = async (idSteam) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'idSteam': idSteam})
+        body: JSON.stringify({ 'idSteam': idSteam })
     })
         .then(response => response.json())
         .then(jazonprovResponse => {
             jazonJogoData = jazonprovResponse
         });
-        // console.log(jazonJogoData[idSteam]['data']['name'])
-        document.getElementById('titleJogo').append(jazonJogoData[idSteam]['data']['name'])
-        document.getElementById('descriJogo').insertAdjacentHTML("beforeend", jazonJogoData[idSteam]['data']['short_description'])
-        document.getElementById('imgJogo').src=jazonJogoData[idSteam]['data']['header_image']
-        document.getElementById('videoJogo').src=jazonJogoData[idSteam]['data']['movies'][0]['mp4']['480']
+    // console.log(jazonJogoData[idSteam]['data']['name'])
+    document.getElementById('titleJogo').append(jazonJogoData[idSteam]['data']['name'])
+    document.getElementById('descriJogo').insertAdjacentHTML("beforeend", jazonJogoData[idSteam]['data']['short_description'])
+    document.getElementById('imgJogo').src = jazonJogoData[idSteam]['data']['header_image']
+    document.getElementById('videoJogo').src = jazonJogoData[idSteam]['data']['movies'][0]['mp4']['480']
 
-        minimos  = jazonJogoData[idSteam]['data']['pc_requirements']['minimum']
-        var resultado = minimos.substr(0,7)+" class='requisitos'"+minimos.substr(2,minimos.length);
-        document.getElementById('minimum').insertAdjacentHTML("beforeend",resultado)
-        
+    minimos = jazonJogoData[idSteam]['data']['pc_requirements']['minimum']
+    var resultado = minimos.substr(0, 7) + " class='requisitos'" + minimos.substr(2, minimos.length);
+    document.getElementById('minimum').insertAdjacentHTML("beforeend", resultado)
 
-        recomendados  = jazonJogoData[idSteam]['data']['pc_requirements']['recommended']
-        var resultado = recomendados.substr(0,7)+" class='requisitos'"+recomendados.substr(2, recomendados.length);
-        document.getElementById('recommended').insertAdjacentHTML("beforeend",resultado)
-    }
+
+    recomendados = jazonJogoData[idSteam]['data']['pc_requirements']['recommended']
+    var resultado = recomendados.substr(0, 7) + " class='requisitos'" + recomendados.substr(2, recomendados.length);
+    document.getElementById('recommended').insertAdjacentHTML("beforeend", resultado)
+}
 
 
 addCardGame = (jazon) => {
@@ -63,6 +63,34 @@ clickjogo = (idSteam) => {
 reqSteam = () => {
     idSteam = sessionStorage.getItem('idSteam')
     postJogoData(idSteam)
+    addcardCarousel()
+}
+addcardCarousel = async () => {
+    await fetch("/getJogos", { method: 'GET' })
+        .then(response => response.json())
+        .then(jazonprovResponse => {
+            jazon = jazonprovResponse
+            console.log(jazon)
+        });
+    tamanho = jazon["length"]
+    // document.getElementById("teste2").insertAdjacentHTML("beforeend", '<div id="carousel" class="carousel mb-5 mt-4" style="margin: 0 100px;">>')
+    for (i = 1; i < 11; i++) {
+        numero = Math.floor(Math.random() * tamanho)
+        gameimg = jazon[numero]['img']
+        idSteam = jazon[numero]['idSteam']
+
+        document.getElementById(i).src=gameimg
+    }
+    // document.getElementById("teste2").insertAdjacentHTML("beforeend", '</div>')
+
+}
+
+cardCarousel = (gameimg,idSteam) => {
+    idSteam = "'" + idSteam + "'"
+    return '<div class="imgC">' +
+        '<a onclick="clickjogo(' + idSteam + ')"><img class="imgjogo"' +
+        'src="' + gameimg + '"></a>' +
+        '</div>'
 }
 
 
