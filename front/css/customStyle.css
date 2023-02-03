@@ -195,6 +195,9 @@ main {
   height: 185px;
 }
 
+.jogosContainer{
+  width: 100% !important;
+}
 
 .gamename {
   color: aliceblue;
@@ -399,4 +402,8 @@ main {
 
 .imgs-filtros {
   justify-content: space-between;
+}
+
+.imgjogo{
+  cursor: pointer;
 }
