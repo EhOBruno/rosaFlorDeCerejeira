@@ -407,3 +407,12 @@ main {
 .imgjogo{
   cursor: pointer;
 }
+
+.imgC{
+  width: unset !important;
+}
+
+.slick-track{
+  display: flex;
+  gap: 3rem;
+}
