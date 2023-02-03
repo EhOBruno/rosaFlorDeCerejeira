@@ -195,6 +195,9 @@ main {
   height: 185px;
 }
 
+.jogosContainer{
+  width: 100% !important;
+}
 
 .gamename {
   color: aliceblue;
