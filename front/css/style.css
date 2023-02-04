@@ -409,6 +409,19 @@ form img{
   cursor: pointer;
 }
 
+#botao-salvar{
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 13%;
+  height: 35%;
+  font-size: 1.2em;
+  font-weight: bolder;
+  border-radius: 15px;
+  margin-top: 2em;
+  cursor: pointer;
+  display: none;
+}
+
 .footer{
   display: flex;
   flex-direction: row;
@@ -581,7 +594,7 @@ form img{
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
   }
   
   
@@ -619,7 +632,7 @@ form img{
     flex-direction: column;
     width: 20%;
     height: 100vh;
-    margin-left: 15px;
+    margin-right: 30px;
   }
   
   .buttons {
@@ -665,5 +678,3 @@ form img{
   .img-game{
     margin-bottom: 2%;
   }
-  
-  

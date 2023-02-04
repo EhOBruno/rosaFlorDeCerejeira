@@ -7,17 +7,50 @@ function irParaLogin() {
 }
 
 function irParaConfig() {
-  window.location.assign("./configuracoes")
+  document.getElementById("name-input").disabled = false
+  document.getElementById("email-input").disabled = false
+  document.getElementById("processor-input").disabled = false
+  document.getElementById("driver-input").disabled = false
+  document.getElementById("ram-input").disabled = false
+  document.getElementById("pass-input").disabled = false
+  document.getElementById("confirmpass-input").disabled = false
+
+  document.getElementById("name-input").style.setProperty('background-color', 'white', 'important')
+  document.getElementById("email-input").style.setProperty('background-color', 'white', 'important')
+  document.getElementById("processor-input").style.setProperty('background-color', 'white', 'important')
+  document.getElementById("driver-input").style.setProperty('background-color', 'white', 'important')
+  document.getElementById("ram-input").style.setProperty('background-color', 'white', 'important')
+  document.getElementById("pass-input").style.setProperty('background-color', 'white', 'important')
+  document.getElementById("confirmpass-input").style.setProperty('background-color', 'white', 'important')
+  document.getElementById("minhaconta-botao").style.setProperty('background-color', '#2D2D2D', 'important')
+  document.getElementById("minhaconta-botao").style.setProperty('color', 'white', 'important')
+  document.getElementById("configuracoes-botao").style.setProperty('background-color', 'white', 'important')
+  document.getElementById("configuracoes-botao").style.setProperty('color', '#E83678', 'important')
+  document.getElementById("botao-salvar").style.display = 'block'
 }
 
 function irParaConta() {
-  window.location.assign("./minhaconta")
-}
+  document.getElementById("name-input").disabled = true
+  document.getElementById("email-input").disabled = true
+  document.getElementById("processor-input").disabled = true
+  document.getElementById("driver-input").disabled = true
+  document.getElementById("ram-input").disabled = true
+  document.getElementById("pass-input").disabled = true
+  document.getElementById("confirmpass-input").disabled = true
 
-function irParaFav() {
-  window.location.assign("./favoritos.html")
+  document.getElementById("name-input").style.setProperty('background-color', '#f8d7da', 'important')
+  document.getElementById("email-input").style.setProperty('background-color', '#f8d7da', 'important')
+  document.getElementById("processor-input").style.setProperty('background-color', '#f8d7da', 'important')
+  document.getElementById("driver-input").style.setProperty('background-color', '#f8d7da', 'important')
+  document.getElementById("ram-input").style.setProperty('background-color', '#f8d7da', 'important')
+  document.getElementById("pass-input").style.setProperty('background-color', '#f8d7da', 'important')
+  document.getElementById("confirmpass-input").style.setProperty('background-color', '#f8d7da', 'important')
+  document.getElementById("minhaconta-botao").style.setProperty('background-color', 'white', 'important')
+  document.getElementById("minhaconta-botao").style.setProperty('color', '#E83678', 'important')
+  document.getElementById("configuracoes-botao").style.setProperty('background-color', '#2D2D2D', 'important')
+  document.getElementById("configuracoes-botao").style.setProperty('color', 'white', 'important')
+  document.getElementById("botao-salvar").style.display = 'none'
 }
-
 
 
 

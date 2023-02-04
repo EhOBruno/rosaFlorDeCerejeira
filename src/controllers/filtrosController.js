@@ -6,8 +6,9 @@ exports.paginaFiltros = (req, res) => {
 };
 
 exports.getJogos = ('/getJogos', (req, res) => {
+    const filtro = {genero: "Ação"}
     try {
-        Jogo.find((error, data) => {
+        Jogo.find(filtro, (error, data) => {
             if (error) {
                 console.log(error)
             }

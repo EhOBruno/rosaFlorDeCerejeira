@@ -27,13 +27,6 @@
 <body>
     <script src="./js/header.js"></script>
     <main class="main-perfil">
-        <div class="side-bar">
-            <div class="buttons">
-                <button class="side-bar-buttons" onclick="irParaConta()">MINHA CONTA</button>
-                <button class="side-bar-buttons" onclick="irParaConfig()">CONFIGURAÇÕES</button>
-                <button class="side-bar-buttons" onclick="irParaFav()">JOGOS FAVORITOS</button>
-            </div>
-        </div>
 
         <div class="div-configs">
             <div class="div-configs-filha"></div>
@@ -41,34 +34,56 @@
 
             <div class="inputs-test-2">
                 <div class="form-floating mb-4 mt-4" style="width: 25em;">
-                    <input class="input form-control bg-danger-subtle border-light-subtle " placeholder="Nome"
-                        id="floatingInput">
+                    <input class="input form-control bg-danger-subtle border-light-subtle" placeholder="Nome"
+                        disabled id="name-input">
                     <label class="text-danger form-label" for="floatingInput">Nome</label>
                 </div>
 
                 <div class="form-floating mb-4" style="width: 25em;">
-                    <input type="email" class="input form-control bg-danger-subtle border-light-subtle  "
-                        id="floatingInput" placeholder="name@example.com">
+                    <input type="email" class="input form-control bg-danger-subtle border-light-subtle  " disabled
+                        id="email-input" placeholder="name@example.com">
                     <label class="text-danger form-label" for="floatingInput">E-mail</label>
                 </div>
 
                 <div class="form-floating mb-4" style="width: 25em;">
-                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle "
-                        id="floatingPassword" placeholder="Password">
+                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle " disabled
+                        id="processor-input" placeholder="Password">
                     <label class="text-danger form-label" for="floatingPassword">Processador</label>
                 </div>
                 <div class="form-floating mb-4" style="width: 25em;">
-                    <input type="email" class="input form-control bg-danger-subtle border-light-subtle  "
-                        id="floatingInput" placeholder="name@example.com">
+                    <input type="email" class="input form-control bg-danger-subtle border-light-subtle  " disabled
+                        id="driver-input" placeholder="name@example.com">
                     <label class="text-danger form-label" for="floatingInput">Placa de vídeo</label>
                 </div>
                 <div class="form-floating mb-4" style="width: 25em;">
-                    <input type="email" class="input form-control bg-danger-subtle border-light-subtle  "
-                        id="floatingInput" placeholder="name@example.com">
+                    <input type="email" class="input form-control bg-danger-subtle border-light-subtle  " disabled
+                        id="ram-input" placeholder="name@example.com">
                     <label class="text-danger form-label" for="floatingInput">Memória RAM</label>
                 </div>
+                <div class="form-floating mb-4" style="width: 25em;">
+                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle  " disabled
+                        id="pass-input" placeholder="Senha">
+                    <label class="text-danger form-label" for="floatingInput">Senha</label>
+                </div>
+                <div class="form-floating mb-4" style="width: 25em;">
+                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle  " disabled
+                        id="confirmpass-input" placeholder="Confirmar Senha">
+                    <label class="text-danger form-label" for="floatingInput">Confirmar Senha</label>
+                </div>
+
+                <div class="div-botao-finalizar" onclick="sendUpdateForm()">
+                    <button type='button' id="botao-salvar">Salvar</button>
+                  </div>
             </div>
         </div>
+
+        <div class="side-bar">
+            <div class="buttons">
+                <button id="minhaconta-botao" class="side-bar-buttons" onclick="irParaConta()">MINHA CONTA</button>
+                <button id="configuracoes-botao" class="side-bar-buttons" onclick="irParaConfig()">CONFIGURAÇÕES</button>
+            </div>
+        </div>
+
     </main>
     <script src="./js/footer.js"></script>
 
