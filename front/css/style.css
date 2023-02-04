@@ -686,3 +686,8 @@ form img{
   .img-game{
     margin-bottom: 2%;
   }
+
+  #minhaconta-botao{
+    background-color: white;
+    color:#D7336E;
+  }
