@@ -440,7 +440,20 @@ form img {
   cursor: pointer;
 }
 
-.footer {
+#botao-salvar{
+  background-color: #D7336E;
+  color: #ffffff;
+  width: 13%;
+  height: 35%;
+  font-size: 1.2em;
+  font-weight: bolder;
+  border-radius: 15px;
+  margin-top: 2em;
+  cursor: pointer;
+  display: none;
+}
+
+.footer{
   display: flex;
   flex-direction: row;
   width: 100vw;
@@ -535,164 +548,169 @@ form img {
   text-decoration: underline;
   color: #e83678;
 }
+  
+  
+  .div-botoes input {
+    margin-left: 2em;
+    margin-bottom: 5px;
+  }
+  
+  
+  .alterar-perfil{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  
+  
+  .input-user{
+    background-color:#BF7A87;
+    width: 50%;
+    height: 10%;
+    margin-top: 3%;
+    padding: 1%;
+    border-radius: 10px;
+  }
+  
+  .div-fav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 10%;
+    margin-top: 10%;
+  }
+  
+  .foto-perfil{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    height: 20%;
+  }
+  
+  .img-user{
+    width: 25%;
+    height: 25%;
+    margin-top: 8%;
+  }
+  
+  .btn-user{
+    background-color: #151515;
+    width: 10%;
+    height: 5%;
+    color: white;
+    margin-left: 8%;
+    margin-top: 3%;
+  }
+  
+  .div-inputs{
+    margin-left: 5%;
+  }
+  
+  
+  .main-perfil{
+    display: flex;
+    justify-content:center;
+    width: 100%;
+  }
+  
+  
+  .div-configs{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  
+  
+  .inputs-test {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 7%;
+  }
+  
+  .inputs-test-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .div-fav{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+  
+  .img-user{
+    margin-top: 8%;
+    margin-left: 0;
+  }
+  
+  
+  
+  .side-bar {
+    background-color: #151515;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    margin-right: 30px;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50%;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .side-bar-buttons {
+    background-image: url("../img/arrow1.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 13em;
+  
+    text-align: left;
+    border: 0;
+    cursor: pointer;
+  
+    background-color: #2D2D2D;
+    border-radius: 5px;
+    width: 95%;
+  
+    padding: 10px;
+  
+    margin: 15px 0 0 0;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .side-bar-buttons:focus {
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #ffffff;
+    background-position-x: 13em;
+    font-weight: bold;
+    color: #E83678;
+  
+  }
+  
+  .img-game{
+    margin-bottom: 2%;
+  }
 
-
-.div-botoes input {
-  margin-left: 2em;
-  margin-bottom: 5px;
-}
-
-
-.alterar-perfil {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-
-
-.input-user {
-  background-color: #BF7A87;
-  width: 50%;
-  height: 10%;
-  margin-top: 3%;
-  padding: 1%;
-  border-radius: 10px;
-}
-
-.div-fav {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  margin-left: 2%;
-  margin-right: 10%;
-  margin-top: 10%;
-}
-
-.foto-perfil {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30%;
-  height: 20%;
-}
-
-.img-user {
-  width: 25%;
-  height: 25%;
-  margin-top: 8%;
-}
-
-.btn-user {
-  background-color: #151515;
-  width: 10%;
-  height: 5%;
-  color: white;
-  margin-left: 8%;
-  margin-top: 3%;
-}
-
-.div-inputs {
-  margin-left: 5%;
-}
-
-
-.main-perfil {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-
-.div-configs {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-
-
-.inputs-test {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  margin-top: 7%;
-}
-
-.inputs-test-2 {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-
-.div-fav {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.img-user {
-  margin-top: 8%;
-  margin-left: 0;
-}
-
-
-
-.side-bar {
-  background-color: #151515;
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  height: 100vh;
-  margin-left: 15px;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50%;
-  align-items: center;
-  width: 100%;
-}
-
-.side-bar-buttons {
-  background-image: url("../img/arrow1.svg");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-position-x: 13em;
-
-  text-align: left;
-  border: 0;
-  cursor: pointer;
-
-  background-color: #2D2D2D;
-  border-radius: 5px;
-  width: 95%;
-
-  padding: 10px;
-
-  margin: 15px 0 0 0;
-  color: #fff;
-  font-weight: bold;
-}
-
-.side-bar-buttons:focus {
-  background-image: url("../img/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-color: #ffffff;
-  background-position-x: 13em;
-  font-weight: bold;
-  color: #E83678;
-
-}
-
-.img-game {
-  margin-bottom: 2%;
-}
+  #minhaconta-botao{
+    background-color: white;
+    color:#D7336E;
+  }

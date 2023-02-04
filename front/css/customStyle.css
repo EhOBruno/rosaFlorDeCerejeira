@@ -8,7 +8,6 @@ body {
 }
 
 main {
-
   margin-left: 320px;
   margin-right: 320px;
 }
@@ -439,6 +438,7 @@ main {
 
 .imgC {
   width: unset !important;
+  cursor: pointer;
 }
 
 .slick-track {

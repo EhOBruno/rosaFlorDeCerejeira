@@ -4,9 +4,9 @@ if (sessionStorage.getItem('Logado')) {
   <header class="header">
   <div class="header-left">
     <img src="img/logo.svg" alt="logo" onclick="window.location.assign('./filtros')" class="logo">
-    <input id="imputBusca" type="text" class="teste1 barra-pesquisa" 
+    <input id="imputBusca" type="text" class="barra-pesquisa" 
       placeholder="Pesquise aqui...">
-      <div id="buscaResultados" class="teste1 respBusca"></div>
+      <div id="buscaResultados" class="respBusca"></div>
   </div>
   <div class="header-right-all-login">
     <a href="">
