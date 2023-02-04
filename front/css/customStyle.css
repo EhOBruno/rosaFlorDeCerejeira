@@ -126,7 +126,7 @@ main {
 .barra-pesquisa {
   width: 50%;
   height: 45%;
-  border-radius: 32px;
+  border-radius: 25px;
   margin-top: 30px;
   margin-left: 2%;
   background: url(../img/lupa.svg);
@@ -139,7 +139,36 @@ main {
   border: 0 none;
   outline: 0;
   font-size: 1.2em;
+}
+.barra-pesquisa:focus {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
 
+.respBusca {
+  display: none;
+  width: 24.95% ;
+  margin-left: 8.75%;
+  border-radius: 40px;
+  position: absolute;
+  /* background-color: #ffceced9; */
+  background-color: 0;
+  margin-top: 87.1px;
+  
+}
+.respJogo{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0 1px 1px 1px solid #fe0808;
+  background-color: #ffa4b8;
+  margin-bottom: 1px;
+}
+
+.respJogo div {
+  font-size: 1.5em;
 }
 
 .barra-pesquisa::placeholder {
@@ -195,7 +224,7 @@ main {
   height: 185px;
 }
 
-.jogosContainer{
+.jogosContainer {
   width: 100% !important;
 }
 
@@ -404,15 +433,15 @@ main {
   justify-content: space-between;
 }
 
-.imgjogo{
+.imgjogo {
   cursor: pointer;
 }
 
-.imgC{
+.imgC {
   width: unset !important;
 }
 
-.slick-track{
+.slick-track {
   display: flex;
   gap: 3rem;
 }

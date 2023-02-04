@@ -270,7 +270,7 @@ async function sendCadastroReq(data) {
 }
 
 //barra de pesquisa
-
+var vezes = 0;
 $(document).ready(function () {
 
     const imputBusca = document.getElementById("imputBusca");
@@ -279,20 +279,67 @@ $(document).ready(function () {
     imputBusca.addEventListener("input", function () {
         buscaResultados.style.display = 'block';
         const valorBusca = imputBusca.value;
-        getJogosBusca(valorBusca)
-        // buscaResultados.innerHTML = `Resultados da pesquisa para: ${searchValue}`;
+        getJogosBusca(valorBusca, buscaResultados)
     });
+    // buscaResultados.addEventListener("click", function () {
+    //     alert()
+    // });
     imputBusca.addEventListener("blur", function () {
         imputBusca.value = ""
         buscaResultados.style.display = 'none';
+        vezes = 0;
+        qtdDivs = document.getElementById("buscaResultados").children.length
+        if (qtdDivs != 0) {
+            for (i = 0; i < qtdDivs; i++) {
+                document.getElementById("buscaResultados").removeChild(document.getElementById("respBusca"));
+            }
+        }
     });
 });
-getJogosBusca = (valorBusca) => {
-    fetch("/getJogos", { method: 'GET' })
-        .then(response => response.json())
-        .then(jazonprovResponse => {
-            jazon = jazonprovResponse
-            console.log(jazon)
-        });
+
+getJogosBusca = (valorBusca, buscaResultados) => {
+
+    if (valorBusca != "") {
+
+        fetch("/getJogos?valor=" + valorBusca, { method: 'GET' })
+            .then(response => response.json())
+            .then(jazonprovResponse => {
+                jazon = jazonprovResponse
+                // console.log(jazon)
+                qtdDivs = document.getElementById("buscaResultados").children.length
+
+                if (vezes != 0 && qtdDivs != 0) {
+                    for (i = 0; i < qtdDivs; i++) {
+                        document.getElementById("buscaResultados").removeChild(document.getElementById("respBusca"));
+
+                    }
+                }
+                vezes++;
+                if (jazon != undefined) {
+                    cardJogoBusca(jazon, buscaResultados)
+                }
+            });
+    } else {
+        qtdDivs = document.getElementById("buscaResultados").children.length
+        if (vezes != 0 && qtdDivs != 0) {
+            for (i = 0; i < qtdDivs; i++) {
+                document.getElementById("buscaResultados").removeChild(document.getElementById("respBusca"));
+            }
+        }
+        buscaResultados.insertAdjacentHTML("beforeend", '<div id="respBusca" class="respJogo"><div>Nenhum resultado</div></div>')
+    }
+
+
     // console.log(JSON.stringify(jazon))
+}
+cardJogoBusca = (jazon, buscaResultados) => {
+    tamanho = jazon["length"]
+    if (tamanho != 0) {
+        for (i = 0; i < tamanho; i++) {
+            buscaResultados.insertAdjacentHTML("beforeend", '<div id="respBusca" onclick="clickjogo(' + jazon[i]['idSteam'] + ')" class="respJogo"><div>' + jazon[i]['nome'] + '</div></div>')
+        }
+    } else {
+        buscaResultados.insertAdjacentHTML("beforeend", '<div id="respBusca" class="respJogo"><div>Nenhum resultado</div></div>')
+    }
+
 }

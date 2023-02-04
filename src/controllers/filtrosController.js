@@ -6,8 +6,14 @@ exports.paginaFiltros = (req, res) => {
 };
 
 exports.getJogos = ('/getJogos', (req, res) => {
+    if(req.query.valor!=undefined){
+        nomejogo = {nome: { $regex: '^' + req.query.valor, $options: 'i' }}
+    }else{
+        nomejogo = undefined
+    }
+    console.log(req.query.valor)
     try {
-        Jogo.find((error, data) => {
+        Jogo.find(nomejogo,(error, data) => {
             if (error) {
                 console.log(error)
             }
