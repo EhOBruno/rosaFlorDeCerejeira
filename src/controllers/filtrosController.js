@@ -11,7 +11,7 @@ exports.getJogos = ('/getJogos', (req, res) => {
     }else{
         nomejogo = undefined
     }
-    console.log(req.query.valor)
+    // console.log(req.query.valor)
     try {
         Jogo.find(nomejogo,(error, data) => {
             if (error) {

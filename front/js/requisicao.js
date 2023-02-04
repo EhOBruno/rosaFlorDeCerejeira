@@ -4,7 +4,7 @@ getJogos = async () => {
         .then(response => response.json())
         .then(jazonprovResponse => {
             jazon = jazonprovResponse
-            console.log(jazon)
+            // console.log(jazon)
             sessionStorage.setItem('jazon', jazon)
         });
     // console.log(JSON.stringify(jazon))
@@ -82,7 +82,7 @@ addcardCarousel = async () => {
         .then(response => response.json())
         .then(jazonprovResponse => {
             jazon = jazonprovResponse
-            console.log(jazon)
+            // console.log(jazon)
         });
     tamanho = jazon["length"]
     numerosusados = [];
@@ -139,14 +139,14 @@ async function sendLoginReq(data) {
             .then(response => {
                 let resStatus = response.status
                 if (resStatus === 404) {
-                     Swal.fire({
+                    Swal.fire({
                         icon: 'error',
                         title: 'Esse usuário não está cadastrado.',
                         confirmButtonText: 'Voltar',
                     })
                 }
                 else if (resStatus === 401) {
-                     Swal.fire({
+                    Swal.fire({
                         icon: 'error',
                         title: 'Senha inválida.',
                         confirmButtonText: 'Voltar',
@@ -156,7 +156,7 @@ async function sendLoginReq(data) {
                     return response
                 }
                 else {
-                     Swal.fire({
+                    Swal.fire({
                         icon: 'error',
                         title: 'Ocorreu um erro no sistema D:',
                         text: 'Por favor, tente novamente mais tarde.',
@@ -177,7 +177,7 @@ async function sendLoginReq(data) {
 
                 window.location.href = '/filtros'
             })
-    } 
+    }
     catch (err) {
         console.log(err)
     }
@@ -284,67 +284,65 @@ async function sendCadastroReq(data) {
 
 //barra de pesquisa
 var vezes = 0;
-$(document).ready(function () {
 
+$(document).ready(function () {
     const imputBusca = document.getElementById("imputBusca");
     const buscaResultados = document.getElementById("buscaResultados");
+    let isDiv1Clicked = false;
 
     imputBusca.addEventListener("input", function () {
         buscaResultados.style.display = 'block';
-        const valorBusca = imputBusca.value;
-        getJogosBusca(valorBusca, buscaResultados)
+        getJogosBusca(imputBusca.value, buscaResultados);
     });
-    // buscaResultados.addEventListener("click", function () {
-    //     alert()
-    // });
-    imputBusca.addEventListener("blur", function () {
-        imputBusca.value = ""
-        buscaResultados.style.display = 'none';
-        vezes = 0;
-        qtdDivs = document.getElementById("buscaResultados").children.length
-        if (qtdDivs != 0) {
-            for (i = 0; i < qtdDivs; i++) {
-                document.getElementById("buscaResultados").removeChild(document.getElementById("respBusca"));
+
+    buscaResultados.addEventListener("click", function () {
+        isDiv1Clicked = true;
+    });
+
+    document.addEventListener("mousedown", function (event) {
+        if (!isDiv1Clicked && event.target !== imputBusca && event.target !== buscaResultados && event.target.parentNode.parentNode !== buscaResultados && event.target.parentNode !== buscaResultados) {
+            imputBusca.value = "";
+            buscaResultados.style.display = 'none';
+            vezes = 0;
+            qtdDivs = buscaResultados.children.length;
+            if (qtdDivs !== 0) {
+                for (i = 0; i < qtdDivs; i++) {
+                    buscaResultados.removeChild(document.getElementById("respBusca"));
+                }
             }
         }
+        isDiv1Clicked = false;
     });
 });
 
 getJogosBusca = (valorBusca, buscaResultados) => {
-
-    if (valorBusca != "") {
-
+    if (valorBusca !== "") {
         fetch("/getJogos?valor=" + valorBusca, { method: 'GET' })
             .then(response => response.json())
             .then(jazonprovResponse => {
-                jazon = jazonprovResponse
-                // console.log(jazon)
-                qtdDivs = document.getElementById("buscaResultados").children.length
+                jazon = jazonprovResponse;
+                qtdDivs = buscaResultados.children.length;
 
-                if (vezes != 0 && qtdDivs != 0) {
+                if (vezes !== 0 && qtdDivs !== 0) {
                     for (i = 0; i < qtdDivs; i++) {
-                        document.getElementById("buscaResultados").removeChild(document.getElementById("respBusca"));
-
+                        buscaResultados.removeChild(document.getElementById("respBusca"));
                     }
                 }
                 vezes++;
-                if (jazon != undefined) {
-                    cardJogoBusca(jazon, buscaResultados)
+                if (jazon !== undefined) {
+                    cardJogoBusca(jazon, buscaResultados);
                 }
             });
     } else {
-        qtdDivs = document.getElementById("buscaResultados").children.length
-        if (vezes != 0 && qtdDivs != 0) {
+        qtdDivs = buscaResultados.children.length;
+        if (vezes !== 0 && qtdDivs !== 0) {
             for (i = 0; i < qtdDivs; i++) {
-                document.getElementById("buscaResultados").removeChild(document.getElementById("respBusca"));
+                buscaResultados.removeChild(document.getElementById("respBusca"));
             }
         }
-        buscaResultados.insertAdjacentHTML("beforeend", '<div id="respBusca" class="respJogo"><div>Nenhum resultado</div></div>')
+        buscaResultados.insertAdjacentHTML("beforeend", '<div id="respBusca" class="respJogo"><div>Nenhum resultado</div></div>');
     }
-
-
-    // console.log(JSON.stringify(jazon))
-}
+};
 cardJogoBusca = (jazon, buscaResultados) => {
     tamanho = jazon["length"]
     if (tamanho != 0) {
@@ -354,7 +352,6 @@ cardJogoBusca = (jazon, buscaResultados) => {
     } else {
         buscaResultados.insertAdjacentHTML("beforeend", '<div id="respBusca" class="respJogo"><div>Nenhum resultado</div></div>')
     }
-
 }
 
 //EDITAR DADOS DA CONTA
