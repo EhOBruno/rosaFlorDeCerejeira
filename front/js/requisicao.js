@@ -72,7 +72,7 @@ postJogoData = async (idSteam) => {
     if (recomendados != null) {
         var resultado = recomendados.substr(0, 7) + " class='requisitos'" + recomendados.substr(2, recomendados.length);
         document.getElementById('recommended').insertAdjacentHTML("beforeend", resultado)
-    }else{
+    } else {
         document.getElementById('recommended').style.display = "none";
     }
 
@@ -86,7 +86,7 @@ addcardCarousel = async () => {
         });
     tamanho = jazon["length"]
     numerosusados = [];
-    for (i = 1; i < 7 ; i++) {
+    for (i = 1; i < 7; i++) {
         do {
             numero = Math.floor(Math.random() * tamanho);
         } while (numerosusados.indexOf(numero) !== -1);
@@ -267,4 +267,32 @@ async function sendCadastroReq(data) {
     } catch (err) {
         console.log(err)
     }
+}
+
+//barra de pesquisa
+
+$(document).ready(function () {
+
+    const imputBusca = document.getElementById("imputBusca");
+    const buscaResultados = document.getElementById("buscaResultados");
+
+    imputBusca.addEventListener("input", function () {
+        buscaResultados.style.display = 'block';
+        const valorBusca = imputBusca.value;
+        getJogosBusca(valorBusca)
+        // buscaResultados.innerHTML = `Resultados da pesquisa para: ${searchValue}`;
+    });
+    imputBusca.addEventListener("blur", function () {
+        imputBusca.value = ""
+        buscaResultados.style.display = 'none';
+    });
+});
+getJogosBusca = (valorBusca) => {
+    fetch("/getJogos", { method: 'GET' })
+        .then(response => response.json())
+        .then(jazonprovResponse => {
+            jazon = jazonprovResponse
+            console.log(jazon)
+        });
+    // console.log(JSON.stringify(jazon))
 }

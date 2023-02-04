@@ -125,7 +125,15 @@ body{
   border: 0 none;
   outline: 0;
   font-size: 1.2em;
-}  
+} 
+.respBusca{
+  display: none;
+  width: 20.5%;
+  margin-left: 11.6%;
+  position: absolute;
+  background-color: #ffceced9;
+  margin-top: 87.1px;
+} 
 
 .barra-pesquisa::placeholder {
   font-size: 1em;
