@@ -135,8 +135,8 @@ body {
 
 .respBusca {
   display: none;
-  width: 24.95% ;
-  margin-left: 8.9%;
+  width: 24.4% ;
+  margin-left: 8.8%;
   border-radius: 40px;
   position: absolute;
   /* background-color: #ffceced9; */
@@ -144,6 +144,20 @@ body {
   margin-top: 87.1px;
   
 }
+
+@media screen and (max-width: 1500px) {
+  .respBusca {
+    display: none;
+    width: 24.45% ;
+    margin-left: 9%;
+    border-radius: 40px;
+    position: absolute;
+    /* background-color: #ffceced9; */
+    background-color: 0;
+    margin-top: 87.1px;
+  }
+}
+
 .respJogo{
   cursor: pointer;
   display: flex;
