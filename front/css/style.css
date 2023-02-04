@@ -714,3 +714,7 @@ form img {
     background-color: white;
     color:#D7336E;
   }
+
+  #pass-div, #confirmpass-div{
+    display: none;
+  }

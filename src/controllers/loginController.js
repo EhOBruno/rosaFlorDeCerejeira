@@ -6,7 +6,6 @@ exports.paginaLogin = (req, res) => {
 }
 
 exports.loginAuth = ('/loginAuth', async (req, res) => {
-    console.log("aaa", req.body)
     try {
         let signedUser = await User.findOne({ email: req.body.email })
 
@@ -20,12 +19,12 @@ exports.loginAuth = ('/loginAuth', async (req, res) => {
             return res.status(401).send()
         }
         else {
-            return res.status(200).send()
+            return res.status(200).send(signedUser)
         }
     }
     catch (err) {
-    console.log(err)
-     return res.status(500).send("err", err).send()
-}
+        console.log(err)
+        return res.status(500).send("err", err).send()
+    }
 
 })

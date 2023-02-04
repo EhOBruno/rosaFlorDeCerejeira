@@ -22,6 +22,8 @@ function irParaConfig() {
   document.getElementById("ram-input").style.setProperty('background-color', 'white', 'important')
   document.getElementById("pass-input").style.setProperty('background-color', 'white', 'important')
   document.getElementById("confirmpass-input").style.setProperty('background-color', 'white', 'important')
+  document.getElementById("pass-div").style.display = 'block'
+  document.getElementById("confirmpass-div").style.display = 'block'
   document.getElementById("minhaconta-botao").style.setProperty('background-color', '#2D2D2D', 'important')
   document.getElementById("minhaconta-botao").style.setProperty('color', 'white', 'important')
   document.getElementById("configuracoes-botao").style.setProperty('background-color', 'white', 'important')
@@ -45,14 +47,14 @@ function irParaConta() {
   document.getElementById("ram-input").style.setProperty('background-color', '#f8d7da', 'important')
   document.getElementById("pass-input").style.setProperty('background-color', '#f8d7da', 'important')
   document.getElementById("confirmpass-input").style.setProperty('background-color', '#f8d7da', 'important')
+  document.getElementById("pass-div").style.display = 'none'
+  document.getElementById("confirmpass-div").style.display = 'none'
   document.getElementById("minhaconta-botao").style.setProperty('background-color', 'white', 'important')
   document.getElementById("minhaconta-botao").style.setProperty('color', '#E83678', 'important')
   document.getElementById("configuracoes-botao").style.setProperty('background-color', '#2D2D2D', 'important')
   document.getElementById("configuracoes-botao").style.setProperty('color', 'white', 'important')
   document.getElementById("botao-salvar").style.display = 'none'
 }
-
-
 
 let mybutton = document.getElementById("button-page-up");
 

@@ -139,25 +139,24 @@ async function sendLoginReq(data) {
             .then(response => {
                 let resStatus = response.status
                 if (resStatus === 404) {
-                    return Swal.fire({
+                     Swal.fire({
                         icon: 'error',
                         title: 'Esse usuário não está cadastrado.',
                         confirmButtonText: 'Voltar',
                     })
                 }
                 else if (resStatus === 401) {
-                    return Swal.fire({
+                     Swal.fire({
                         icon: 'error',
                         title: 'Senha inválida.',
                         confirmButtonText: 'Voltar',
                     })
                 }
                 else if (resStatus === 200) {
-                    sessionStorage.setItem('Logado', true)
-                    return window.location.assign('./filtros.html')
+                    return response
                 }
                 else {
-                    return Swal.fire({
+                     Swal.fire({
                         icon: 'error',
                         title: 'Ocorreu um erro no sistema D:',
                         text: 'Por favor, tente novamente mais tarde.',
@@ -165,7 +164,21 @@ async function sendLoginReq(data) {
                     })
                 }
             })
-    } catch (err) {
+            .then(response => response.json())
+            .then(response => {
+                console.log(response)
+                sessionStorage.setItem("nome", response.name)
+                sessionStorage.setItem("email", response.email)
+                sessionStorage.setItem("processador", response.processor)
+                sessionStorage.setItem("gpu", response.gpu)
+                sessionStorage.setItem("ram", response.ram)
+                sessionStorage.setItem("senha", response.password)
+                sessionStorage.setItem('Logado', true)
+
+                window.location.href = '/filtros'
+            })
+    } 
+    catch (err) {
         console.log(err)
     }
 }
@@ -342,4 +355,36 @@ cardJogoBusca = (jazon, buscaResultados) => {
         buscaResultados.insertAdjacentHTML("beforeend", '<div id="respBusca" class="respJogo"><div>Nenhum resultado</div></div>')
     }
 
+}
+
+//EDITAR DADOS DA CONTA
+sendEditarDadosForm = () => {
+    nome = document.getElementById('name-input').value
+    email = document.getElementById('email-input').value
+    processador = document.getElementById('processor-input').value
+    gpu = document.getElementById('driver-input').value
+    ram = document.getElementById('ram-input').value
+    password = document.getElementById('pass-input').value
+    passwordConf = document.getElementById('confirmpass-input').value
+
+    const inputData = {
+        "nome": nome,
+        "email": email,
+        "password": password,
+        "passwordConf": passwordConf,
+        "gpu": gpu,
+        "ram": ram,
+        "processador": processador
+    }
+    sendEditarReq(inputData)
+}
+async function sendEditarReq(data) {
+    await fetch("/editarDados", {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
 }
