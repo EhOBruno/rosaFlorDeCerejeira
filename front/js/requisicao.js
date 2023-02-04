@@ -1,4 +1,3 @@
-
 // tela filtros
 getJogos = async () => {
     await fetch("/getJogos", { method: 'GET' })
@@ -70,8 +69,13 @@ postJogoData = async (idSteam) => {
 
 
     recomendados = jazonJogoData[idSteam]['data']['pc_requirements']['recommended']
-    var resultado = recomendados.substr(0, 7) + " class='requisitos'" + recomendados.substr(2, recomendados.length);
-    document.getElementById('recommended').insertAdjacentHTML("beforeend", resultado)
+    if (recomendados != null) {
+        var resultado = recomendados.substr(0, 7) + " class='requisitos'" + recomendados.substr(2, recomendados.length);
+        document.getElementById('recommended').insertAdjacentHTML("beforeend", resultado)
+    }else{
+        document.getElementById('recommended').style.display = "none";
+    }
+
 }
 addcardCarousel = async () => {
     await fetch("/getJogos", { method: 'GET' })
@@ -81,24 +85,19 @@ addcardCarousel = async () => {
             console.log(jazon)
         });
     tamanho = jazon["length"]
-    // document.getElementById("teste2").insertAdjacentHTML("beforeend", '<div id="carousel" class="carousel mb-5 mt-4" style="margin: 0 100px;">>')
-    for (i = 1; i < 11; i++) {
-        numero = Math.floor(Math.random() * tamanho)
-        gameimg = jazon[numero]['img']
-        idSteam = jazon[numero]['idSteam']
+    numerosusados = [];
+    for (i = 1; i < 7 ; i++) {
+        do {
+            numero = Math.floor(Math.random() * tamanho);
+        } while (numerosusados.indexOf(numero) !== -1);
+        numerosusados.push(numero);
 
-        document.getElementById(i).src=gameimg
+        gameimg = jazon[numero]['img'];
+        idSteam = jazon[numero]['idSteam'];
+
+        document.getElementById(i).src = gameimg;
+        document.getElementById(i).setAttribute("onclick", "clickjogo(" + idSteam + ")");
     }
-    // document.getElementById("teste2").insertAdjacentHTML("beforeend", '</div>')
-
-}
-
-cardCarousel = (gameimg,idSteam) => {
-    idSteam = "'" + idSteam + "'"
-    return '<div class="imgC">' +
-        '<a onclick="clickjogo(' + idSteam + ')"><img class="imgjogo"' +
-        'src="' + gameimg + '"></a>' +
-        '</div>'
 }
 
 // LOGIN
@@ -125,7 +124,7 @@ sendLoginForm = () => {
         "email": email,
         "password": password,
     }
-    sendLoginReq(inputData)  
+    sendLoginReq(inputData)
 }
 async function sendLoginReq(data) {
     try {
@@ -253,7 +252,7 @@ async function sendCadastroReq(data) {
                         if (result.isConfirmed) {
                             window.location.assign('./filtros')
                         }
-                      })
+                    })
                 }
                 else {
                     return Swal.fire({
