@@ -3,7 +3,7 @@ document.write(`
     <div class="header-left">
         <img src="img/logo.svg" alt="logo" onclick="window.location.assign('./')" class="logo">
         <div id="barraDeBusca">
-          <input id="imputBusca" type="text" class="barra-pesquisa" placeholder="Pesquise aqui...">
+          <input autocomplete="off" id="imputBusca" type="text" class="barra-pesquisa" placeholder="Pesquise aqui...">
           <div id="buscaResultados" class="respBusca">
               <div class="mt-2"></div>
           </div>

@@ -3,7 +3,7 @@ if (sessionStorage.getItem('Logado')) {
   <header class="header">
   <div class="header-left">
     <img src="img/logo.svg" alt="logo" onclick="window.location.assign('./filtros')" class="logo">
-    <input id="imputBusca" type="text" class="barra-pesquisa" 
+    <input autocomplete="off" id="imputBusca" type="text" class="barra-pesquisa" 
       placeholder="Pesquise aqui...">
       <div id="buscaResultados" class="respBusca-login"></div>
   </div>
@@ -22,7 +22,7 @@ if (sessionStorage.getItem('Logado')) {
   <header class="header">
     <div class="header-left">
         <img src="img/logo.svg" alt="logo" onclick="window.location.assign('./')" class="logo">
-        <input id="imputBusca" type="text" class="barra-pesquisa" 
+        <input autocomplete="off" id="imputBusca" type="text" class="barra-pesquisa" 
         placeholder="Pesquise aqui...">
         <div id="buscaResultados" class="respBusca"></div>
     </div>

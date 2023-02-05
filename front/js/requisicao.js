@@ -151,8 +151,19 @@ postJogoData = async (idSteam) => {
         document.getElementById("spanProcessador").append(sessionStorage.getItem('processador'))
         document.getElementById("spanGpu").append(sessionStorage.getItem('gpu'))
         document.getElementById("spanRam").append(sessionStorage.getItem('ram'))
-        console.log(minimos)
-
+        cpuMin = parseInt(sessionStorage.getItem('cpuMin'))
+        gpuMin = parseInt(sessionStorage.getItem('gpuMin'))
+        ramMin = parseInt(sessionStorage.getItem('ramMin'))
+        performanceGpu = parseInt(sessionStorage.getItem('performanceGpu'))
+        performanceCpu = parseInt(sessionStorage.getItem('performanceCpu'))
+        ram = parseInt(sessionStorage.getItem('ram'))
+        if(performanceGpu>=gpuMin){
+            if(performanceCpu>=cpuMin){
+                if(ram>=ramMin){
+                  console.log('tanka')  
+                }
+            }
+        }
     }
 
 }
@@ -271,6 +282,7 @@ async function sendLoginReq(data) {
                 sessionStorage.setItem('ram', response.ram)
                 sessionStorage.setItem('senha', response.password)
                 sessionStorage.setItem('Logado', true)
+                console.log(response)
                 sessionStorage.setItem("performanceGpu", response.performanceGpu)
                 sessionStorage.setItem("performanceCpu", response.performanceCpu)
                 window.location.href = '/filtros'

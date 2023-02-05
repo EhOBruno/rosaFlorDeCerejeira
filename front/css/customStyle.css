@@ -515,7 +515,7 @@ main {
 }
 
 .cardTanka {
-  display: block;
+  display: none;
   font-size: 1.3em;
   text-align: center;
   color: #e83678;
