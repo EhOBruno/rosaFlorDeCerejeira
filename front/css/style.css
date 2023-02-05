@@ -158,6 +158,19 @@ body {
   }
 }
 
+@media (min-width: 1766px) and (max-width: 1767px) {
+  .respBusca {
+    display: none;
+    width: 24.60% ;
+    margin-left: 8.9%;
+    border-radius: 40px;
+    position: absolute;
+    /* background-color: #ffceced9; */
+    background-color: 0;
+    margin-top: 87.1px;
+  }
+}
+
 .respJogo{
   cursor: pointer;
   display: flex;
