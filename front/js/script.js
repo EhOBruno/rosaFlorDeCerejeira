@@ -111,15 +111,6 @@ function logout() {
   window.location.href = '/'
 }
 
-function setInputValues() {
-  document.getElementById("name-input").value = sessionStorage.getItem('nome')
-  document.getElementById("email-input").value = sessionStorage.getItem('email')
-  document.getElementById("processor-input").value = sessionStorage.getItem('processador')
-  document.getElementById("driver-input").value = sessionStorage.getItem('gpu')
-  document.getElementById("ram-input").value = sessionStorage.getItem('ram')
-}
-setInputValues()
-
 let mybutton = document.getElementById("button-page-up");
 
 // window.onscroll = function() {scrollFunction()};

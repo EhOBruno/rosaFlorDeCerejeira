@@ -24,6 +24,7 @@
     <script src="./js/sweetalert2.all.min.js"></script>
     <script src="./js/script.js" defer></script>
     <script src="./js/requisicao.js" defer></script>
+    <script src="./js/imput.js"></script>
 
 </head>
 
@@ -129,7 +130,7 @@
 
                             console.log("Valor selecionado:", selectedOption.value);
                             console.log("Performance CPU:", selectedOption.performancecpu);
-                            sessionStorage.setItem("performanceCpu", selectedOption.performancecpu)
+                            sessionStorage.setItem("performanceCpuProv", selectedOption.performancecpu)
                         });
                         var opcoes = [
                             { value: "RTX-4090", label: "RTX-4090", performancegpu: "100" },
@@ -194,7 +195,7 @@
 
                             console.log("Valor selecionado:", selectedOpcao.value);
                             console.log("Performance GPU:", selectedOpcao.performancegpu);
-                           /*  sessionStorage.setItem("performanceGpu", selectedOpcao.performancegpu) */
+                            sessionStorage.setItem("performanceGpuProv", selectedOpcao.performancegpu)
                         });
                     }
                 </script>

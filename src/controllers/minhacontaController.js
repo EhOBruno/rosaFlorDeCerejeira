@@ -25,7 +25,9 @@ exports.editarDados = ('/editarDados', async (req, res) => {
                 processador: req.body.processador,
                 gpu: req.body.gpu,
                 ram: req.body.ram,
-                password: userPass
+                password: userPass,
+                performanceCpu: req.body.performanceCpu,
+                performanceGpu: req.body.performanceGpu
             }
         )
         res.status(202).send()

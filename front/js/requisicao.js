@@ -161,16 +161,20 @@ postJogoData = async (idSteam) => {
         if (performanceGpu >= gpuMin) {
             if (performanceCpu >= cpuMin) {
                 if (ram >= ramMin) {
-                    document.getElementById('SeuPcTanka').display="block"
+                    console.log("4")
+                    document.getElementById('SeuPcTanka').style.display="block"
 
                 }else{
-                    document.getElementById('SeuPcNTanka').display="block"
+                    console.log("3")
+                    document.getElementById('SeuPcNTanka').style.display="block"
                 }
             }else{
-                document.getElementById('SeuPcNTanka').display="block"
+                console.log("2")
+                document.getElementById('SeuPcNTanka').style.display="block"
             }
         }else{
-            document.getElementById('SeuPcNTanka').display="block"
+            console.log("1")
+            document.getElementById('SeuPcNTanka').style.display="block"
         }
     }
 
@@ -537,6 +541,25 @@ sendEditarDadosForm = () => {
     ram = document.getElementById('ram-input').value
     password = document.getElementById('pass-input').value
     passwordConf = document.getElementById('confirmpass-input').value
+    if (processador != "Nenhum") {
+        performanceCpu = sessionStorage.getItem('performanceCpuProv')
+    } else {
+        performanceCpu = '0'
+        console.log('opa')
+    }
+    if (gpu != "Nenhuma") {
+        performanceGpu = sessionStorage.getItem('performanceGpuProv')
+    } else {
+        console.log('opa')
+        performanceGpu = '0'
+    }
+    if (ram != "Nenhuma") {
+        ram = document.getElementById('ram-input').value
+    } else {
+        console.log('opa')
+        ram = '0'
+    }
+
 
     if (nome === '') {
         return swal.fire({
@@ -590,7 +613,9 @@ sendEditarDadosForm = () => {
         'passwordConf': passwordConf,
         'gpu': gpu,
         'ram': ram,
-        'processador': processador
+        'processador': processador,
+        "performanceCpu": performanceCpu,
+        "performanceGpu": performanceGpu
     }
     sendEditarReq(inputData)
 }
