@@ -150,7 +150,8 @@ postJogoData = async (idSteam) => {
     if (sessionStorage.getItem('Logado')) {
         document.getElementById("spanProcessador").append(sessionStorage.getItem('processador'))
         document.getElementById("spanGpu").append(sessionStorage.getItem('gpu'))
-        document.getElementById("spanRam").append(sessionStorage.getItem('ram'))
+        document.getElementById("spanRam").append(sessionStorage.getItem('ram')+" GB de RAM")
+
         cpuMin = parseInt(sessionStorage.getItem('cpuMin'))
         gpuMin = parseInt(sessionStorage.getItem('gpuMin'))
         ramMin = parseInt(sessionStorage.getItem('ramMin'))
@@ -160,11 +161,16 @@ postJogoData = async (idSteam) => {
         if (performanceGpu >= gpuMin) {
             if (performanceCpu >= cpuMin) {
                 if (ram >= ramMin) {
+                    document.getElementById('SeuPcTanka').display="block"
 
+                }else{
+                    document.getElementById('SeuPcNTanka').display="block"
                 }
-
+            }else{
+                document.getElementById('SeuPcNTanka').display="block"
             }
-
+        }else{
+            document.getElementById('SeuPcNTanka').display="block"
         }
     }
 
