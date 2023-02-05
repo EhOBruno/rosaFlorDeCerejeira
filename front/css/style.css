@@ -80,6 +80,16 @@ body {
   margin-right: 30px;
 }
 
+.header-right-all-login {
+  display: flex;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  justify-content: right;
+  margin-right: 30px;
+  align-items: center;
+}
+
 .header-right-all-login a {
   text-decoration: none;
   color: aliceblue;
@@ -135,8 +145,20 @@ body {
 
 .respBusca {
   display: none;
-  width: 24.4% ;
-  margin-left: 8.8%;
+  width: 24.95% ;
+  margin-left: 8.75%;
+  border-radius: 40px;
+  position: absolute;
+  /* background-color: #ffceced9; */
+  background-color: 0;
+  margin-top: 87.1px;
+  
+}
+
+.respBusca-login {
+  display: none;
+  width: 24.95% ;
+  margin-left: 8.75%;
   border-radius: 40px;
   position: absolute;
   /* background-color: #ffceced9; */
@@ -167,7 +189,33 @@ body {
     position: absolute;
     /* background-color: #ffceced9; */
     background-color: 0;
+    margin-top: 80.1px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .respBusca-login {
+    display: none;
+    width: 24.45% ;
+    margin-left: 9%;
+    border-radius: 40px;
+    position: absolute;
+    /* background-color: #ffceced9; */
+    background-color: 0;
     margin-top: 87.1px;
+  }
+}
+
+@media (min-width: 1766px) and (max-width: 1767px) {
+  .respBusca-login {
+    display: none;
+    width: 24.35% ;
+    margin-left: 8.8%;
+    border-radius: 40px;
+    position: absolute;
+    /* background-color: #ffceced9; */
+    background-color: 0;
+    margin-top: 80.1px;
   }
 }
 
@@ -178,7 +226,6 @@ body {
   justify-content: center;
   border: 0 1px 1px 1px solid #fe0808;
   background-color: #ffa4b8;
-  margin-bottom: 1px;
 }
 
 .respJogo div {
