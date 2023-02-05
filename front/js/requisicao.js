@@ -139,14 +139,14 @@ async function sendLoginReq(data) {
             .then(response => {
                 let resStatus = response.status
                 if (resStatus === 404) {
-                    Swal.fire({
+                    return Swal.fire({
                         icon: 'error',
                         title: 'Esse usuário não está cadastrado.',
                         confirmButtonText: 'Voltar',
                     })
                 }
                 else if (resStatus === 401) {
-                    Swal.fire({
+                    return Swal.fire({
                         icon: 'error',
                         title: 'Senha inválida.',
                         confirmButtonText: 'Voltar',
@@ -156,7 +156,7 @@ async function sendLoginReq(data) {
                     return response
                 }
                 else {
-                    Swal.fire({
+                    return Swal.fire({
                         icon: 'error',
                         title: 'Ocorreu um erro no sistema D:',
                         text: 'Por favor, tente novamente mais tarde.',
@@ -166,13 +166,13 @@ async function sendLoginReq(data) {
             })
             .then(response => response.json())
             .then(response => {
-                console.log(response)
-                sessionStorage.setItem("nome", response.name)
-                sessionStorage.setItem("email", response.email)
-                sessionStorage.setItem("processador", response.processor)
-                sessionStorage.setItem("gpu", response.gpu)
-                sessionStorage.setItem("ram", response.ram)
-                sessionStorage.setItem("senha", response.password)
+                sessionStorage.setItem('id', response._id)
+                sessionStorage.setItem('nome', response.name)
+                sessionStorage.setItem('email', response.email)
+                sessionStorage.setItem('processador', response.processador)
+                sessionStorage.setItem('gpu', response.gpu)
+                sessionStorage.setItem('ram', response.ram)
+                sessionStorage.setItem('senha', response.password)
                 sessionStorage.setItem('Logado', true)
 
                 window.location.href = '/filtros'
@@ -203,6 +203,13 @@ sendCadastroForm = () => {
     else if (email === '') {
         return Swal.fire({
             title: 'Por favor, digite seu e-mail',
+            icon: 'warning',
+            confirmButtonText: 'Voltar',
+        })
+    }
+    else if (!email.includes('@')) {
+        return Swal.fire({
+            title: 'Por favor, utilize um email válido.',
             icon: 'warning',
             confirmButtonText: 'Voltar',
         })
@@ -254,7 +261,6 @@ async function sendCadastroReq(data) {
                     })
                 }
                 else if (resStatus === 200) {
-                    sessionStorage.setItem('Logado', true)
                     return Swal.fire({
                         background: '#111111',
                         allowOutsideClick: false,
@@ -263,7 +269,7 @@ async function sendCadastroReq(data) {
                         confirmButtonText: ':D',
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            window.location.assign('./filtros')
+                            window.location.assign('./login')
                         }
                     })
                 }
@@ -363,14 +369,44 @@ sendEditarDadosForm = () => {
     password = document.getElementById('pass-input').value
     passwordConf = document.getElementById('confirmpass-input').value
 
+    if (nome === '') {
+        return Swal.fire({
+            title: 'Por favor, insira um nome válido.',
+            icon: 'warning',
+            confirmButtonText: 'Voltar',
+        })
+    }
+    else if (email === '' || !email.includes('@')) {
+        return Swal.fire({
+            title: 'Por favor, insira um email válido.',
+            icon: 'warning',
+            confirmButtonText: 'Voltar',
+        })
+    }
+    else if (password === '') {
+        return Swal.fire({
+            icon: 'warning',
+            title: 'Por favor, digite sua nova senha.',
+            confirmButtonText: 'Voltar',
+        })
+    }
+    else if (password !== passwordConf) {
+        return Swal.fire({
+            icon: 'warning',
+            title: 'As senhas não conferem.',
+            confirmButtonText: 'Voltar',
+        })
+    }
+
     const inputData = {
-        "nome": nome,
-        "email": email,
-        "password": password,
-        "passwordConf": passwordConf,
-        "gpu": gpu,
-        "ram": ram,
-        "processador": processador
+        'id': sessionStorage.getItem('id'),
+        'nome': nome,
+        'email': email,
+        'password': password,
+        'passwordConf': passwordConf,
+        'gpu': gpu,
+        'ram': ram,
+        'processador': processador
     }
     sendEditarReq(inputData)
 }
@@ -383,4 +419,28 @@ async function sendEditarReq(data) {
         },
         body: JSON.stringify(data)
     })
+        .then(response => {
+            let resStatus = response.status
+            if (resStatus === 201) {
+                return Swal.fire({
+                    icon: 'success',
+                    title: 'Dados atualizados com sucesso.',
+                    text: 'Por favor, faça login novamente.',
+                    confirmButtonText: 'Voltar',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        sessionStorage.clear()
+                        window.location.assign('./login')
+                    }
+                })
+            }
+            else {
+                return Swal.fire({
+                    icon: 'error',
+                    title: 'Ocorreu um erro no sistema D:',
+                    text: 'Por favor, tente novamente mais tarde.',
+                    confirmButtonText: 'Ok',
+                })
+            }
+        })
 }

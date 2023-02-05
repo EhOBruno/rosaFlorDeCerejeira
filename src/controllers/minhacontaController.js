@@ -1,4 +1,5 @@
 const User = require('../models/UserSchema')
+const bcrypt = require('bcrypt')
 
 exports.paginaConta = ('/minhaconta', (req, res) => {
     res.render('../front/meuperfil.html')
@@ -6,26 +7,24 @@ exports.paginaConta = ('/minhaconta', (req, res) => {
 
 exports.editarDados = ('/editarDados', async (req, res) => {
     try {
-        console.log("sla", req.body)
-        let userUpdated = await User.findOneAndUpdate(
-            {
-                id: User._id
-            },
+
+        const hashedPass = await bcrypt.hash(req.body.password, 10)
+
+        let userUpdated = await User.findByIdAndUpdate(
+            req.body.id,
             {
                 name: req.body.nome,
                 email: req.body.email,
-                processor: req.body.processador,
+                processador: req.body.processador,
                 gpu: req.body.gpu,
                 ram: req.body.ram,
-                password: req.body.password
-            },
-            {
-                new: true,
+                password: hashedPass
             }
         )
+        res.status(202).send()
     }
     catch (err) {
         console.log(err)
-        res.status(500).send("err", err).send()
+        res.status(500).send("err", err)
     }
 })

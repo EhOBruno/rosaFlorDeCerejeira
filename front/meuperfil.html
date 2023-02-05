@@ -21,14 +21,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/requisicao.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/requisicao.js" defer></script>
 
 </head>
 
 <body>
     <script src="./js/header.js"></script>
-    
+
     <main class="main-perfil">
 
         <div class="div-configs">
@@ -36,54 +37,152 @@
             <img src="./img/perfil.svg" alt="fotodeperfil" class="img-user">
 
             <div class="inputs-test-2">
+                <!-- NOME -->
                 <div class="form-floating mb-4 mt-4" style="width: 25em;">
-                    <input class="input form-control bg-danger-subtle border-light-subtle" placeholder="Nome"
-                        disabled id="name-input">
+                    <input class="input form-control bg-danger-subtle border-light-subtle" placeholder="Nome" disabled
+                        id="name-input">
                     <label class="text-danger form-label" for="floatingInput">Nome</label>
                 </div>
 
+                <!-- PROCESSADOR -->
                 <div class="form-floating mb-4" style="width: 25em;">
+                    <select class="form-select bg-danger-subtle rounded-3" name="processador" id="processor-input"
+                        aria-label="Floating label select example" disabled>
+                        <option value="Nenhum" selected>Nenhum</option>
+                        <option value="I5-2500">I5-2500</option>
+                        <option value="I5-3570">I5-3570</option>
+                        <option value="I5-4400">I5-4400</option>
+                        <option value="I5-5600">I5-5600</option>
+                        <option value="I5-6600">I5-6600</option>
+                        <option value="I5-7400">I5-7400</option>
+                        <option value="I5-8600">I5-8600</option>
+                        <option value="I5-9600">I5-9600</option>
+                        <option value="I5-10400">I5-10400</option>
+                        <option value="I5-11400">I5-11400</option>
+                        <option value="I5-12400">I5-12400</option>
+                        <option value="I7-2600">I7-2600</option>
+                        <option value="I7-3770">I7-3770</option>
+                        <option value="I7-4770">I7-4770</option>
+                        <option value="I7-5700">I7-5700</option>
+                        <option value="I7-6700">I7-6700</option>
+                        <option value="I7-7700">I7-7700</option>
+                        <option value="18I7-8700">I7-8700</option>
+                        <option value="I7-9700">I7-9700</option>
+                        <option value="I7-10700">I7-10700</option>
+                        <option value="I7-11700">I7-11700</option>
+                        <option value="I7-12700">I7-12700</option>
+                        <option value="Ryzen 3 1600">Ryzen 3 1600</option>
+                        <option value="Ryzen 3 2200">Ryzen 3 2200</option>
+                        <option value="Ryzen 3 3200">Ryzen 3 3200</option>
+                        <option value="Ryzen 3 4300">Ryzen 3 4300</option>
+                        <option value="Ryzen 3 5300">Ryzen 3 5300</option>
+                        <option value="Ryzen 5 1600">Ryzen 5 1600</option>
+                        <option value="Ryzen 5 2600">Ryzen 5 2600</option>
+                        <option value="Ryzen 5 3600">Ryzen 5 3600</option>
+                        <option value="Ryzen 5 4600">Ryzen 5 4600</option>
+                        <option value="Ryzen 5 5600">Ryzen 5 5600</option>
+                        <option value="Ryzen 5 6600">Ryzen 5 6600</option>
+                        <option value="Ryzen 7 1700">Ryzen 7 1700</option>
+                        <option value="Ryzen 7 2700">Ryzen 7 2700</option>
+                        <option value="Ryzen 7 3700">Ryzen 7 3700</option>
+                        <option value="Ryzen 7 4700">Ryzen 7 4700</option>
+                        <option value="Ryzen 7 5800">Ryzen 7 5800</option>
+                        <option value="Ryzen 7 6800">Ryzen 7 6800</option>
+                        <option value="Ryzen 7 7700">Ryzen 7 7700</option>
+                    </select>
+                    <label class="text-danger" for="floatingSelect">Processador</label>
+                </div>
+
+                <!-- PLACA DE VÍDEO -->
+                <div class="form-floating mb-4" style="width: 25em;">
+                    <select class="form-select bg-danger-subtle rounded-3" name="gpu" id="driver-input"
+                        aria-label="Floating label select example" disabled>
+                        <option value="Nenhuma" selected>Nenhuma</option>
+                        <option value="GTX-1050">GTX-1050</option>
+                        <option value="GTX-1060">GTX-1060</option>
+                        <option value="GTX-1070">GTX-1070</option>
+                        <option value="GTX-1080">GTX-1080</option>
+                        <option value="GTX-1650">GTX-1650</option>
+                        <option value="GTX-1660">GTX-1660</option>
+                        <option value="GTX-1670">GTX-1670</option>
+                        <option value="RTX-2050">RTX-2050</option>
+                        <option value="RTX-2060">RTX-2060</option>
+                        <option value="RTX-2070">RTX-2070</option>
+                        <option value="RTX-2080">RTX-2080</option>
+                        <option value="RTX-3050">RTX-3050</option>
+                        <option value="RTX-3060">RTX-3060</option>
+                        <option value="RTX-3070">RTX-3070</option>
+                        <option value="RTX-4070">RTX-4070</option>
+                        <option value="RTX-4080">RTX-4080</option>
+                        <option value="RTX-4090">RTX-4090</option>
+                        <option value="RX-450">RX-450</option>
+                        <option value="RX-460">RX-460</option>
+                        <option value="RX-470">RX-470</option>
+                        <option value="RX-480">RX-480</option>
+                        <option value="RX-550">RX-550</option>
+                        <option value="RX-560">RX-560</option>
+                        <option value="RX-570">RX-570</option>
+                        <option value="RX-580">RX-580</option>
+                        <option value="XT-5500">XT-5500</option>
+                        <option value="28XT-5600">XT-5600</option>
+                        <option value="XT-5700">XT-5700</option>
+                        <option value="XT-5800">XT-5800</option>
+                        <option value="XT-6500">XT-6500</option>
+                        <option value="XT-6600">XT-6600</option>
+                        <option value="XT-6700">XT-6700</option>
+                        <option value="34XT-6800">XT-6800</option>
+                    </select>
+                    <label class="text-danger" for="floatingSelect">Placa de Vídeo</label>
+                </div>
+
+                <!-- RAM -->
+                <div class="form-floating mb-4" style="width: 25em;">
+                    <select class="form-select bg-danger-subtle rounded-3" name="ram" id="ram-input"
+                        aria-label="Floating label select example" disabled>
+                        <option value="Nenhuma" selected>Nenhuma</option>
+                        <option value="4GB">4Gb</option>
+                        <option value="8GB">8Gb</option>
+                        <option value="16GB">16Gb</option>
+                        <option value="32GB">32Gb</option>
+                        <option value="64GB">64Gb</option>
+                    </select>
+                    <label class="text-danger" for="floatingSelect">Memória RAM</label>
+                </div>
+
+                <!-- EMAIL -->
+                <div id='email-div' class="form-floating mb-4" style="width: 25em;">
                     <input type="email" class="input form-control bg-danger-subtle border-light-subtle  " disabled
                         id="email-input" placeholder="name@example.com">
                     <label class="text-danger form-label" for="floatingInput">E-mail</label>
                 </div>
 
-                <div class="form-floating mb-4" style="width: 25em;">
-                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle " disabled
-                        id="processor-input" placeholder="Password">
-                    <label class="text-danger form-label" for="floatingPassword">Processador</label>
-                </div>
-                <div class="form-floating mb-4" style="width: 25em;">
-                    <input type="email" class="input form-control bg-danger-subtle border-light-subtle  " disabled
-                        id="driver-input" placeholder="name@example.com">
-                    <label class="text-danger form-label" for="floatingInput">Placa de vídeo</label>
-                </div>
-                <div class="form-floating mb-4" style="width: 25em;">
-                    <input type="email" class="input form-control bg-danger-subtle border-light-subtle  " disabled
-                        id="ram-input" placeholder="name@example.com">
-                    <label class="text-danger form-label" for="floatingInput">Memória RAM</label>
-                </div>
+                <!-- SENHA -->
                 <div id='pass-div' class="form-floating mb-4" style="width: 25em;">
                     <input type="password" class="input form-control bg-danger-subtle border-light-subtle  " disabled
                         id="pass-input" placeholder="Senha">
                     <label class="text-danger form-label" for="floatingInput">Senha</label>
                 </div>
+
+                <!-- CONFIRMAR SENHA -->
                 <div id='confirmpass-div' class="form-floating mb-4" style="width: 25em;">
                     <input type="password" class="input form-control bg-danger-subtle border-light-subtle  " disabled
                         id="confirmpass-input" placeholder="Confirmar Senha">
                     <label class="text-danger form-label" for="floatingInput">Confirmar Senha</label>
                 </div>
 
+                <!-- BOTÃO SALVAR -->
                 <div class="div-botao-finalizar" onclick="sendEditarDadosForm()">
                     <button type='button' id="botao-salvar">Salvar</button>
-                  </div>
+                </div>
             </div>
         </div>
 
         <div class="side-bar">
             <div class="buttons">
-                <button id="minhaconta-botao" class="side-bar-buttons" onclick="irParaConta()">MINHA CONTA</button>
+                <button id="minhaconta-botao" class="side-bar-buttons ativo" onclick="irParaConta()">MINHA CONTA</button>
                 <button id="configuracoes-botao" class="side-bar-buttons" onclick="irParaConfig()">CONFIGURAÇÕES</button>
+                <button id="configuracoes-botao" class="side-bar-buttons" onclick="irParaTrocarSenha()">MUDAR SENHA</button>
+                <button id="sair-botao" class="side-bar-buttons" onclick="logout()">SAIR</button>
             </div>
         </div>
 

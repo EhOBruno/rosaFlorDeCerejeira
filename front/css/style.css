@@ -784,11 +784,20 @@ form img {
     margin-bottom: 2%;
   }
 
-  #minhaconta-botao{
-    background-color: white;
-    color:#D7336E;
+  #minhaconta-botao, 
+  #configuracoes-botao,
+  #sair-botao{
+    background-color: #2D2D2D;
+    color:white;
   }
 
-  #pass-div, #confirmpass-div{
+  .ativo{
+    background-color: white !important;
+    color:#D7336E !important;
+  }
+
+  #pass-div, 
+  #confirmpass-div,
+  #email-div{
     display: none;
   }

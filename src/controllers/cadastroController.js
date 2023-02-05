@@ -24,6 +24,7 @@ exports.register = ('/cadastro', async (req, res) => {
             ram: req.body.ram
 
         })
+
         user.save()
             .then(user => {
                 console.log(user)
@@ -31,6 +32,7 @@ exports.register = ('/cadastro', async (req, res) => {
             .catch(error => {
                 console.log(error)
             })
+            
         res.status(200).send()
     }
     catch (err) {
