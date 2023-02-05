@@ -7,8 +7,15 @@ exports.paginaConta = ('/minhaconta', (req, res) => {
 
 exports.editarDados = ('/editarDados', async (req, res) => {
     try {
+        let user = await User.findOne({ _id: req.body.id })
 
-        const hashedPass = await bcrypt.hash(req.body.password, 10)
+        var userPass = req.body.password
+
+        if(req.body.password !== user.password){
+            console.log(userPass)
+            userPass = await bcrypt.hash(req.body.password, 10) 
+            console.log(userPass)
+        }     
 
         let userUpdated = await User.findByIdAndUpdate(
             req.body.id,
@@ -18,7 +25,7 @@ exports.editarDados = ('/editarDados', async (req, res) => {
                 processador: req.body.processador,
                 gpu: req.body.gpu,
                 ram: req.body.ram,
-                password: hashedPass
+                password: userPass
             }
         )
         res.status(202).send()

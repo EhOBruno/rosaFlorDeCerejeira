@@ -33,19 +33,18 @@
     <main class="main-perfil">
 
         <div class="div-configs">
-            <div class="div-configs-filha"></div>
             <img src="./img/perfil.svg" alt="fotodeperfil" class="img-user">
 
             <div class="inputs-test-2">
                 <!-- NOME -->
-                <div class="form-floating mb-4 mt-4" style="width: 25em;">
+                <div id="name-div" class="form-floating mb-4" style="width: 25em;">
                     <input class="input form-control bg-danger-subtle border-light-subtle" placeholder="Nome" disabled
                         id="name-input">
                     <label class="text-danger form-label" for="floatingInput">Nome</label>
                 </div>
 
                 <!-- PROCESSADOR -->
-                <div class="form-floating mb-4" style="width: 25em;">
+                <div id="processor-div" class="form-floating mb-4" style="width: 25em;">
                     <select class="form-select bg-danger-subtle rounded-3" name="processador" id="processor-input"
                         aria-label="Floating label select example" disabled>
                         <option value="Nenhum" selected>Nenhum</option>
@@ -94,7 +93,7 @@
                 </div>
 
                 <!-- PLACA DE VÍDEO -->
-                <div class="form-floating mb-4" style="width: 25em;">
+                <div id="driver-div" class="form-floating mb-4" style="width: 25em;">
                     <select class="form-select bg-danger-subtle rounded-3" name="gpu" id="driver-input"
                         aria-label="Floating label select example" disabled>
                         <option value="Nenhuma" selected>Nenhuma</option>
@@ -136,7 +135,7 @@
                 </div>
 
                 <!-- RAM -->
-                <div class="form-floating mb-4" style="width: 25em;">
+                <div id="ram-div" class="form-floating mb-4" style="width: 25em;">
                     <select class="form-select bg-danger-subtle rounded-3" name="ram" id="ram-input"
                         aria-label="Floating label select example" disabled>
                         <option value="Nenhuma" selected>Nenhuma</option>
@@ -157,21 +156,21 @@
                 </div>
 
                 <!-- SENHA -->
-                <div id='pass-div' class="form-floating mb-4" style="width: 25em;">
-                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle  " disabled
+                <div id='pass-div' class="form-floating mb-4 mt-4" style="width: 25em;">
+                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle  "
                         id="pass-input" placeholder="Senha">
                     <label class="text-danger form-label" for="floatingInput">Senha</label>
                 </div>
 
                 <!-- CONFIRMAR SENHA -->
                 <div id='confirmpass-div' class="form-floating mb-4" style="width: 25em;">
-                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle  " disabled
+                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle  "
                         id="confirmpass-input" placeholder="Confirmar Senha">
                     <label class="text-danger form-label" for="floatingInput">Confirmar Senha</label>
                 </div>
 
                 <!-- BOTÃO SALVAR -->
-                <div class="div-botao-finalizar" onclick="sendEditarDadosForm()">
+                <div class="div-botao-finalizar salvar" onclick="sendEditarDadosForm()">
                     <button type='button' id="botao-salvar">Salvar</button>
                 </div>
             </div>
@@ -179,9 +178,12 @@
 
         <div class="side-bar">
             <div class="buttons">
-                <button id="minhaconta-botao" class="side-bar-buttons ativo" onclick="irParaConta()">MINHA CONTA</button>
-                <button id="configuracoes-botao" class="side-bar-buttons" onclick="irParaConfig()">CONFIGURAÇÕES</button>
-                <button id="configuracoes-botao" class="side-bar-buttons" onclick="irParaTrocarSenha()">MUDAR SENHA</button>
+                <button id="minhaconta-botao" class="side-bar-buttons ativo" onclick="irParaConta()">MINHA
+                    CONTA</button>
+                <button id="configuracoes-botao" class="side-bar-buttons"
+                    onclick="irParaConfig()">CONFIGURAÇÕES</button>
+                <button id="mudarsenha-botao" class="side-bar-buttons" onclick="irParaTrocarSenha()">MUDAR
+                    SENHA</button>
                 <button id="sair-botao" class="side-bar-buttons" onclick="logout()">SAIR</button>
             </div>
         </div>

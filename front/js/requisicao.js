@@ -421,7 +421,7 @@ async function sendEditarReq(data) {
     })
         .then(response => {
             let resStatus = response.status
-            if (resStatus === 201) {
+            if (resStatus === 202) {
                 return Swal.fire({
                     icon: 'success',
                     title: 'Dados atualizados com sucesso.',
