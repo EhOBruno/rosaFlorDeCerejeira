@@ -6,9 +6,18 @@ exports.paginaFiltros = (req, res) => {
 };
 
 exports.getJogos = ('/getJogos', (req, res) => {
-    if(req.query.valor!=undefined){
+    // console.log(req.query.filtrogenero)
+    // console.log(req.query.valor)
+    busca = req.query.valor
+    filtro = req.query.filtrogenero
+    if(busca!=undefined){
         nomejogo = {nome: { $regex: '^' + req.query.valor, $options: 'i' }}
-    }else{
+    }else if(filtro != 'null' && filtro !== {} && filtro !== undefined){
+        // console.log('toaqui3')
+        nomejogo = JSON.parse(filtro)
+
+    }else if (busca==undefined && filtro == 'null' || {}){
+        // console.log('toaqui')
         nomejogo = undefined
     }
     // console.log(req.query.valor)

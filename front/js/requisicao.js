@@ -1,14 +1,38 @@
 // tela filtros
+
 getJogos = async () => {
-    await fetch("/getJogos", { method: 'GET' })
+
+    checkAutoBox()
+    filtro = sessionStorage.getItem('filtrogenero')
+    await fetch("/getJogos?filtrogenero=" + filtro, { method: 'GET' })
         .then(response => response.json())
         .then(jazonprovResponse => {
             jazon = jazonprovResponse
-            // console.log(jazon)
+            console.log(jazon)
             sessionStorage.setItem('jazon', jazon)
+            sessionStorage.removeItem('filtrogenero')
+            sessionStorage.removeItem('checkId')
         });
     // console.log(JSON.stringify(jazon))
-    addCardGame(jazon)
+    if (jazon.length != 0) {
+        addCardGame(jazon)
+    } else {
+        return Swal.fire({
+            icon: 'warning',
+            title: 'Nenhum jogo encontrado',
+            color: '#FFFFFF',
+            background:'#111111',
+            confirmButtonColor: '#d7336e',
+            confirmButtonText: 'Voltar',
+            allowOutsideClick: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.reload()
+            }
+        })
+
+    }
+
 }
 addCardGame = (jazon) => {
     tamanho = jazon["length"]
@@ -36,6 +60,46 @@ cardGame = (gameimg, gameNome, idSteam) => {
 clickjogo = (idSteam) => {
     sessionStorage.setItem('idSteam', idSteam)
     window.location.assign("./jogo")
+}
+clickFiltrar = () => {
+
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    // console.log(checkboxes)
+    var generosSelecionados = [];
+    var checkId = [];
+
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+
+            generosSelecionados.push({ genero: checkboxes[i].id });
+            checkId.push({ id: checkboxes[i].id });
+        }
+    }
+
+    var filtrogenero = {};
+
+    if (generosSelecionados.length >= 2) {
+        filtrogenero = { $and: generosSelecionados };
+    } else if (generosSelecionados.length === 1) {
+        filtrogenero = generosSelecionados[0];
+    }
+    console.log(filtrogenero)
+    sessionStorage.setItem('filtrogenero', JSON.stringify(filtrogenero))
+    sessionStorage.setItem('checkId', JSON.stringify(checkId))
+    location.reload()
+
+}
+checkAutoBox = () => {
+    $(document).ready(function () {
+        checkIdArray = JSON.parse(sessionStorage.getItem("checkId"))
+        if (checkIdArray != null) {
+            if (checkIdArray.length != 0) {
+                for (i = 0; i < checkIdArray.length; i++) {
+                    document.getElementById(checkIdArray[i]["id"]).checked = true;
+                }
+            }
+        }
+    });
 }
 
 // tela jogo
