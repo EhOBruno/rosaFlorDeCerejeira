@@ -150,24 +150,7 @@
               console.log("Valor selecionado:", selectedOption.value);
               console.log("Performance CPU:", selectedOption.performancecpu);
             });
-          }
-        </script>
-        <label class="text-danger" for="floatingSelect">Processador</label>
-      </div>
-
-      <!-- <form action="" class="forms">
-      <input type="Nome" class="input-2" placeholder="Processador">
-      <button class="botao-escolha"></button>
-    </form> -->
-
-      <div class="form-floating mb-4" style="width: 25em;">
-        <select class="form-select bg-danger-subtle rounded-3" name="gpu" id="imputGpu"
-          aria-label="Floating label select example">
-          <option value="Nenhuma" selected>Nenhuma</option>
-        </select>
-        <script>
-          window.onload = function () {
-            var options = [
+            var opcoes = [
               { value: "RTX-4090", label: "RTX-4090", performancegpu: "100" },
               { value: "RTX-4080", label: "RTX-4080", performancegpu: "99" },
               { value: "RTX-4070", label: "RTX-4070", performancegpu: "98" },
@@ -195,24 +178,37 @@
 
 
             ];
-            var select = document.getElementById("imputGpu")
+            var select2 = document.getElementById("imputGpu")
 
-            for (var i = 0; i < options.length; i++) {
-              var option = document.createElement("option");
-              option.value = options[i].value;
-              option.text = options[i].label;
-              select.appendChild(option);
+            for (var i = 0; i < opcoes.length; i++) {
+              var opcao = document.createElement("option");
+              opcao.value = opcoes[i].value;
+              opcao.text = opcoes[i].label;
+              select2.appendChild(opcao);
             }
-            select.addEventListener("change", function () {
-              var selectedOption = options.find(function (option) {
-                return option.value == select.value;
+            select2.addEventListener("change", function () {
+              var selectedOpcao = opcoes.find(function (opcao) {
+                return opcao.value == select2.value;
               });
 
-              console.log("Valor selecionado:", selectedOption.value);
-              console.log("Performance GPU:", selectedOption.performancegpu);
+              console.log("Valor selecionado:", selectedOpcao.value);
+              console.log("Performance GPU:", selectedOpcao.performancegpu);
             });
           }
         </script>
+        <label class="text-danger" for="floatingSelect">Processador</label>
+      </div>
+
+      <!-- <form action="" class="forms">
+      <input type="Nome" class="input-2" placeholder="Processador">
+      <button class="botao-escolha"></button>
+    </form> -->
+
+      <div class="form-floating mb-4" style="width: 25em;">
+        <select class="form-select bg-danger-subtle rounded-3" name="gpu" id="imputGpu"
+          aria-label="Floating label select example">
+          <option value="Nenhuma" selected>Nenhuma</option>
+        </select>
         <label class="text-danger" for="floatingSelect">Placa de Vídeo</label>
       </div>
 
