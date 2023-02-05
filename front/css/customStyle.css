@@ -147,8 +147,8 @@ main {
 
 .respBusca {
   display: none;
-  width: 24.95% ;
-  margin-left: 8.75%;
+  width: 24.6% ;
+  margin-left: 8.85%;
   border-radius: 40px;
   position: absolute;
   /* background-color: #ffceced9; */
@@ -159,8 +159,8 @@ main {
 
 .respBusca-login {
   display: none;
-  width: 24.95% ;
-  margin-left: 8.75%;
+  width: 24.6% ;
+  margin-left: 8.85%;
   border-radius: 40px;
   position: absolute;
   /* background-color: #ffceced9; */
@@ -186,7 +186,7 @@ main {
   .respBusca {
     display: none;
     width: 24.60% ;
-    margin-left: 8.9%;
+    margin-left: 8.92%;
     border-radius: 40px;
     position: absolute;
     /* background-color: #ffceced9; */
@@ -211,8 +211,8 @@ main {
 @media (min-width: 1766px) and (max-width: 1767px) {
   .respBusca-login {
     display: none;
-    width: 24.35% ;
-    margin-left: 8.8%;
+    width: 24.62% ;
+    margin-left: 8.93%;
     border-radius: 40px;
     position: absolute;
     /* background-color: #ffceced9; */
@@ -220,7 +220,6 @@ main {
     margin-top: 80.1px;
   }
 }
-
 .respJogo{
   cursor: pointer;
   display: flex;

@@ -145,7 +145,7 @@ body {
 
 .respBusca {
   display: none;
-  width: 24.95% ;
+  width: 24.45% ;
   margin-left: 8.75%;
   border-radius: 40px;
   position: absolute;
@@ -157,7 +157,7 @@ body {
 
 .respBusca-login {
   display: none;
-  width: 24.95% ;
+  width: 24.45% ;
   margin-left: 8.75%;
   border-radius: 40px;
   position: absolute;
@@ -184,7 +184,7 @@ body {
   .respBusca {
     display: none;
     width: 24.60% ;
-    margin-left: 8.9%;
+    margin-left: 8.92%;
     border-radius: 40px;
     position: absolute;
     /* background-color: #ffceced9; */
@@ -209,8 +209,8 @@ body {
 @media (min-width: 1766px) and (max-width: 1767px) {
   .respBusca-login {
     display: none;
-    width: 24.35% ;
-    margin-left: 8.8%;
+    width: 24.62% ;
+    margin-left: 8.93%;
     border-radius: 40px;
     position: absolute;
     /* background-color: #ffceced9; */
@@ -784,11 +784,20 @@ form img {
     margin-bottom: 2%;
   }
 
-  #minhaconta-botao{
-    background-color: white;
-    color:#D7336E;
+  #minhaconta-botao, 
+  #configuracoes-botao,
+  #sair-botao{
+    background-color: #2D2D2D;
+    color:white;
   }
 
-  #pass-div, #confirmpass-div{
+  .ativo{
+    background-color: white !important;
+    color:#D7336E !important;
+  }
+
+  #pass-div, 
+  #confirmpass-div,
+  #email-div{
     display: none;
   }

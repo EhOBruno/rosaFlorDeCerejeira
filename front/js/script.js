@@ -20,14 +20,18 @@ function irParaConfig() {
   document.getElementById("processor-input").style.setProperty('background-color', 'white', 'important')
   document.getElementById("driver-input").style.setProperty('background-color', 'white', 'important')
   document.getElementById("ram-input").style.setProperty('background-color', 'white', 'important')
-  document.getElementById("pass-input").style.setProperty('background-color', 'white', 'important')
-  document.getElementById("confirmpass-input").style.setProperty('background-color', 'white', 'important')
-  document.getElementById("pass-div").style.display = 'block'
-  document.getElementById("confirmpass-div").style.display = 'block'
-  document.getElementById("minhaconta-botao").style.setProperty('background-color', '#2D2D2D', 'important')
-  document.getElementById("minhaconta-botao").style.setProperty('color', 'white', 'important')
-  document.getElementById("configuracoes-botao").style.setProperty('background-color', 'white', 'important')
-  document.getElementById("configuracoes-botao").style.setProperty('color', '#E83678', 'important')
+  // document.getElementById("pass-input").style.setProperty('background-color', 'white', 'important')
+  // document.getElementById("confirmpass-input").style.setProperty('background-color', 'white', 'important')
+
+  // document.getElementById("pass-div").style.display = 'block'
+  // document.getElementById("confirmpass-div").style.display = 'block'
+  document.getElementById("email-div").style.display = 'block'
+  
+
+  document.getElementById("configuracoes-botao").classList.add('ativo')
+  document.getElementById("minhaconta-botao").classList.remove('ativo')
+  document.getElementById("sair-botao").classList.remove('ativo')
+
   document.getElementById("botao-salvar").style.display = 'block'
 }
 
@@ -47,14 +51,41 @@ function irParaConta() {
   document.getElementById("ram-input").style.setProperty('background-color', '#f8d7da', 'important')
   document.getElementById("pass-input").style.setProperty('background-color', '#f8d7da', 'important')
   document.getElementById("confirmpass-input").style.setProperty('background-color', '#f8d7da', 'important')
+
   document.getElementById("pass-div").style.display = 'none'
   document.getElementById("confirmpass-div").style.display = 'none'
-  document.getElementById("minhaconta-botao").style.setProperty('background-color', 'white', 'important')
-  document.getElementById("minhaconta-botao").style.setProperty('color', '#E83678', 'important')
-  document.getElementById("configuracoes-botao").style.setProperty('background-color', '#2D2D2D', 'important')
-  document.getElementById("configuracoes-botao").style.setProperty('color', 'white', 'important')
+  document.getElementById("email-div").style.display = 'none'
+
+  document.getElementById("minhaconta-botao").classList.add('ativo')
+  document.getElementById("configuracoes-botao").classList.remove('ativo')
+  document.getElementById("sair-botao").classList.remove('ativo')
+  
   document.getElementById("botao-salvar").style.display = 'none'
 }
+
+function irParaTrocarSenha() {
+  document.getElementById("pass-div").style.display = 'block'
+  document.getElementById("confirmpass-div").style.display = 'block'
+  
+}
+
+function logout() {
+  document.getElementById("sair-botao").classList.add('ativo')
+  document.getElementById("configuracoes-botao").classList.remove('ativo')
+  document.getElementById("minhaconta-botao").classList.remove('ativo')
+
+  sessionStorage.clear()
+  window.location.href = '/filtros'
+}
+
+function setInputValues() {
+  document.getElementById("name-input").value = sessionStorage.getItem('nome')
+  document.getElementById("email-input").value = sessionStorage.getItem('email')
+  document.getElementById("processor-input").value = sessionStorage.getItem('processador')
+  document.getElementById("driver-input").value = sessionStorage.getItem('gpu')
+  document.getElementById("ram-input").value = sessionStorage.getItem('ram')
+}
+setInputValues()
 
 let mybutton = document.getElementById("button-page-up");
 
