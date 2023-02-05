@@ -314,7 +314,6 @@ $(document).ready(function () {
         isDiv1Clicked = false;
     });
 });
-
 getJogosBusca = (valorBusca, buscaResultados) => {
     if (valorBusca !== "") {
         fetch("/getJogos?valor=" + valorBusca, { method: 'GET' })

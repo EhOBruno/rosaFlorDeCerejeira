@@ -1,5 +1,4 @@
 if (sessionStorage.getItem('Logado')) {
-  
   document.write(`
   <header class="header">
   <div class="header-left">
@@ -10,9 +9,9 @@ if (sessionStorage.getItem('Logado')) {
   </div>
   <div class="header-right-all-login">
     <a href="">
-      <span id="username">Username</span>
+      <span id="username">`+sessionStorage.getItem('nome')+`</span>
     </a>
-    <a href="">
+    <a href="./minhaconta">
       <img src="./img/login.svg" alt="" id="img-user">
     </a>
   </div>
