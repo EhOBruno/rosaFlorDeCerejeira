@@ -35,6 +35,13 @@
 
 <body>
     <script>reqSteam()</script>
+    <script>
+        $(document).ready(function () {
+            if (!sessionStorage.getItem('Logado')) {
+                document.getElementById("reqSeus").style.display="none"
+            }
+        });
+    </script>
     <script src="./js/header.js"></script>
     <main>
         <div class="row justify-content-start">
@@ -72,16 +79,14 @@
                 <div id="recommended" class="col">
 
                 </div>
-                <div class="col">
+                <div id="reqSeus" class="col">
                     <strong class="requisitos">Seus:</strong><br>
                     <ul class="bb_ul">
-                        <li><strong>Processor:</strong> Intel Core i5-2500K @ 3.3 GHz or better or AMD FX-8120
-                            @ 3.1 Ghz or better<br>
+                        <li><strong>Processor:</strong> <span id="spanProcessador"></span>
                         </li>
-                        <li><strong>Memory:</strong> 8 GB RAM<br>
+                        <li><strong>Memory:</strong> <span id="spanRam"></span> <br>
                         </li>
-                        <li><strong>Graphics:</strong> NVIDIA GeForce GTX 670 (or GTX 760 / GTX 960) or AMD
-                            Radeon HD 7970 (or R9 280x [2GB VRAM] / R9 380 / Fury X)<br>
+                        <li><strong>Graphics:</strong> <span id="spanGpu"></span><br>
                         </li>
                     </ul>
                 </div>

@@ -76,6 +76,12 @@ postJogoData = async (idSteam) => {
         document.getElementById('recommended').style.display = "none";
     }
 
+    if (sessionStorage.getItem('Logado')) {
+        document.getElementById("spanProcessador").append(sessionStorage.getItem('processador'))
+        document.getElementById("spanGpu").append(sessionStorage.getItem('gpu'))
+        document.getElementById("spanRam").append(sessionStorage.getItem('ram'))
+    }
+
 }
 addcardCarousel = async () => {
     await fetch("/getJogos", { method: 'GET' })
