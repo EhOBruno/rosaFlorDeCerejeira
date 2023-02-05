@@ -17,12 +17,12 @@ getJogos = async () => {
     if (jazon.length != 0) {
         addCardGame(jazon)
     } else {
-        return Swal.fire({
+        return swal.fire({
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             icon: 'warning',
             title: 'Nenhum jogo encontrado',
-            color: '#FFFFFF',
-            background:'#111111',
-            confirmButtonColor: '#d7336e',
             confirmButtonText: 'Voltar',
             allowOutsideClick: false,
         }).then((result) => {
@@ -176,14 +176,20 @@ sendLoginForm = () => {
     password = document.getElementById('floatingPassword').value
 
     if (email === '') {
-        return Swal.fire({
+        return swal.fire({
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             title: 'Por favor, digite seu e-mail',
             icon: 'warning',
             confirmButtonText: 'Voltar',
         })
     }
     else if (password === '') {
-        return Swal.fire({
+        return swal.fire({
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             icon: 'warning',
             title: 'Por favor, digite sua senha.',
             confirmButtonText: 'Voltar',
@@ -209,14 +215,20 @@ async function sendLoginReq(data) {
             .then(response => {
                 let resStatus = response.status
                 if (resStatus === 404) {
-                    return Swal.fire({
+                    return swal.fire({
+                        color: '#FFFFFF',
+                        background: '#111111',
+                        confirmButtonColor: '#d7336e',
                         icon: 'error',
                         title: 'Esse usuário não está cadastrado.',
                         confirmButtonText: 'Voltar',
                     })
                 }
                 else if (resStatus === 401) {
-                    return Swal.fire({
+                    return swal.fire({
+                        color: '#FFFFFF',
+                        background: '#111111',
+                        confirmButtonColor: '#d7336e',
                         icon: 'error',
                         title: 'Senha inválida.',
                         confirmButtonText: 'Voltar',
@@ -226,7 +238,10 @@ async function sendLoginReq(data) {
                     return response
                 }
                 else {
-                    return Swal.fire({
+                    return swal.fire({
+                        color: '#FFFFFF',
+                        background: '#111111',
+                        confirmButtonColor: '#d7336e',
                         icon: 'error',
                         title: 'Ocorreu um erro no sistema D:',
                         text: 'Por favor, tente novamente mais tarde.',
@@ -264,35 +279,50 @@ sendCadastroForm = () => {
     ram = document.getElementById('imputRam').value
 
     if (nome === '') {
-        return Swal.fire({
+        return swal.fire({
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             title: 'Por favor, digite seu nome',
             icon: 'warning',
             confirmButtonText: 'Voltar',
         })
     }
     else if (email === '') {
-        return Swal.fire({
+        return swal.fire({
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             title: 'Por favor, digite seu e-mail',
             icon: 'warning',
             confirmButtonText: 'Voltar',
         })
     }
     else if (!email.includes('@')) {
-        return Swal.fire({
+        return swal.fire({
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             title: 'Por favor, utilize um email válido.',
             icon: 'warning',
             confirmButtonText: 'Voltar',
         })
     }
     else if (password === '') {
-        return Swal.fire({
+        return swal.fire({
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             icon: 'warning',
             title: 'Por favor, digite uma senha.',
             confirmButtonText: 'Voltar',
         })
     }
     else if (password !== passwordConf) {
-        return Swal.fire({
+        return swal.fire({
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             icon: 'warning',
             title: 'As senhas não conferem.',
             confirmButtonText: 'Voltar',
@@ -323,7 +353,11 @@ async function sendCadastroReq(data) {
             .then(response => {
                 let resStatus = response.status
                 if (resStatus === 401) {
-                    return Swal.fire({
+                    return swal.fire({
+
+                        color: '#FFFFFF',
+                        background: '#111111',
+                        confirmButtonColor: '#d7336e',
                         background: '#111111',
                         icon: 'error',
                         title: 'Esse email já está cadastrado.',
@@ -331,7 +365,11 @@ async function sendCadastroReq(data) {
                     })
                 }
                 else if (resStatus === 200) {
-                    return Swal.fire({
+                    return swal.fire({
+
+                        color: '#FFFFFF',
+                        background: '#111111',
+                        confirmButtonColor: '#d7336e',
                         background: '#111111',
                         allowOutsideClick: false,
                         icon: 'success',
@@ -344,7 +382,11 @@ async function sendCadastroReq(data) {
                     })
                 }
                 else {
-                    return Swal.fire({
+                    return swal.fire({
+
+                        color: '#FFFFFF',
+                        background: '#111111',
+                        confirmButtonColor: '#d7336e',
                         background: '#111111',
                         icon: 'error',
                         title: 'Ocorreu um erro no sistema D:',
@@ -440,28 +482,43 @@ sendEditarDadosForm = () => {
     passwordConf = document.getElementById('confirmpass-input').value
 
     if (nome === '') {
-        return Swal.fire({
+        return swal.fire({
+
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             title: 'Por favor, insira um nome válido.',
             icon: 'warning',
             confirmButtonText: 'Voltar',
         })
     }
     else if (email === '' || !email.includes('@')) {
-        return Swal.fire({
+        return swal.fire({
+
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             title: 'Por favor, insira um email válido.',
             icon: 'warning',
             confirmButtonText: 'Voltar',
         })
     }
     else if (password === '') {
-        return Swal.fire({
+        return swal.fire({
+
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             icon: 'warning',
             title: 'Por favor, digite sua nova senha.',
             confirmButtonText: 'Voltar',
         })
     }
     else if (password !== passwordConf) {
-        return Swal.fire({
+        return swal.fire({
+            color: '#FFFFFF',
+            background: '#111111',
+            confirmButtonColor: '#d7336e',
             icon: 'warning',
             title: 'As senhas não conferem.',
             confirmButtonText: 'Voltar',
@@ -492,11 +549,15 @@ async function sendEditarReq(data) {
         .then(response => {
             let resStatus = response.status
             if (resStatus === 202) {
-                return Swal.fire({
+                return swal.fire({
+                    color: '#FFFFFF',
+                    background: '#111111',
+                    confirmButtonColor: '#d7336e',
                     icon: 'success',
                     title: 'Dados atualizados com sucesso.',
                     text: 'Por favor, faça login novamente.',
                     confirmButtonText: 'Voltar',
+                    allowOutsideClick: false,
                 }).then((result) => {
                     if (result.isConfirmed) {
                         sessionStorage.clear()
@@ -505,7 +566,10 @@ async function sendEditarReq(data) {
                 })
             }
             else {
-                return Swal.fire({
+                return swal.fire({
+                    color: '#FFFFFF',
+                    background: '#111111',
+                    confirmButtonColor: '#d7336e',
                     icon: 'error',
                     title: 'Ocorreu um erro no sistema D:',
                     text: 'Por favor, tente novamente mais tarde.',
