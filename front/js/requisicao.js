@@ -144,6 +144,29 @@ postJogoData = async (idSteam) => {
         document.getElementById("spanProcessador").append(sessionStorage.getItem('processador'))
         document.getElementById("spanGpu").append(sessionStorage.getItem('gpu'))
         document.getElementById("spanRam").append(sessionStorage.getItem('ram'))
+        console.log(minimos)
+
+        // try(){
+            
+        // }
+        // const processadorIntel = minimos.match(/Intel (.*?) /)[1];
+        // const processadorAmd = minimos.match(/AMD (.*?) /)[1];
+        // const ram = minimos.match(/<strong>Memória:<strong> (.*n?)<br>/)[1];
+        // const videoNvidia = minimos.match(/GeForce (.*?) /)[1];
+        // const videoAmd = minimos.match(/AMD Radeon (.*?) /)[1];
+
+
+        // console.log(processadorIntel);
+        // console.log(processadorAmd);
+        // console.log(ram);
+        // console.log(videoNvidia);
+        // console.log(videoAmd);
+        // const processadorIntel = minimos.match(/Intel Core i(\w+)/)[1];
+        // const processadorAmd = minimos.match(/AMD (\w+)/)[1];
+        // const ram = minimos.match(/(\d+ GB RAM)/)[1];
+        // const videoNvidia = minimos.match(/ NVIDIA GeForce (\w+)/)[1];
+        // const videoAmd = minimos.match(/ AMD Radeon (\w+)/)[1];
+        // console.log(processadorIntel);
     }
 
 }
@@ -259,7 +282,8 @@ async function sendLoginReq(data) {
                 sessionStorage.setItem('ram', response.ram)
                 sessionStorage.setItem('senha', response.password)
                 sessionStorage.setItem('Logado', true)
-
+                sessionStorage.setItem("performanceGpu", response.performanceGpu)
+                sessionStorage.setItem("performanceCpu", response.performanceCpu)
                 window.location.href = '/filtros'
             })
     }
@@ -277,6 +301,20 @@ sendCadastroForm = () => {
     processador = document.getElementById('imputProcessador').value
     gpu = document.getElementById('imputGpu').value
     ram = document.getElementById('imputRam').value
+    if (processador != "Nenhum") {
+        performanceCpu = sessionStorage.getItem('performanceCpu')
+    } else {
+        performanceCpu = 0
+        console.log('df')
+    }
+    if (gpu != "Nenhuma") {
+        performanceGpu = sessionStorage.getItem('performanceGpu')
+
+    } else {
+        performanceGpu = 0
+        console.log('df')
+    }
+
 
     if (nome === '') {
         return swal.fire({
@@ -336,7 +374,9 @@ sendCadastroForm = () => {
         "passwordConf": passwordConf,
         "gpu": gpu,
         "ram": ram,
-        "processador": processador
+        "processador": processador,
+        "performanceCpu": performanceCpu,
+        "performanceGpu": performanceGpu
     }
     sendCadastroReq(inputData)
 }

@@ -39,7 +39,10 @@
       <button class="button-1">Sobre</button>
     </div>
   </header>
-
+<script>
+  sessionStorage.removeItem("performanceGpu")
+  sessionStorage.removeItem("performanceCpu")
+</script>
   <form>
     <main class="main-cadastro">
       <h1>Cadastre-se</h1>
@@ -141,14 +144,16 @@
               option.value = options[i].value;
               option.text = options[i].label;
               select.appendChild(option);
+              
             }
             select.addEventListener("change", function () {
               var selectedOption = options.find(function (option) {
-                return option.value == select.value;
+              return  option.value == select.value;
               });
 
               console.log("Valor selecionado:", selectedOption.value);
               console.log("Performance CPU:", selectedOption.performancecpu);
+              sessionStorage.setItem("performanceCpu", selectedOption.performancecpu)
             });
             var opcoes = [
               { value: "RTX-4090", label: "RTX-4090", performancegpu: "100" },
@@ -193,6 +198,7 @@
 
               console.log("Valor selecionado:", selectedOpcao.value);
               console.log("Performance GPU:", selectedOpcao.performancegpu);
+              sessionStorage.setItem("performanceGpu", selectedOpcao.performancegpu)
             });
           }
         </script>

@@ -21,8 +21,9 @@ exports.register = ('/cadastro', async (req, res) => {
             password: hashedPass,
             processador: req.body.processador,
             gpu: req.body.gpu,
-            ram: req.body.ram
-
+            ram: req.body.ram,
+            performanceGpu: req.body.performanceGpu,
+            performanceCpu: req.body.performanceCpu
         })
 
         user.save()

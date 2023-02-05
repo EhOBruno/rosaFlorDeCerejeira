@@ -25,6 +25,12 @@ const userSchema = new Schema({
     },
     ram: {
         type: String
+    },
+    performanceGpu: {
+        type: String
+    },
+    performanceCpu:{
+        type: String
     }
 }, {timestamps: true});
 
