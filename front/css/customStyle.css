@@ -156,6 +156,71 @@ main {
   margin-top: 87.1px;
   
 }
+
+.respBusca-login {
+  display: none;
+  width: 24.95% ;
+  margin-left: 8.75%;
+  border-radius: 40px;
+  position: absolute;
+  /* background-color: #ffceced9; */
+  background-color: 0;
+  margin-top: 87.1px;
+  
+}
+
+@media screen and (max-width: 1500px) {
+  .respBusca {
+    display: none;
+    width: 24.45% ;
+    margin-left: 9%;
+    border-radius: 40px;
+    position: absolute;
+    /* background-color: #ffceced9; */
+    background-color: 0;
+    margin-top: 87.1px;
+  }
+}
+
+@media (min-width: 1766px) and (max-width: 1767px) {
+  .respBusca {
+    display: none;
+    width: 24.60% ;
+    margin-left: 8.9%;
+    border-radius: 40px;
+    position: absolute;
+    /* background-color: #ffceced9; */
+    background-color: 0;
+    margin-top: 80.1px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .respBusca-login {
+    display: none;
+    width: 24.45% ;
+    margin-left: 9%;
+    border-radius: 40px;
+    position: absolute;
+    /* background-color: #ffceced9; */
+    background-color: 0;
+    margin-top: 87.1px;
+  }
+}
+
+@media (min-width: 1766px) and (max-width: 1767px) {
+  .respBusca-login {
+    display: none;
+    width: 24.35% ;
+    margin-left: 8.8%;
+    border-radius: 40px;
+    position: absolute;
+    /* background-color: #ffceced9; */
+    background-color: 0;
+    margin-top: 80.1px;
+  }
+}
+
 .respJogo{
   cursor: pointer;
   display: flex;
@@ -163,7 +228,6 @@ main {
   justify-content: center;
   border: 0 1px 1px 1px solid #fe0808;
   background-color: #ffa4b8;
-  margin-bottom: 1px;
 }
 
 .respJogo div {
@@ -217,10 +281,16 @@ main {
   font-weight: 700;
 }
 
+.cardjogo a {
+  display: flex;
+  justify-content: center;
+}
+
 .imgjogo {
   border-radius: 20px;
   width: 396px;
   height: 185px;
+  
 }
 
 .jogosContainer {
@@ -231,7 +301,6 @@ main {
   color: aliceblue;
   font-weight: bold;
   text-align: center;
-  margin-right: 70px;
 
 }
 
