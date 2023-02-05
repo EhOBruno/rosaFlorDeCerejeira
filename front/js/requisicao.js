@@ -157,12 +157,14 @@ postJogoData = async (idSteam) => {
         performanceGpu = parseInt(sessionStorage.getItem('performanceGpu'))
         performanceCpu = parseInt(sessionStorage.getItem('performanceCpu'))
         ram = parseInt(sessionStorage.getItem('ram'))
-        if(performanceGpu>=gpuMin){
-            if(performanceCpu>=cpuMin){
-                if(ram>=ramMin){
-                  console.log('tanka')  
+        if (performanceGpu >= gpuMin) {
+            if (performanceCpu >= cpuMin) {
+                if (ram >= ramMin) {
+
                 }
+
             }
+
         }
     }
 
@@ -274,6 +276,7 @@ async function sendLoginReq(data) {
             })
             .then(response => response.json())
             .then(response => {
+
                 sessionStorage.setItem('id', response._id)
                 sessionStorage.setItem('nome', response.name)
                 sessionStorage.setItem('email', response.email)
@@ -282,7 +285,6 @@ async function sendLoginReq(data) {
                 sessionStorage.setItem('ram', response.ram)
                 sessionStorage.setItem('senha', response.password)
                 sessionStorage.setItem('Logado', true)
-                console.log(response)
                 sessionStorage.setItem("performanceGpu", response.performanceGpu)
                 sessionStorage.setItem("performanceCpu", response.performanceCpu)
                 window.location.href = '/filtros'
@@ -305,12 +307,20 @@ sendCadastroForm = () => {
     if (processador != "Nenhum") {
         performanceCpu = sessionStorage.getItem('performanceCpu')
     } else {
-        performanceCpu = 0
+        performanceCpu = '0'
+        console.log('opa')
     }
     if (gpu != "Nenhuma") {
         performanceGpu = sessionStorage.getItem('performanceGpu')
     } else {
-        performanceGpu = 0
+        console.log('opa')
+        performanceGpu = '0'
+    }
+    if (ram != "Nenhuma") {
+        ram = document.getElementById('imputRam').value
+    } else {
+        console.log('opa')
+        ram = '0'
     }
 
 
