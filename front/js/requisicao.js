@@ -44,21 +44,28 @@ addCardGame = (jazon) => {
         gameimg = jazon[i]['img']
         gameNome = jazon[i]['nome']
         idSteam = jazon[i]['idSteam']
+        cpu = jazon[i]['cpuMin']
+        gpu = jazon[i]['gpuMin']
+        ram = jazon[i]['ramMin']
 
-        card = cardGame(gameimg, gameNome, idSteam)
+
+        card = cardGame(gameimg, gameNome, idSteam, cpu, gpu, ram)
         document.getElementById("gamestable").insertAdjacentHTML("beforeend", card)
     }
 }
-cardGame = (gameimg, gameNome, idSteam) => {
+cardGame = (gameimg, gameNome, idSteam, cpu, gpu, ram) => {
     idSteam = "'" + idSteam + "'"
     return '<div class="col-4 cardjogo mb-4">' +
-        '<a onclick="clickjogo(' + idSteam + ')"><img class="imgjogo"' +
+        '<a onclick="clickjogo(' + idSteam + ',' + cpu + ',' + gpu + ',' + ram + ')"><img class="imgjogo"' +
         'src="' + gameimg + '"></a>' +
         '<p class="gamename">' + gameNome + '</p>' +
         '</div>'
 }
-clickjogo = (idSteam) => {
+clickjogo = (idSteam, cpu, gpu, ram) => {
     sessionStorage.setItem('idSteam', idSteam)
+    sessionStorage.setItem('cpuMin', cpu)
+    sessionStorage.setItem('gpuMin', gpu)
+    sessionStorage.setItem('ramMin', ram)
     window.location.assign("./jogo")
 }
 clickFiltrar = () => {
@@ -146,27 +153,6 @@ postJogoData = async (idSteam) => {
         document.getElementById("spanRam").append(sessionStorage.getItem('ram'))
         console.log(minimos)
 
-        // try(){
-            
-        // }
-        // const processadorIntel = minimos.match(/Intel (.*?) /)[1];
-        // const processadorAmd = minimos.match(/AMD (.*?) /)[1];
-        // const ram = minimos.match(/<strong>Memória:<strong> (.*n?)<br>/)[1];
-        // const videoNvidia = minimos.match(/GeForce (.*?) /)[1];
-        // const videoAmd = minimos.match(/AMD Radeon (.*?) /)[1];
-
-
-        // console.log(processadorIntel);
-        // console.log(processadorAmd);
-        // console.log(ram);
-        // console.log(videoNvidia);
-        // console.log(videoAmd);
-        // const processadorIntel = minimos.match(/Intel Core i(\w+)/)[1];
-        // const processadorAmd = minimos.match(/AMD (\w+)/)[1];
-        // const ram = minimos.match(/(\d+ GB RAM)/)[1];
-        // const videoNvidia = minimos.match(/ NVIDIA GeForce (\w+)/)[1];
-        // const videoAmd = minimos.match(/ AMD Radeon (\w+)/)[1];
-        // console.log(processadorIntel);
     }
 
 }
@@ -187,9 +173,12 @@ addcardCarousel = async () => {
 
         gameimg = jazon[numero]['img'];
         idSteam = jazon[numero]['idSteam'];
+        cpu = jazon[i]['cpuMin']
+        gpu = jazon[i]['gpuMin']
+        ram = jazon[i]['ramMin']
 
         document.getElementById(i).src = gameimg;
-        document.getElementById(i).setAttribute("onclick", "clickjogo(" + idSteam + ")");
+        document.getElementById(i).setAttribute("onclick", 'clickjogo(' + idSteam + ',' + cpu + ',' + gpu + ',' + ram + ')');
     }
 }
 
@@ -305,14 +294,11 @@ sendCadastroForm = () => {
         performanceCpu = sessionStorage.getItem('performanceCpu')
     } else {
         performanceCpu = 0
-        console.log('df')
     }
     if (gpu != "Nenhuma") {
         performanceGpu = sessionStorage.getItem('performanceGpu')
-
     } else {
         performanceGpu = 0
-        console.log('df')
     }
 
 
@@ -504,7 +490,10 @@ cardJogoBusca = (jazon, buscaResultados) => {
     tamanho = jazon["length"]
     if (tamanho != 0) {
         for (i = 0; i < tamanho; i++) {
-            buscaResultados.insertAdjacentHTML("beforeend", '<div id="respBusca" onclick="clickjogo(' + jazon[i]['idSteam'] + ')" class="respJogo"><div>' + jazon[i]['nome'] + '</div></div>')
+            cpu = jazon[i]['cpuMin']
+            gpu = jazon[i]['gpuMin']
+            ram = jazon[i]['ramMin']
+            buscaResultados.insertAdjacentHTML("beforeend", '<div id="respBusca" onclick="clickjogo(' + jazon[i]['idSteam'] + ',' + cpu + ',' + gpu + ',' + ram + ')" class="respJogo"><div>' + jazon[i]['nome'] + '</div></div>')
         }
     } else {
         buscaResultados.insertAdjacentHTML("beforeend", '<div id="respBusca" class="respJogo"><div>Nenhum resultado</div></div>')
