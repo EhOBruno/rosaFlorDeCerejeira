@@ -99,10 +99,10 @@ body {
   margin-right: 1em;
 }
 
-#img-user {
+/* #img-user {
   width: 5em;
   height: auto;
-}
+} */
 
 .header-right-2 {
   display: flex;
@@ -517,7 +517,7 @@ form img {
 #botao-salvar{
   background-color: #D7336E;
   color: #ffffff;
-  width: 13%;
+  width: 100%;
   height: 35%;
   font-size: 1.2em;
   font-weight: bolder;
@@ -669,9 +669,8 @@ form img {
   }
   
   .img-user{
-    width: 25%;
-    height: 25%;
-    margin-top: 8%;
+    width: 15rem;
+    height: 15rem;
   }
   
   .btn-user{
@@ -690,16 +689,18 @@ form img {
   
   .main-perfil{
     display: flex;
-    justify-content:center;
+    justify-content:space-between;
     width: 100%;
+    padding: 0 10%;
   }
   
   
   .div-configs{
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 80%;
+    margin-top: 8%;
+    gap: 10rem;
   }
   
   
@@ -714,7 +715,7 @@ form img {
   .inputs-test-2 {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: fit-content;
     align-items: center;
   }
   
@@ -723,11 +724,7 @@ form img {
       flex-direction: column;
       width: 100%;
   }
-  
-  .img-user{
-    margin-top: 8%;
-    margin-left: 0;
-  }
+
   
   
   
@@ -736,14 +733,12 @@ form img {
     display: flex;
     flex-direction: column;
     width: 20%;
-    height: 100vh;
-    margin-right: 30px;
+    margin-top: 8%;
   }
   
   .buttons {
     display: flex;
     flex-direction: column;
-    margin-top: 50%;
     align-items: center;
     width: 100%;
   }
@@ -790,6 +785,9 @@ form img {
     background-color: #2D2D2D;
     color:white;
   }
+  #minhaconta-botao{
+    margin-top: 0;
+  }
 
   .ativo{
     background-color: white !important;
@@ -801,3 +799,12 @@ form img {
   #email-div{
     display: none;
   }
+
+  #pass-input,
+  #confirmpass-input{
+    background-color: white !important;
+  }
+
+.salvar{
+  width: 100% !important;
+}
