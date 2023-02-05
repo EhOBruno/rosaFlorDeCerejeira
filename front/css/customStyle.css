@@ -513,3 +513,33 @@ main {
   display: flex;
   gap: 3rem;
 }
+
+.cardTanka {
+  display: block;
+  font-size: 1.3em;
+  text-align: center;
+  color: #e83678;
+  font-weight: bolder;
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+  background-color: #111111;
+  background-image: url("../img/borda.gif");
+  background-position: center;
+  overflow: hidden;
+}
+
+.cardNTanka {
+  display: none;
+  font-size: 1.1em;
+  text-align: center;
+  color: #e83678;
+  font-weight: bolder;
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+  background-color: #111111;
+  background-image: url("../img/borda.gif");
+  background-position: center;
+  overflow: hidden;
+}
