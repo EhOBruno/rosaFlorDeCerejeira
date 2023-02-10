@@ -104,6 +104,8 @@ main {
 #img-user {
   width: 5em;
   height: auto;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .header-right-2 {

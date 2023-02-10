@@ -99,10 +99,12 @@ body {
   margin-right: 1em;
 }
 
-/* #img-user {
+#img-user {
   width: 5em;
   height: auto;
-} */
+  border-radius: 50%;
+  overflow: hidden;
+}
 
 .header-right-2 {
   display: flex;
