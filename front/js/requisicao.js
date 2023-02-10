@@ -158,6 +158,45 @@ postJogoData = async (idSteam) => {
         performanceGpu = parseInt(sessionStorage.getItem('performanceGpu'))
         performanceCpu = parseInt(sessionStorage.getItem('performanceCpu'))
         ram = parseInt(sessionStorage.getItem('ram'))
+        let score = 0
+
+        if(performanceGpu >= gpuMin){
+            score++
+        }else{
+
+            document.getElementById("spanGpu").style.color= "red"
+
+        }
+
+        if(performanceCpu >= cpuMin){
+            score++
+        }else{
+
+            document.getElementById("spanProcessador").style.color= "red"
+
+        }
+        
+        if(ram >= ramMin){
+            score++
+        }else{
+
+            document.getElementById("spanRam").style.color= "red"
+            
+        }
+
+        if(score==3){
+
+            document.getElementById('SeuPcTanka').style.display="block"
+
+        }else{
+
+            document.getElementById('SeuPcNTanka').style.display="block"
+
+        }
+
+
+
+
         if (performanceGpu >= gpuMin) {
             if (performanceCpu >= cpuMin) {
                 if (ram >= ramMin) {
