@@ -13,18 +13,24 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
   <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="./js/sweetalert2.all.min.js"></script>
   <script src="./js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="./js/requisicao.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 
 
 </head>
 
 <body>
 
-  <script src="./js/headerSemlogin.js"></script>
+  <script src="./js/header.js"></script>
 
   <main class="main-index">
     <div id="main-left-1">
@@ -49,7 +55,7 @@
         DE ACORDO COM SUAS ESPECIFICAÇÕES</p>
       <button id="botao-cadastro" onclick="irParaCadastro()"> Cadastre-se</button>
       <p id="texto-intermedio">OU</p>
-      <button id="botao-navegar">Navegue livremente</button>
+      <button id="botao-navegar" onclick="window.location.assign('./filtros')">Navegue livremente</button>
 
     </div>
 
@@ -59,9 +65,10 @@
     </div>
   </main>
   <footer id="footer_pg_inicial"> </footer>
-  
+
   <script src="./js/footer.js"></script>
-  <script src="./js/script.js"></script>
-  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </body>
+
 </html>

@@ -1,39 +1,30 @@
-const path = require('path');
-const jwt = require('jsonwebtoken');
+const User = require('../models/UserSchema');
 const bcrypt = require('bcrypt');
-const bodyParser = require('body-parser');
-var SECRET = "cacaiuscaibcuiasbciuasbcascxczcmxz"
-const mongoose = require('mongoose');
-const User = require('../models/User');
-
 
 exports.paginaLogin = (req, res) => {
     res.render('../front/login.html')
 }
 
-exports.logar = async (req, res) => {
+exports.loginAuth = ('/loginAuth', async (req, res) => {
+    try {
+        let signedUser = await User.findOne({ email: req.body.email })
 
-    const user = await User.findOne({email: req.body.email})
-    if(!user){
-        return res.status(404).json({msg: "usuario nao encontrado"})
-    }
-    
-    //check password
-    const checkPassword = await bcrypt.compare(req.body.password, user.password)
-    if(!checkPassword){
-        return res.status(404).json({msg: "senha invalida"})
-    }
-    
-    try{
-        
-        const secret = SECRET
+        if (!signedUser) {
+            return res.status(404).send()
+        }
 
-        const token = jwt.sign({
-            id: user._id
-        }, secret)
-        res.status(200).redirect('/filtros')
-        
-    }catch(err){
+        const checkPassword = await bcrypt.compare(req.body.password, signedUser.password)
+
+        if (!checkPassword) {
+            return res.status(401).send()
+        }
+        else {
+            return res.status(200).send(signedUser)
+        }
+    }
+    catch (err) {
         console.log(err)
+        return res.status(500).send("err", err).send()
     }
-}
+
+})

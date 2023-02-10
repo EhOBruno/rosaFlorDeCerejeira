@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <title>Seu PC tanka? - Meu perfil</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/requisicao.js" defer></script>
+    <script src="./js/imput.js"></script>
+
+</head>
+
+<body>
+    <script src="./js/header.js"></script>
+
+    <main class="main-perfil">
+
+        <div class="div-configs">
+            <img src="./img/perfil.svg" alt="fotodeperfil" class="img-user">
+
+            <div class="inputs-test-2">
+                <!-- NOME -->
+                <div id="name-div" class="form-floating mb-4" style="width: 25em;">
+                    <input class="input form-control bg-danger-subtle border-light-subtle" placeholder="Nome" disabled
+                        id="name-input">
+                    <label class="text-danger form-label" for="floatingInput">Nome</label>
+                </div>
+
+                <!-- PROCESSADOR -->
+                <div id="processor-div" class="form-floating mb-4" style="width: 25em;">
+                    <select class="form-select bg-danger-subtle rounded-3" name="processador" id="processor-input"
+                        aria-label="Floating label select example" disabled>
+
+                    </select>
+                    <label class="text-danger" for="floatingSelect">Processador</label>
+                </div>
+                <script>
+                    window.onload = function () {
+                        var options = [
+                            {value: sessionStorage.getItem('processador'), label:sessionStorage.getItem('processador'), performancecpu: sessionStorage.getItem('performanceCpu')},
+                            { value: "I7-12700", label: "I7-12700", performancecpu: "100" },
+                            { value: "I7-11700", label: "I7-11700", performancecpu: "99" },
+                            { value: "I7-10700", label: "I7-10700", performancecpu: "98" },
+                            { value: "I7-9700", label: "I7-9700", performancecpu: "97" },
+                            { value: "I7-8700", label: "I7-8700", performancecpu: "96" },
+                            { value: "I7-7700", label: "I7-7700", performancecpu: "95" },
+                            { value: "I7-6700", label: "I7-6700", performancecpu: "94" },
+                            { value: "I7-5700", label: "I7-5700", performancecpu: "90" },
+                            { value: "I7-4770", label: "I7-4770", performancecpu: "85" },
+                            { value: "I7-3770", label: "I7-3770", performancecpu: "83" },
+                            { value: "I7-2600", label: "I7-2600", performancecpu: "80" },
+                            { value: "I5-12400", label: "I5-12400", performancecpu: "95" },
+                            { value: "I5-11400", label: "I5-11400", performancecpu: "93" },
+                            { value: "I5-10400", label: "I5-10400", performancecpu: "92" },
+                            { value: "I5-9600", label: "I5-9600", performancecpu: "86" },
+                            { value: "I5-8600", label: "I5-8600", performancecpu: "84" },
+                            { value: "I5-7600", label: "I5-7600", performancecpu: "82" },
+                            { value: "I5-6600", label: "I5-6600", performancecpu: "78" },
+                            { value: "I5-5600", label: "I5-8600", performancecpu: "75" },
+                            { value: "I5-4600", label: "I5-4600", performancecpu: "72" },
+                            { value: "I5-3570", label: "I5-3570", performancecpu: "68" },
+                            { value: "I5-2500", label: "I5-2500", performancecpu: "65" },
+                            { value: "I3-12100", label: "I3-12100", performancecpu: "90" },
+                            { value: "I3-11100", label: "I3-11100", performancecpu: "88" },
+                            { value: "I3-9100", label: "I3-9100", performancecpu: "85" },
+                            { value: "I3-8100", label: "I3-8100", performancecpu: "83" },
+                            { value: "I3-7100", label: "I3-7100", performancecpu: "77" },
+                            { value: "I3-6100", label: "I3-6100", performancecpu: "74" },
+                            { value: "I3-5100", label: "I3-5100", performancecpu: "70" },
+                            { value: "I3-4170", label: "I3-4170", performancecpu: "65" },
+                            { value: "I3-2100", label: "I3-2100", performancecpu: "60" },
+
+                            { value: "Ryzen 7 7700", label: "Ryzen 7 7700", performancecpu: "100" },
+                            { value: "Ryzen 7 6800", label: "Ryzen 7 6800", performancecpu: "99" },
+                            { value: "Ryzen 7 5700", label: "Ryzen 7 5700", performancecpu: "98" },
+                            { value: "Ryzen 7 4700", label: "Ryzen 7 4700", performancecpu: "97" },
+                            { value: "Ryzen 7 3700", label: "Ryzen 7 3700", performancecpu: "95" },
+                            { value: "Ryzen 7 2700", label: "Ryzen 7 2700", performancecpu: "93" },
+                            { value: "Ryzen 7 1700", label: "Ryzen 7 1700", performancecpu: "88" },
+                            { value: "Ryzen 5 7600", label: "Ryzen 5 7600", performancecpu: "98" },
+                            { value: "Ryzen 5 6600", label: "Ryzen 5 6600", performancecpu: "97" },
+                            { value: "Ryzen 5 4600", label: "Ryzen 5 4600", performancecpu: "94" },
+                            { value: "Ryzen 5 3600", label: "Ryzen 5 3600", performancecpu: "90" },
+                            { value: "Ryzen 5 2600", label: "Ryzen 5 2600", performancecpu: "88" },
+                            { value: "Ryzen 5 1600", label: "Ryzen 5 1600", performancecpu: "78" },
+                            { value: "Ryzen 3 7300", label: "Ryzen 3 7300", performancecpu: "95" },
+                            { value: "Ryzen 3 6300", label: "Ryzen 3 6300", performancecpu: "92" },
+                            { value: "Ryzen 3 5300", label: "Ryzen 3 5300", performancecpu: "88" },
+                            { value: "Ryzen 3 4300", label: "Ryzen 3 4300", performancecpu: "85" },
+                            { value: "Ryzen 3 3200", label: "Ryzen 3 3200", performancecpu: "81" },
+                            { value: "Ryzen 3 2200", label: "Ryzen 3 2200", performancecpu: "77" },
+                            { value: "Ryzen 3 1200", label: "Ryzen 3 1200", performancecpu: "65" },
+                            { value: "AMD FX-6300", label: "AMD FX-6300", performancecpu: "70" },
+
+
+
+
+                        ];
+
+                        var select = document.getElementById("processor-input")
+
+                        for (var i = 0; i < options.length; i++) {
+                            var option = document.createElement("option");
+                            option.value = options[i].value;
+                            option.text = options[i].label;
+                            select.appendChild(option);
+
+                        }
+                        select.addEventListener("change", function () {
+                            var selectedOption = options.find(function (option) {
+                                return option.value == select.value;
+                            });
+
+                            console.log("Valor selecionado:", selectedOption.value);
+                            console.log("Performance CPU:", selectedOption.performancecpu);
+                            sessionStorage.setItem("performanceCpuProv", selectedOption.performancecpu)
+                        });
+                        var opcoes = [
+                            {value: sessionStorage.getItem('gpu'), label: sessionStorage.getItem('gpu'), performancegpu: sessionStorage.getItem('performanceGpu')},
+                            { value: "RTX-4090", label: "RTX-4090", performancegpu: "100" },
+                            { value: "RTX-4080", label: "RTX-4080", performancegpu: "99" },
+                            { value: "RTX-4070", label: "RTX-4070", performancegpu: "98" },
+                            { value: "RTX-3090", label: "RTX-3090", performancegpu: "98" },
+                            { value: "RTX-3080", label: "RTX-3080", performancegpu: "97" },
+                            { value: "RTX-3070", label: "RTX-3070", performancegpu: "96" },
+                            { value: "RTX-3060", label: "RTX-3060", performancegpu: "95" },
+                            { value: "RTX-2080", label: "RTX-2080", performancegpu: "96" },
+                            { value: "RTX-2070", label: "RTX-2070", performancegpu: "94" },
+                            { value: "RTX-2060", label: "RTX-2060", performancegpu: "90" },
+                            { value: "RTX-2050", label: "RTX-2050", performancegpu: "85" },
+                            { value: "GTX-1660", label: "GTX-1660", performancegpu: "90" },
+                            { value: "GTX-1650", label: "GTX-1650", performancegpu: "82" },
+                            { value: "GTX-1080", label: "GTX-1080", performancegpu: "90" },
+                            { value: "GTX-1070", label: "GTX-1070", performancegpu: "87" },
+                            { value: "GTX-1060", label: "GTX-1060", performancegpu: "81" },
+                            { value: "GTX-1050", label: "GTX-1050", performancegpu: "75" },
+                            { value: "GTX-980", label: "GTX-980", performancegpu: "87" },
+                            { value: "GTX-970", label: "GTX-970", performancegpu: "82" },
+                            { value: "GTX-960", label: "GTX-960", performancegpu: "75" },
+                            { value: "GTX-950", label: "GTX-950", performancegpu: "71" },
+                            { value: "GTX-780", label: "GTX-780", performancegpu: "75" },
+                            { value: "GTX-770", label: "GTX-770", performancegpu: "70" },
+                            { value: "GTX-750", label: "GTX-750", performancegpu: "60" },
+
+                            { value: "RX 7900 XT", label: "RX 7900 XT", performancegpu: "100" },
+                            { value: "RX 6900 XT", label: "RX 7900 XT", performancegpu: "100" },
+                            { value: "RX 6800 XT", label: "RX 7900 XT", performancegpu: "100" },
+                            { value: "RX 6700 XT", label: "RX 7900 XT", performancegpu: "100" },
+                            { value: "RX 6600 XT", label: "RX 7900 XT", performancegpu: "100" },
+                            { value: "RX 6500 XT", label: "RX 7900 XT", performancegpu: "100" },
+                            { value: "RX 5700 XT", label: "RX 7900 XT", performancegpu: "100" },
+                            { value: "RX 5500 XT", label: "RX 7900 XT", performancegpu: "98" },
+                            { value: "RX 590", label: "RX 590", performancegpu: "93" },
+                            { value: "RX 580", label: "RX 580", performancegpu: "92" },
+                            { value: "RX 570", label: "RX 570", performancegpu: "88" },
+                            { value: "RX 560", label: "RX 560", performancegpu: "86" },
+                            { value: "RX 550", label: "RX 550", performancegpu: "82" },
+                            { value: "RX 480", label: "RX 480", performancegpu: "87" },
+                            { value: "RX 470", label: "RX 470", performancegpu: "75" },
+                            { value: "RX 460", label: "RX 460", performancegpu: "70" },
+                            { value: "RX 450", label: "RX 450", performancegpu: "65" },
+
+
+
+
+                        ];
+                        var select2 = document.getElementById("driver-input")
+
+                        for (var i = 0; i < opcoes.length; i++) {
+                            var opcao = document.createElement("option");
+                            opcao.value = opcoes[i].value;
+                            opcao.text = opcoes[i].label;
+                            select2.appendChild(opcao);
+                        }
+                        select2.addEventListener("change", function () {
+                            var selectedOpcao = opcoes.find(function (opcao) {
+                                return opcao.value == select2.value;
+                            });
+
+                            console.log("Valor selecionado:", selectedOpcao.value);
+                            console.log("Performance GPU:", selectedOpcao.performancegpu);
+                            sessionStorage.setItem("performanceGpuProv", selectedOpcao.performancegpu)
+                        });
+                    }
+                </script>
+                <!-- PLACA DE VÍDEO -->
+                <div id="driver-div" class="form-floating mb-4" style="width: 25em;">
+                    <select class="form-select bg-danger-subtle rounded-3" name="gpu" id="driver-input"
+                        aria-label="Floating label select example" disabled>
+                       
+
+                    </select>
+                    <label class="text-danger" for="floatingSelect">Placa de Vídeo</label>
+                </div>
+
+                <!-- RAM -->
+                <div id="ram-div" class="form-floating mb-4" style="width: 25em;">
+                    <select class="form-select bg-danger-subtle rounded-3" name="ram" id="ram-input"
+                        aria-label="Floating label select example" disabled>
+                        <option value="Nenhuma" selected>Nenhuma</option>
+                        <option value="4">4Gb</option>
+                        <option value="8">8Gb</option>
+                        <option value="16">16Gb</option>
+                        <option value="32">32Gb</option>
+                        <option value="64">64Gb</option>
+                    </select>
+                    <label class="text-danger" for="floatingSelect">Memória RAM</label>
+                </div>
+
+                <!-- EMAIL -->
+                <div id='email-div' class="form-floating mb-4" style="width: 25em;">
+                    <input type="email" class="input form-control bg-danger-subtle border-light-subtle  " disabled
+                        id="email-input" placeholder="name@example.com">
+                    <label class="text-danger form-label" for="floatingInput">E-mail</label>
+                </div>
+
+                <!-- SENHA -->
+                <div id='pass-div' class="form-floating mb-4 mt-4" style="width: 25em;">
+                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle  "
+                        id="pass-input" placeholder="Senha">
+                    <label class="text-danger form-label" for="floatingInput">Senha</label>
+                </div>
+
+                <!-- CONFIRMAR SENHA -->
+                <div id='confirmpass-div' class="form-floating mb-4" style="width: 25em;">
+                    <input type="password" class="input form-control bg-danger-subtle border-light-subtle  "
+                        id="confirmpass-input" placeholder="Confirmar Senha">
+                    <label class="text-danger form-label" for="floatingInput">Confirmar Senha</label>
+                </div>
+
+                <!-- BOTÃO SALVAR -->
+                <div class="div-botao-finalizar salvar" onclick="sendEditarDadosForm()">
+                    <button type='button' id="botao-salvar">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-bar">
+            <div class="buttons">
+                <button id="minhaconta-botao" class="side-bar-buttons ativo" onclick="irParaConta()">MINHA
+                    CONTA</button>
+                <button id="configuracoes-botao" class="side-bar-buttons"
+                    onclick="irParaConfig()">CONFIGURAÇÕES</button>
+                <button id="mudarsenha-botao" class="side-bar-buttons" onclick="irParaTrocarSenha()">MUDAR
+                    SENHA</button>
+                <button id="sair-botao" class="side-bar-buttons" onclick="logout()">SAIR</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./js/footer.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</body>
+
+</html>

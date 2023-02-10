@@ -1,7 +1,11 @@
 $('.carousel').slick({
+  infinite: false,
+  slidesPerRow: 6,
+  slidesToShow: 2,
+  initialSlide: 2,
   centerMode: true,
   centerPadding: '60px',
-  slidesToShow: 3,
+  lazyLoad: 'ondemand',
   responsive: [
     {
       breakpoint: 768,

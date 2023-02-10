@@ -1,0 +1,520 @@
+{
+    "578080": {
+        "success": true,
+        "data": {
+            "type": "game",
+            "name": "PUBG: BATTLEGROUNDS",
+            "steam_appid": 578080,
+            "required_age": 0,
+            "is_free": true,
+            "detailed_description": "<strong>LAND, LOOT, SURVIVE!</strong><br>Play PUBG: BATTLEGROUNDS for free.<br>Land on strategic locations, loot weapons and supplies, and survive to become the last team standing across various, diverse Battlegrounds.<br>Squad up and join the Battlegrounds for the original Battle Royale experience that only PUBG: BATTLEGROUNDS can offer.<br><br>This content download will also provide access to the BATTLEGROUNDS Test Server, which requires a separate download to play. <br>Optional in-game purchases available.",
+            "about_the_game": "<strong>LAND, LOOT, SURVIVE!</strong><br>Play PUBG: BATTLEGROUNDS for free.<br>Land on strategic locations, loot weapons and supplies, and survive to become the last team standing across various, diverse Battlegrounds.<br>Squad up and join the Battlegrounds for the original Battle Royale experience that only PUBG: BATTLEGROUNDS can offer.<br><br>This content download will also provide access to the BATTLEGROUNDS Test Server, which requires a separate download to play. <br>Optional in-game purchases available.",
+            "short_description": "Play PUBG: BATTLEGROUNDS for free. Land on strategic locations, loot weapons and supplies, and survive to become the last team standing across various, diverse Battlegrounds. Squad up and join the Battlegrounds for the original Battle Royale experience that only PUBG: BATTLEGROUNDS can offer.",
+            "supported_languages": "English, Korean, Simplified Chinese, French, German, Spanish - Spain, Arabic, Japanese, Polish, Portuguese - Portugal, Russian, Turkish, Thai, Italian, Portuguese - Brazil, Traditional Chinese, Ukrainian",
+            "header_image": "https://cdn.akamai.steamstatic.com/steam/apps/578080/header.jpg?t=1673331963",
+            "website": "http://www.pubg.com",
+            "pc_requirements": {
+                "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> 64-bit Windows 10<br></li><li><strong>Processor:</strong> Intel Core i5-4430 / AMD FX-6300<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> NVIDIA GeForce GTX 960 2GB / AMD Radeon R7 370 2GB<br></li><li><strong>DirectX:</strong> Version 11<br></li><li><strong>Network:</strong> Broadband Internet connection<br></li><li><strong>Storage:</strong> 40 GB available space</li></ul>",
+                "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> 64-bit Windows 10<br></li><li><strong>Processor:</strong> Intel Core i5-6600K / AMD Ryzen 5 1600<br></li><li><strong>Memory:</strong> 16 GB RAM<br></li><li><strong>Graphics:</strong> NVIDIA GeForce GTX 1060 3GB / AMD Radeon RX 580 4GB<br></li><li><strong>DirectX:</strong> Version 11<br></li><li><strong>Network:</strong> Broadband Internet connection<br></li><li><strong>Storage:</strong> 50 GB available space</li></ul>"
+            },
+            "mac_requirements": {
+                "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system</li></ul>",
+                "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system</li></ul>"
+            },
+            "linux_requirements": {
+                "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system</li></ul>",
+                "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system</li></ul>"
+            },
+            "legal_notice": "© 2017 KRAFTON, Inc.<br />\r\nPUBG: BATTLEGROUNDS Korea and PUBG are registered trademarks or service marks of KRAFTON, Inc.",
+            "developers": [
+                "KRAFTON, Inc."
+            ],
+            "publishers": [
+                "KRAFTON, Inc."
+            ],
+            "package_groups": [],
+            "platforms": {
+                "windows": true,
+                "mac": false,
+                "linux": false
+            },
+            "categories": [
+                {
+                    "id": 1,
+                    "description": "Multi-player"
+                },
+                {
+                    "id": 49,
+                    "description": "PvP"
+                },
+                {
+                    "id": 36,
+                    "description": "Online PvP"
+                },
+                {
+                    "id": 15,
+                    "description": "Stats"
+                },
+                {
+                    "id": 41,
+                    "description": "Remote Play on Phone"
+                },
+                {
+                    "id": 42,
+                    "description": "Remote Play on Tablet"
+                }
+            ],
+            "genres": [
+                {
+                    "id": "1",
+                    "description": "Action"
+                },
+                {
+                    "id": "25",
+                    "description": "Adventure"
+                },
+                {
+                    "id": "37",
+                    "description": "Free to Play"
+                },
+                {
+                    "id": "29",
+                    "description": "Massively Multiplayer"
+                }
+            ],
+            "screenshots": [
+                {
+                    "id": 0,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_f148e1cd44da2972d1b61da1e12b7b3587c1f6a3.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_f148e1cd44da2972d1b61da1e12b7b3587c1f6a3.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 1,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_c2456a0981b61eca4e84d3ff62fff6c78d61a6d0.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_c2456a0981b61eca4e84d3ff62fff6c78d61a6d0.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 2,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_cec7ea5e83407dba51c80d24a2c8076e93752d4f.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_cec7ea5e83407dba51c80d24a2c8076e93752d4f.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 3,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_23af2e59855a833c22d0c11ca23a719f54a554ff.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_23af2e59855a833c22d0c11ca23a719f54a554ff.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 4,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_8814c071f0cce53821d8e1b1a96de78d00e5d4d1.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_8814c071f0cce53821d8e1b1a96de78d00e5d4d1.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 5,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_109d7072cf85f5b3b1e3dacadf3009718db451c4.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_109d7072cf85f5b3b1e3dacadf3009718db451c4.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 6,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_4bbcaeac1ef977d962c60c1a5e4675cdd81de564.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_4bbcaeac1ef977d962c60c1a5e4675cdd81de564.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 7,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_0985fff929498a15793fc3df766607fb54bf5338.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_0985fff929498a15793fc3df766607fb54bf5338.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 8,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_abadb3bfc951cd05150901ff65386e3129c6011a.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_abadb3bfc951cd05150901ff65386e3129c6011a.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 9,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_c49417566f70eec8bf0ddbb2956b235d91504a09.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_c49417566f70eec8bf0ddbb2956b235d91504a09.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 10,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_4454f310776c626a76baeca2d05fd82bd17c6ee0.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_4454f310776c626a76baeca2d05fd82bd17c6ee0.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 11,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_e34bcd20c7e3f5244c17b5af5d192b2149e11d33.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_e34bcd20c7e3f5244c17b5af5d192b2149e11d33.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 12,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_2db6a7b87ad61fbee74adcd2d7b03eee1a28743e.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_2db6a7b87ad61fbee74adcd2d7b03eee1a28743e.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 13,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_93e6e1fa807c3b3b09ce4e1e4800e7723dc308a1.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_93e6e1fa807c3b3b09ce4e1e4800e7723dc308a1.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 14,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_de28db240ee8646b1dd883a141b4832271a150e7.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_de28db240ee8646b1dd883a141b4832271a150e7.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 15,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_11e51d12d854712ed7c83e69f1b21d246ab018b3.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_11e51d12d854712ed7c83e69f1b21d246ab018b3.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 16,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_5fe3d8ce7e90442569fc676e2315fffdf81dd1a5.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_5fe3d8ce7e90442569fc676e2315fffdf81dd1a5.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 17,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_2b1f73afd6efb1952ee267e94f8bcc24ec5e8fb3.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_2b1f73afd6efb1952ee267e94f8bcc24ec5e8fb3.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 18,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_52773275afe4c34a84fbf38e9960a598a420b3c2.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_52773275afe4c34a84fbf38e9960a598a420b3c2.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 19,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_c98c609e2f07c80c8455624cc62696c9dde9ea73.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_c98c609e2f07c80c8455624cc62696c9dde9ea73.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 20,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_07590e851053a453e09c7d6f272adf602c3f8ee8.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_07590e851053a453e09c7d6f272adf602c3f8ee8.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 21,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_56d29e4503ba1a74047feb55986c6bf4ca4297f9.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_56d29e4503ba1a74047feb55986c6bf4ca4297f9.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 22,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_f96bc802fb38617ce790c0950b87a7979f096025.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_f96bc802fb38617ce790c0950b87a7979f096025.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 23,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_108e2981889423b057b778cd07ae25ac18406cf1.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_108e2981889423b057b778cd07ae25ac18406cf1.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 24,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_a403a1f4071d36d42bea7a505089b56b570b2569.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_a403a1f4071d36d42bea7a505089b56b570b2569.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 25,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_8112cd376568d9470c2edde841908fcdf46f1529.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_8112cd376568d9470c2edde841908fcdf46f1529.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 26,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_88a8dff0756673179e190c2e16d090de63ecfb2e.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_88a8dff0756673179e190c2e16d090de63ecfb2e.1920x1080.jpg?t=1673331963"
+                },
+                {
+                    "id": 27,
+                    "path_thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_29d0709711f3204e84b6f9d69f3be163ebe12486.600x338.jpg?t=1673331963",
+                    "path_full": "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_29d0709711f3204e84b6f9d69f3be163ebe12486.1920x1080.jpg?t=1673331963"
+                }
+            ],
+            "movies": [
+                {
+                    "id": 256919601,
+                    "name": "Vikendi_Trailer",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256919601/movie.293x165.jpg?t=1670316051",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256919601/movie480_vp9.webm?t=1670316051",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256919601/movie_max_vp9.webm?t=1670316051"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256919601/movie480.mp4?t=1670316051",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256919601/movie_max.mp4?t=1670316051"
+                    },
+                    "highlight": true
+                },
+                {
+                    "id": 256896251,
+                    "name": "Battlegrounds_Deston_ver2",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256896251/movie.293x165.jpg?t=1657765655",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256896251/movie480_vp9.webm?t=1657765655",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256896251/movie_max_vp9.webm?t=1657765655"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256896251/movie480.mp4?t=1657765655",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256896251/movie_max.mp4?t=1657765655"
+                    },
+                    "highlight": true
+                },
+                {
+                    "id": 256868780,
+                    "name": "Battlegrounds_FOR_ALL",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256868780/movie.293x165.jpg?t=1641965538",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256868780/movie480_vp9.webm?t=1641965538",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256868780/movie_max_vp9.webm?t=1641965538"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256868780/movie480.mp4?t=1641965538",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256868780/movie_max.mp4?t=1641965538"
+                    },
+                    "highlight": true
+                },
+                {
+                    "id": 256864911,
+                    "name": "Battlegrounds_FOR_ALL_Teaser",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256864911/movie.293x165.jpg?t=1639450117",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256864911/movie480_vp9.webm?t=1639450117",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256864911/movie_max_vp9.webm?t=1639450117"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256864911/movie480.mp4?t=1639450117",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256864911/movie_max.mp4?t=1639450117"
+                    },
+                    "highlight": true
+                },
+                {
+                    "id": 256842241,
+                    "name": "Taego_Trailer",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256842241/movie.293x165.jpg?t=1625828895",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256842241/movie480_vp9.webm?t=1625828895",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256842241/movie_max_vp9.webm?t=1625828895"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256842241/movie480.mp4?t=1625828895",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256842241/movie_max.mp4?t=1625828895"
+                    },
+                    "highlight": true
+                },
+                {
+                    "id": 256814351,
+                    "name": "Survivor Pass 10",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256814351/movie.293x165.jpg?t=1626232779",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256814351/movie480_vp9.webm?t=1626232779",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256814351/movie_max_vp9.webm?t=1626232779"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256814351/movie480.mp4?t=1626232779",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256814351/movie_max.mp4?t=1626232779"
+                    },
+                    "highlight": false
+                },
+                {
+                    "id": 256805874,
+                    "name": "Survivor Pass: 9",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256805874/movie.293x165.jpg?t=1619690398",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256805874/movie480_vp9.webm?t=1619690398",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256805874/movie_max_vp9.webm?t=1619690398"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256805874/movie480.mp4?t=1619690398",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256805874/movie_max.mp4?t=1619690398"
+                    },
+                    "highlight": false
+                },
+                {
+                    "id": 256793553,
+                    "name": "Survivor Pass 8",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256793553/movie.293x165.jpg?t=1595992300",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256793553/movie480_vp9.webm?t=1595992300",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256793553/movie_max_vp9.webm?t=1595992300"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256793553/movie480.mp4?t=1595992300",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256793553/movie_max.mp4?t=1595992300"
+                    },
+                    "highlight": false
+                },
+                {
+                    "id": 256782753,
+                    "name": "Survivor Pass 7",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256782753/movie.293x165.jpg?t=1587538797",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256782753/movie480_vp9.webm?t=1587538797",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256782753/movie_max_vp9.webm?t=1587538797"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256782753/movie480.mp4?t=1587538797",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256782753/movie_max.mp4?t=1587538797"
+                    },
+                    "highlight": false
+                },
+                {
+                    "id": 256773105,
+                    "name": "Survivor Pass 6",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256773105/movie.293x165.jpg?t=1619690406",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256773105/movie480.webm?t=1619690406",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256773105/movie_max.webm?t=1619690406"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256773105/movie480.mp4?t=1619690406",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256773105/movie_max.mp4?t=1619690406"
+                    },
+                    "highlight": false
+                },
+                {
+                    "id": 256774477,
+                    "name": "Season 5",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256774477/movie.293x165.jpg?t=1619690413",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256774477/movie480.webm?t=1619690413",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256774477/movie_max.webm?t=1619690413"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256774477/movie480.mp4?t=1619690413",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256774477/movie_max.mp4?t=1619690413"
+                    },
+                    "highlight": false
+                },
+                {
+                    "id": 256774476,
+                    "name": "Season 5 CGI",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256774476/movie.293x165.jpg?t=1619690420",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256774476/movie480.webm?t=1619690420",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256774476/movie_max.webm?t=1619690420"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256774476/movie480.mp4?t=1619690420",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256774476/movie_max.mp4?t=1619690420"
+                    },
+                    "highlight": false
+                },
+                {
+                    "id": 256774471,
+                    "name": "Season 4",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256774471/movie.293x165.jpg?t=1619690427",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256774471/movie480.webm?t=1619690427",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256774471/movie_max.webm?t=1619690427"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256774471/movie480.mp4?t=1619690427",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256774471/movie_max.mp4?t=1619690427"
+                    },
+                    "highlight": false
+                },
+                {
+                    "id": 256774464,
+                    "name": "Season 3",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256774464/movie.293x165.jpg?t=1619690435",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256774464/movie480.webm?t=1619690435",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256774464/movie_max.webm?t=1619690435"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256774464/movie480.mp4?t=1619690435",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256774464/movie_max.mp4?t=1619690435"
+                    },
+                    "highlight": false
+                },
+                {
+                    "id": 256757848,
+                    "name": "Vikendi CGI Trailer",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256757848/movie.293x165.jpg?t=1564606214",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256757848/movie480.webm?t=1564606214",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256757848/movie_max.webm?t=1564606214"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256757848/movie480.mp4?t=1564606214",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256757848/movie_max.mp4?t=1564606214"
+                    },
+                    "highlight": false
+                },
+                {
+                    "id": 256720476,
+                    "name": "Sanhok Trailer",
+                    "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/256720476/movie.293x165.jpg?t=1619690442",
+                    "webm": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256720476/movie480.webm?t=1619690442",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256720476/movie_max.webm?t=1619690442"
+                    },
+                    "mp4": {
+                        "480": "http://cdn.akamai.steamstatic.com/steam/apps/256720476/movie480.mp4?t=1619690442",
+                        "max": "http://cdn.akamai.steamstatic.com/steam/apps/256720476/movie_max.mp4?t=1619690442"
+                    },
+                    "highlight": false
+                }
+            ],
+            "recommendations": {
+                "total": 1644368
+            },
+            "achievements": {
+                "total": 37,
+                "highlighted": [
+                    {
+                        "name": "Last Survivor",
+                        "path": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/578080/59abda8f6cfe24cb94398ce496a1aab1248a3f61.jpg"
+                    },
+                    {
+                        "name": "Winner Winner Chicken Dinner!",
+                        "path": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/578080/0ba42c6fbcf0fecb0893124f138c5d30fc5f8ff4.jpg"
+                    },
+                    {
+                        "name": "Dynamic Duo",
+                        "path": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/578080/fa12ea95807654db1a05ec9ebd9e8ed5a151fff8.jpg"
+                    },
+                    {
+                        "name": "Fantastic Four",
+                        "path": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/578080/0efd6cfce883f01f2b2bbf6979e71b1158e5b8fd.jpg"
+                    },
+                    {
+                        "name": "Top 10",
+                        "path": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/578080/fbc11e553fcda52b8f887c00aa11a2c80d0559ab.jpg"
+                    },
+                    {
+                        "name": "Pacifist",
+                        "path": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/578080/b534a3173fe847ae350ea5fb834a76a470702951.jpg"
+                    },
+                    {
+                        "name": "CQB Master",
+                        "path": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/578080/2227412df7f1b33945a99744c4f3f70511b43f84.jpg"
+                    },
+                    {
+                        "name": "CQB Expert",
+                        "path": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/578080/bdcbf863a234b6a52bdfb20040bc4c532ab4228c.jpg"
+                    },
+                    {
+                        "name": "CQB Novice",
+                        "path": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/578080/866eef57dcbd674f2b69602eaba7207371176fa7.jpg"
+                    },
+                    {
+                        "name": "Marksman Master",
+                        "path": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/578080/9ef7ec6c4abfedc2a5436fc75b9f63bf9ae80161.jpg"
+                    }
+                ]
+            },
+            "release_date": {
+                "coming_soon": false,
+                "date": "21 Dec, 2017"
+            },
+            "support_info": {
+                "url": "https://support.playbattlegrounds.com",
+                "email": ""
+            },
+            "background": "https://cdn.akamai.steamstatic.com/steam/apps/578080/page_bg_generated_v6b.jpg?t=1673331963",
+            "background_raw": "https://cdn.akamai.steamstatic.com/steam/apps/578080/page.bg.jpg?t=1673331963",
+            "content_descriptors": {
+                "ids": [
+                    2,
+                    5
+                ],
+                "notes": null
+            }
+        }
+    }
+}

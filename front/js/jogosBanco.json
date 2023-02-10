@@ -1,0 +1,300 @@
+[
+    {
+        "_id": "63bdbadb0590fce3ff009c1d",
+        "idSteam": "1593500",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1593500/header.jpg?t=1650554420",
+        "genero": [
+            "Ação",
+            "Aventura",
+            "RPG"
+        ],
+        "lancamento": "2022",
+        "nome": "God of War"
+    },
+    {
+        "_id": "63bdc1ec86c4ed5195681c18",
+        "idSteam": "227300",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/227300/header.jpg?t=1668166019",
+        "genero": [
+            "Indie",
+            "Simulação"
+        ],
+        "lancamento": "2012",
+        "nome": "Euro Truck Simulator 2"
+    },
+    {
+        "_id": "63bdc3bfa06350271caf7634",
+        "idSteam": "1248130",
+        "genero": [
+            "Simulação"
+        ],
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1248130/header.jpg?t=1669368238",
+        "lancamento": "2021",
+        "nome": "Farming Simulator 22"
+    },
+    {
+        "_id": "63bdc3b886c4ed5195681c1a",
+        "idSteam": "730",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg?t=1668125812",
+        "genero": [
+            "Ação"
+        ],
+        "lancamento": "2012",
+        "nome": "Counter-Strike: Global Offensive"
+    },
+    {
+        "_id": "63bdc4eda06350271caf7635",
+        "idSteam": "1692250",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1692250/header.jpg?t=1668785556",
+        "genero": [
+            "Corrida",
+            "Esportes"
+        ],
+        "lancamento": "2022",
+        "nome": "F1 22"
+    },
+    {
+        "_id": "63bdc4bc86c4ed5195681c1c",
+        "idSteam": "578080",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/578080/header.jpg?t=1673331963",
+        "genero": [
+            "Ação",
+            "Aventura",
+            "Multiplayer"
+        ],
+        "lancamento": "2017",
+        "nome": "PUBG: BATTLEGROUNDS"
+    },
+    {
+        "_id": "63bdc5a9a06350271caf7636",
+        "idSteam": "1091500",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1663663573",
+        "genero": [
+            "RPG"
+        ],
+        "lancamento": "2020",
+        "nome": "Cyberpunk 2077"
+    },
+    {
+        "_id": "63bdc5d986c4ed5195681c1e",
+        "idSteam": "1811260",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1811260/header.jpg?t=1672758344",
+        "genero": [
+            "Simulação",
+            "Esportes"
+        ],
+        "lancamento": "2022",
+        "nome": "EA SPORTS™ FIFA 23"
+    },
+    {
+        "_id": "63bdc64ba06350271caf7637",
+        "idSteam": "1332010",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1332010/header.jpg?t=1670349423",
+        "genero": [
+            "Aventura",
+            "Indie"
+        ],
+        "lancamento": "2022",
+        "nome": "Stray"
+    },
+    {
+        "_id": "63bdc6b886c4ed5195681c1f",
+        "idSteam": "359550",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1671482386",
+        "genero": [
+            "Ação"
+        ],
+        "lancamento": "2015",
+        "nome": "Tom Clancy's Rainbow Six Siege"
+    },
+    {
+        "_id": "63bdc73da06350271caf7638",
+        "idSteam": "570",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/570/header.jpg?t=1666237243",
+        "genero": [
+            "Ação",
+            "Estrategia"
+        ],
+        "lancamento": "2013",
+        "nome": "Dota 2"
+    },
+    {
+        "_id": "63bdc74986c4ed5195681c20",
+        "idSteam": "1172470",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/header.jpg?t=1670431796",
+        "genero": [
+            "Ação",
+            "Aventura"
+        ],
+        "lancamento": "2020",
+        "nome": "Apex Legends"
+    },
+    {
+        "_id": "63bdc7d7a06350271caf7639",
+        "idSteam": "1085660",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1085660/header_brazilian.jpg?t=1671639469",
+        "genero": [
+            "Ação",
+            "Aventura"
+        ],
+        "lancamento": "2019",
+        "nome": "Destiny 2"
+    },
+    {
+        "_id": "63bdc7ba86c4ed5195681c21",
+        "idSteam": "1938090",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1938090/header.jpg?t=1671472823",
+        "genero": [
+            "Ação"
+        ],
+        "lancamento": "2022",
+        "nome": "Call of Duty®: Modern Warfare® II"
+    },
+    {
+        "_id": "63bdc871a06350271caf763a",
+        "idSteam": "976310",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/976310/header.jpg?t=1654216426",
+        "genero": [
+            "Ação",
+            "Luta"
+        ],
+        "lancamento": "2019",
+        "nome": "Mortal Kombat 11"
+    },
+    {
+        "_id": "63bdc8b186c4ed5195681c22",
+        "idSteam": "271590",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg?t=1671485100",
+        "genero": [
+            "Ação",
+            "Aventura"
+        ],
+        "lancamento": "2015",
+        "nome": "Grand Theft Auto V"
+    },
+    {
+        "_id": "63bdc8f4a06350271caf763b",
+        "idSteam": "1817190",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1817190/header.jpg?t=1672784176",
+        "genero": [
+            "Ação",
+            "Aventura"
+        ],
+        "lancamento": "2022",
+        "nome": "Marvel's Spider-Man: Miles Morales"
+    },
+    {
+        "_id": "63bdc91086c4ed5195681c23",
+        "idSteam": "1245620",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1672223247",
+        "genero": [
+            "Ação",
+            "RPG"
+        ],
+        "lancamento": "2022",
+        "nome": "ELDEN RING"
+    },
+    {
+        "_id": "63bdc970a06350271caf763c",
+        "idSteam": "1174180",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1671485009",
+        "genero": [
+            "Ação",
+            "Aventura"
+        ],
+        "lancamento": "2019",
+        "nome": "Red Dead Redemption 2"
+    },
+    {
+        "_id": "63bdc96486c4ed5195681c24",
+        "idSteam": "1250410",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1250410/header.jpg?t=1668186331",
+        "genero": [
+            "Simulação"
+        ],
+        "lancamento": "2020",
+        "nome": "Microsoft Flight Simulator"
+    },
+    {
+        "_id": "63bdc9c1a06350271caf763d",
+        "idSteam": "1919590",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1919590/header.jpg?t=1669997894",
+        "genero": [
+            "Simulação",
+            "Esportes",
+            "Multijogador"
+        ],
+        "lancamento": "2022",
+        "nome": "NBA 2K23"
+    },
+    {
+        "_id": "63bdca3886c4ed5195681c25",
+        "idSteam": "1551360",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1551360/header.jpg?t=1673029404\"",
+        "genero": [
+            "Ação",
+            "Aventura",
+            "Corrida",
+            "Simulação",
+            "Esportes"
+        ],
+        "lancamento": "2021",
+        "nome": "Forza Horizon 5"
+    },
+    {
+        "_id": "63bdca6da06350271caf763e",
+        "idSteam": "346110",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/346110/header.jpg?t=1669254188",
+        "genero": [
+            "Ação",
+            "RPG",
+            "Indie",
+            "Multijogador"
+        ],
+        "lancamento": "2017",
+        "nome": "ARK: Survival Evolved"
+    },
+    {
+        "_id": "63bdcad886c4ed5195681c27",
+        "idSteam": "1172620",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1172620/header.jpg?t=1673033786\"",
+        "genero": [
+            "Ação",
+            "Aventura"
+        ],
+        "lancamento": "2020",
+        "nome": "Sea of Thieves"
+    },
+    {
+        "_id": "63bdcae4a06350271caf763f",
+        "idSteam": "1846380",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/1846380/header.jpg?t=1673368466",
+        "genero": [
+            "Ação",
+            "Corrida"
+        ],
+        "lancamento": "2022",
+        "nome": "Need for Speed™ Unbound"
+    },
+    {
+        "_id": "63bdcb3786c4ed5195681c28",
+        "idSteam": "962130",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/962130/header.jpg?t=1669729959",
+        "genero": [
+            "Ação",
+            "Aventura"
+        ],
+        "lancamento": "2022",
+        "nome": "Grounded"
+    },
+    {
+        "_id": "63bdcb46a06350271caf7640",
+        "idSteam": "381210",
+        "img": "https://cdn.akamai.steamstatic.com/steam/apps/381210/header.jpg?t=1669150759",
+        "genero": [
+            "Ação"
+        ],
+        "lancamento": "2016",
+        "nome": "Dead by Daylight"
+    }
+]

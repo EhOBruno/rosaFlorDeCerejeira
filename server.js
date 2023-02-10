@@ -10,7 +10,7 @@ const dotenv = require('dotenv').config();
 
 mongoose.set("strictQuery", true);
 
-mongoose.connect(`mongodb+srv://necivaldo:0ldXupvJhMa5nTjj@cluster0.qvti9so.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true })
+mongoose.connect(`mongodb+srv://necivaldo:0ldXupvJhMa5nTjj@cluster0.qvti9so.mongodb.net/JogosDB`, { useNewUrlParser: true })
     .then(()=>{
         app.emit('pronto')
     })
@@ -18,10 +18,8 @@ mongoose.connect(`mongodb+srv://necivaldo:0ldXupvJhMa5nTjj@cluster0.qvti9so.mong
 app.use(express.urlencoded({ extended: true}));
 app.use(routes);
 app.use(express.json())
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({
-    extended:true
-}))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.static(__dirname + '/front'));
