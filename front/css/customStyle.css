@@ -289,8 +289,11 @@ main {
 
 .imgjogo {
   border-radius: 20px;
-  width: 396px;
-  height: 185px;
+  /* width: 396px;
+  height: 185px; */
+  width: 100%;
+  height: 46%
+
   
 }
 
