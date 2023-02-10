@@ -704,6 +704,11 @@ form img {
     margin-top: 8%;
     gap: 10rem;
   }
+
+  .div-configs img {
+    border-radius: 50%;
+    overflow: hidden;
+  }
   
   
   .inputs-test {
