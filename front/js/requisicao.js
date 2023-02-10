@@ -580,23 +580,37 @@ sendEditarDadosForm = () => {
     ram = document.getElementById('ram-input').value
     password = document.getElementById('pass-input').value
     passwordConf = document.getElementById('confirmpass-input').value
-    if (processador != "Nenhum") {
+/*     if (processador != "Nenhum") {
         performanceCpu = sessionStorage.getItem('performanceCpuProv')
     } else {
         performanceCpu = '0'
         console.log('opa')
-    }
-    if (gpu != "Nenhuma") {
+    } */
+/*     if (gpu != "Nenhuma") {
         performanceGpu = sessionStorage.getItem('performanceGpuProv')
     } else {
         console.log('opa')
         performanceGpu = '0'
-    }
+    } */
     if (ram != "Nenhuma") {
         ram = document.getElementById('ram-input').value
     } else {
         console.log('opa')
         ram = '0'
+    }
+
+    if(!sessionStorage.getItem('performanceGpuProv')){
+        performanceGpu = sessionStorage.getItem('performanceGpu')
+        console.log(performanceGpu)
+    } else {
+        performanceGpu = sessionStorage.getItem('performanceGpuProv')
+        console.log(performanceGpu)
+    }
+
+    if(!sessionStorage.getItem('performanceCpuProv')){
+        performanceCpu = sessionStorage.getItem('performanceCpu')
+    } else {
+        performanceCpu = sessionStorage.getItem('performanceCpuProv')
     }
 
 
