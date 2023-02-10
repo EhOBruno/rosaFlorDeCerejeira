@@ -1,13 +1,13 @@
 function irParaCadastro() {
-  window.location.assign("./cadastro.html")
+  window.location.assign("./cadastro")
 }
 
 function irParaLogin() {
-  window.location.assign("./login.html")
+  window.location.assign("./login")
 }
 
 function irParaSobre() {
-  window.location.assign("./sobre.html")
+  window.location.assign("./sobre")
 }
 
 function irParaConta() {

@@ -1,3 +1,3 @@
 exports.paginaSobre = (req, res) => {
-    res.send('pagina Sobre');
+    res.render('../front/sobre.html')
 };

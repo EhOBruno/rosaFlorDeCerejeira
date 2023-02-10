@@ -38,4 +38,7 @@ route.get('/getJogos', filtrosController.getJogos)
 route.get('/minhaconta', minhacontaController.paginaConta)
 route.put('/editarDados', minhacontaController.editarDados)
 
+//Pagina filtro
+route.get('/sobre', sobreController.paginaSobre)
+
 module.exports = route;
