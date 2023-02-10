@@ -8,7 +8,7 @@ if (sessionStorage.getItem('Logado')) {
       <div id="buscaResultados" class="respBusca-login"></div>
   </div>
   <div class="header-right-all-login">
-    <a href="">
+    <a href="./minhaconta">
       <span id="username">`+sessionStorage.getItem('nome')+`</span>
     </a>
     <a href="./minhaconta">
