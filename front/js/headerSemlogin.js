@@ -10,7 +10,7 @@ document.write(`
         </div>
     </div>
     <div class="header-right-all">
-        <button class="button-1">Sobre</button> 
+        <button class="button-1 onclick="irParaSobre()">Sobre</button> 
         <button class="button-2" onclick="irParaLogin()">Login</button> 
     </div>
   </header>
