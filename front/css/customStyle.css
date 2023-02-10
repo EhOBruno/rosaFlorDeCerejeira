@@ -518,7 +518,7 @@ main {
 
 .cardTanka {
   display: none;
-  font-size: 1.3em;
+  /* font-size: 1.3em;
   text-align: center;
   color: #e83678;
   font-weight: bolder;
@@ -528,12 +528,12 @@ main {
   background-color: #111111;
   background-image: url("../img/borda.gif");
   background-position: center;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 .cardNTanka {
   display: none;
-  font-size: 1.1em;
+  /* font-size: 1.1em;
   text-align: center;
   color: #e83678;
   font-weight: bolder;
@@ -543,5 +543,32 @@ main {
   background-color: #111111;
   background-image: url("../img/borda.gif");
   background-position: center;
-  overflow: hidden;
+  overflow: hidden; */
+}
+
+.TankaouNTanka img{
+  height: 200px;
+}
+
+.TankaouNTanka{
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.slick-prev,
+.slick-next{
+  top: 43%;
+}
+
+.slick-prev:before,
+.slick-next::before{
+  font-size: 45px;
+}
+
+.slick-next {
+  right: -50px;
+}
+.slick-prev{
+  left: -70px
 }

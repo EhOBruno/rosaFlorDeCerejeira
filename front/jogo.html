@@ -38,7 +38,7 @@
     <script>
         $(document).ready(function () {
             if (!sessionStorage.getItem('Logado')) {
-                document.getElementById("reqSeus").style.display="none"
+                document.getElementById("reqSeus").style.display = "none"
             }
         });
     </script>
@@ -98,12 +98,14 @@
             </div>
         </div>
 
-        <div class="row justify-content-center mt-2 mb-5">
-            <div id="SeuPcTanka" class="cardTanka col-4">
-                <span>Seu PC Tanka este Jogo</span>
+        <div class="TankaouNTanka">
+
+            <div id="SeuPcTanka" class="cardTanka">
+                <img src="./img/tanka.png" alt="Seu PC Tanka">
             </div>
-            <div id="SeuPcNTanka" class="cardNTanka col-4">
-                <span>Seu PC Não Tanka este Jogo</span>
+
+            <div id="SeuPcNTanka" class="cardNTanka">
+                <img src="./img/ntanka.png" alt="Seu PC Tanka">
             </div>
         </div>
 
@@ -112,6 +114,12 @@
                 <span>Seu PC Não Tanka este Jogo</span>
             </div>
         </div> -->
+
+        <div class="row">
+            <p class="h4">Você também pode gostar</p>
+            <div id="line-req"></div>
+        </div>
+
 
         <!-- <script src="./js/documentCarousel.js"></script> -->
         <div id="carouselAp" class="carousel mb-5 mt-4" style="margin: 0 100px;">
